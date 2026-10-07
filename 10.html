@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Tengah Semester (UTS) - Instalasi Penerangan Listrik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hots-badge { background: linear-gradient(135deg, #dc2626, #991b1b); }
+        .lots-badge { background: linear-gradient(135deg, #2563eb, #1e40af); }
+        .complex-badge { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+        .bs-badge { background: linear-gradient(135deg, #059669, #047857); }
+        .match-badge { background: linear-gradient(135deg, #d97706, #b45309); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-red-800 via-red-700 to-orange-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-400 text-red-900 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">Pertemuan 10 — Ujian Tengah Semester</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-2">UJIAN TENGAH SEMESTER (UTS)</h1>
+            <p class="text-xl opacity-95 max-w-3xl mx-auto font-semibold">Instalasi Penerangan Listrik — Kelas XI TKTL</p>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto mt-2">Materi: Pertemuan 1 s.d. 9</p>
+            
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-xs">
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-list-ol mr-1"></i> 40 Pilihan Ganda</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-check-double mr-1"></i> 30 PG Kompleks</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-check-circle mr-1"></i> 5 Benar/Salah</span>
+                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full"><i class="fas fa-link mr-1"></i> 5 Menjodohkan</span>
+            </div>
+
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="9.html" class="bg-white text-red-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 9</a>
+                <a href="#data-siswa" class="bg-yellow-400 text-red-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-300 transition">Mulai Ujian <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Petunjuk Ujian -->
+        <section class="mb-10 bg-white p-8 rounded-xl shadow-md border-l-8 border-red-600">
+            <h2 class="text-2xl font-bold text-red-800 mb-4"><i class="fas fa-clipboard-list mr-2"></i>Petunjuk Pengerjaan Ujian</h2>
+            <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-blue-800 mb-2"><i class="fas fa-info-circle mr-2"></i>Ketentuan Umum</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Waktu pengerjaan: <strong>120 menit</strong></li>
+                        <li>Total soal: <strong>80 butir</strong></li>
+                        <li>Nilai maksimal: <strong>100</strong></li>
+                        <li>Isi data diri dengan lengkap dan benar</li>
+                        <li>Kerjakan secara berurutan dan teliti</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-blue-800 mb-2"><i class="fas fa-cogs mr-2"></i>Jenis Soal</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>PG (40 soal):</strong> 1 jawaban benar, 5 opsi (A–E)</li>
+                        <li><strong>PG Kompleks (30 soal):</strong> Bisa >1 jawaban benar, centang semua yang tepat</li>
+                        <li><strong>Benar/Salah (5 soal):</strong> Tentukan B/S tiap pernyataan</li>
+                        <li><strong>Menjodohkan (5 soal):</strong> Pasangkan konsep dengan definisi</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 bg-yellow-50 border-l-4 border-yellow-500 p-3 text-sm">
+                <p><i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i><strong>Integritas:</strong> Kerjakan dengan jujur. Setiap bentuk kecurangan akan berakibat pembatalan nilai. Pastikan koneksi internet stabil sebelum menekan tombol "Kirim & Lihat Hasil".</p>
+            </div>
+        </section>
+
+        <!-- Form Ujian -->
+        <form id="utsForm" class="space-y-10">
+            
+            <!-- Data Siswa -->
+            <section id="data-siswa" class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600">
+                <h3 class="font-bold text-xl text-blue-900 mb-4 border-b pb-2"><i class="fas fa-user-graduate mr-2"></i>Data Siswa</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                        <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">NIS <span class="text-red-500">*</span></label>
+                        <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                        <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                        <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                            <option value="">Pilih Semester</option>
+                            <option value="1">Semester 1 (Ganjil)</option>
+                            <option value="3">Semester 3</option>
+                            <option value="5">Semester 5</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                        <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!-- BAGIAN A: PILIHAN GANDA (40 SOAL: 30 LOTS + 10 HOTS) -->
+            <!-- ======================================================= -->
+            <section class="bg-white p-6 rounded-xl shadow-md border-t-8 border-blue-600">
+                <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+                    <h3 class="font-bold text-xl text-blue-900"><i class="fas fa-list-ol mr-2"></i>BAGIAN A — Pilihan Ganda (40 Soal × 1,5 Poin = 60)</h3>
+                    <span class="text-xs font-semibold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">5 Opsi (A–E)</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4"><em>Pilih SATU jawaban yang paling tepat. Soal bernomor 31–40 adalah soal HOTS (Higher Order Thinking Skills).</em></p>
+
+                <div class="space-y-4" id="pg-questions">
+
+                    <!-- LOTS 1-30 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>1. Pengertian instalasi penerangan listrik yang paling tepat adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg1" value="A" class="form-radio"> <span>A. Rangkaian komponen listrik yang disusun untuk menghasilkan cahaya penerangan yang aman dan efisien</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg1" value="B" class="form-radio"> <span>B. Proses pembangkitan energi listrik dari sumber alam</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg1" value="C" class="form-radio"> <span>C. Sistem distribusi tegangan tinggi antar kota</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg1" value="D" class="form-radio"> <span>D. Proses perbaikan peralatan elektronik rusak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg1" value="E" class="form-radio"> <span>E. Pengukuran konsumsi energi listrik rumah tangga</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>2. Tujuan utama instalasi penerangan listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg2" value="A" class="form-radio"> <span>A. Menambah beban listrik maksimal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg2" value="B" class="form-radio"> <span>B. Memberikan penerangan cukup, aman, nyaman, dan efisien</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg2" value="C" class="form-radio"> <span>C. Menghilangkan kebutuhan cahaya alami</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg2" value="D" class="form-radio"> <span>D. Membuat instalasi terlihat rumit</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg2" value="E" class="form-radio"> <span>E. Meningkatkan konsumsi daya listrik</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>3. Instalasi penerangan jalan raya dan taman kota disebut...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg3" value="A" class="form-radio"> <span>A. Instalasi rumah tinggal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg3" value="B" class="form-radio"> <span>B. Instalasi gedung komersial</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg3" value="C" class="form-radio"> <span>C. Instalasi Penerangan Jalan Umum (PJU)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg3" value="D" class="form-radio"> <span>D. Instalasi industri berat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg3" value="E" class="form-radio"> <span>E. Instalasi tenaga surya</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>4. Tujuan utama penerapan K3 dalam instalasi listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg4" value="A" class="form-radio"> <span>A. Mempercepat pengerjaan proyek</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg4" value="B" class="form-radio"> <span>B. Mengurangi biaya material</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg4" value="C" class="form-radio"> <span>C. Mempercantik bengkel kerja</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg4" value="D" class="form-radio"> <span>D. Mencegah kecelakaan kerja dan menjamin keselamatan jiwa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg4" value="E" class="form-radio"> <span>E. Menambah jam kerja teknisi</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>5. APD yang berfungsi melindungi tangan dari sengatan listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg5" value="A" class="form-radio"> <span>A. Sarung tangan kain</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg5" value="B" class="form-radio"> <span>B. Sarung tangan isolasi (karet khusus)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg5" value="C" class="form-radio"> <span>C. Sarung tangan kulit las</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg5" value="D" class="form-radio"> <span>D. Sarung tangan plastik tipis</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg5" value="E" class="form-radio"> <span>E. Sarung tangan wol</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>6. Prosedur keselamatan untuk mengisolasi sumber energi agar tidak dihidupkan kembali secara tidak sengaja disebut...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg6" value="A" class="form-radio"> <span>A. 5R</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg6" value="B" class="form-radio"> <span>B. SOP</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg6" value="C" class="form-radio"> <span>C. Lock Out Tag Out (LOTO)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg6" value="D" class="form-radio"> <span>D. Maintenance Preventif</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg6" value="E" class="form-radio"> <span>E. Quality Control</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>7. Standar nasional Indonesia yang menjadi acuan wajib instalasi listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg7" value="A" class="form-radio"> <span>A. PUIL (Persyaratan Umum Instalasi Listrik)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg7" value="B" class="form-radio"> <span>B. ISO 9001</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg7" value="C" class="form-radio"> <span>C. SNI ISO 14001</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg7" value="D" class="form-radio"> <span>D. Standar perusahaan lokal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg7" value="E" class="form-radio"> <span>E. IEEE 802.11</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>8. Warna isolasi kabel untuk penghantar NETRAL menurut PUIL adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg8" value="A" class="form-radio"> <span>A. Merah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg8" value="B" class="form-radio"> <span>B. Hijau-Kuning</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg8" value="C" class="form-radio"> <span>C. Biru</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg8" value="D" class="form-radio"> <span>D. Hitam</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg8" value="E" class="form-radio"> <span>E. Putih</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>9. Kode IP yang menunjukkan peralatan tahan debu total dan semprotan air (untuk outdoor) adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg9" value="A" class="form-radio"> <span>A. IP20</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg9" value="B" class="form-radio"> <span>B. IP44</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg9" value="C" class="form-radio"> <span>C. IP33</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg9" value="D" class="form-radio"> <span>D. IP65</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg9" value="E" class="form-radio"> <span>E. IP10</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>10. Sumber listrik utama PLN untuk rumah tinggal di Indonesia adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg10" value="A" class="form-radio"> <span>A. Arus Bolak-balik (AC)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg10" value="B" class="form-radio"> <span>B. Arus Searah (DC)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg10" value="C" class="form-radio"> <span>C. Arus Statis</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg10" value="D" class="form-radio"> <span>D. Arus Eddy</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg10" value="E" class="form-radio"> <span>E. Arus Pulsasi</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>11. Sistem instalasi listrik untuk rumah tinggal dengan satu fasa dan satu netral disebut...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg11" value="A" class="form-radio"> <span>A. Tiga fasa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg11" value="B" class="form-radio"> <span>B. Satu fasa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg11" value="C" class="form-radio"> <span>C. Dua fasa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg11" value="D" class="form-radio"> <span>D. Fasa belah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg11" value="E" class="form-radio"> <span>E. Multi fasa</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>12. Tegangan kerja standar instalasi penerangan satu fasa di Indonesia adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg12" value="A" class="form-radio"> <span>A. 220 Volt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg12" value="B" class="form-radio"> <span>B. 110 Volt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg12" value="C" class="form-radio"> <span>C. 380 Volt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg12" value="D" class="form-radio"> <span>D. 12 Volt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg12" value="E" class="form-radio"> <span>E. 1000 Volt</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>13. Kabel yang memiliki selubung ganda dan cocok untuk indoor/outdoor terlindung adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg13" value="A" class="form-radio"> <span>A. NYA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg13" value="B" class="form-radio"> <span>B. NYM</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg13" value="C" class="form-radio"> <span>C. NYY</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg13" value="D" class="form-radio"> <span>D. NYFGBY</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg13" value="E" class="form-radio"> <span>E. NYHY</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>14. Sakelar yang digunakan untuk mengendalikan satu lampu dari dua tempat berbeda adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg14" value="A" class="form-radio"> <span>A. Sakelar tunggal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg14" value="B" class="form-radio"> <span>B. Sakelar seri</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg14" value="C" class="form-radio"> <span>C. Sakelar tukar (SPDT)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg14" value="D" class="form-radio"> <span>D. Sakelar silang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg14" value="E" class="form-radio"> <span>E. Sakelar push button</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>15. Lampu yang paling efisien energi dan berumur pakai terpanjang adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg15" value="A" class="form-radio"> <span>A. Lampu pijar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg15" value="B" class="form-radio"> <span>B. Lampu TL</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg15" value="C" class="form-radio"> <span>C. Lampu LED</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg15" value="D" class="form-radio"> <span>D. Lampu halogen</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg15" value="E" class="form-radio"> <span>E. Lampu neon</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>16. Pengaman listrik yang bekerja dengan prinsip pelelehan elemen logam saat arus berlebih adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg16" value="A" class="form-radio"> <span>A. MCB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg16" value="B" class="form-radio"> <span>B. ELCB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg16" value="C" class="form-radio"> <span>C. Sekering (fuse)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg16" value="D" class="form-radio"> <span>D. Sakelar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg16" value="E" class="form-radio"> <span>E. Transformator</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>17. Keunggulan utama MCB dibanding sekering tradisional adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg17" value="A" class="form-radio"> <span>A. Harganya lebih murah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg17" value="B" class="form-radio"> <span>B. Ukurannya lebih besar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg17" value="C" class="form-radio"> <span>C. Dapat di-reset setelah gangguan teratasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg17" value="D" class="form-radio"> <span>D. Tidak perlu perawatan sama sekali</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg17" value="E" class="form-radio"> <span>E. Lebih berat</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>18. ELCB/RCD berfungsi khusus melindungi dari bahaya...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg18" value="A" class="form-radio"> <span>A. Tegangan tinggi dari petir</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg18" value="B" class="form-radio"> <span>B. Arus bocor (ground fault) penyebab sengatan listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg18" value="C" class="form-radio"> <span>C. Fluktuasi frekuensi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg18" value="D" class="form-radio"> <span>D. Kehilangan daya PLN</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg18" value="E" class="form-radio"> <span>E. Tegangan lebih</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>19. Material penghantar yang paling umum digunakan dalam instalasi penerangan rumah tinggal adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg19" value="A" class="form-radio"> <span>A. Aluminium</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg19" value="B" class="form-radio"> <span>B. Tembaga (Cu)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg19" value="C" class="form-radio"> <span>C. Besi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg19" value="D" class="form-radio"> <span>D. Perak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg19" value="E" class="form-radio"> <span>E. Emas</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>20. Kabel yang wajib dipasang dalam pipa conduit adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg20" value="A" class="form-radio"> <span>A. NYA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg20" value="B" class="form-radio"> <span>B. NYM</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg20" value="C" class="form-radio"> <span>C. NYY</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg20" value="D" class="form-radio"> <span>D. NYHY</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg20" value="E" class="form-radio"> <span>E. NYFGbY</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>21. KHA kabel 2.5 mm² metode B2 (dalam pipa di dinding) adalah sekitar...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg21" value="A" class="form-radio"> <span>A. 10 A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg21" value="B" class="form-radio"> <span>B. 17,5 A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg21" value="C" class="form-radio"> <span>C. 24 A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg21" value="D" class="form-radio"> <span>D. 41 A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg21" value="E" class="form-radio"> <span>E. 57 A</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>22. Simbol lingkaran dengan silang di dalamnya (⊗) pada gambar instalasi melambangkan...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg22" value="A" class="form-radio"> <span>A. Sakelar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg22" value="B" class="form-radio"> <span>B. Stop kontak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg22" value="C" class="form-radio"> <span>C. Lampu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg22" value="D" class="form-radio"> <span>D. MCB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg22" value="E" class="form-radio"> <span>E. Kotak sambung</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>23. Diagram yang menyederhanakan sistem instalasi dengan satu garis per penghantar disebut...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg23" value="A" class="form-radio"> <span>A. Diagram pengawatan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg23" value="B" class="form-radio"> <span>B. Gambar denah arsitektur</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg23" value="C" class="form-radio"> <span>C. Diagram satu garis (single line diagram)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg23" value="D" class="form-radio"> <span>D. Gambar perspektif 3D</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg23" value="E" class="form-radio"> <span>E. Foto instalasi</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>24. Standar internasional simbol grafis untuk diagram listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg24" value="A" class="form-radio"> <span>A. ISO 9001</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg24" value="B" class="form-radio"> <span>B. IEC 60617</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg24" value="C" class="form-radio"> <span>C. IEEE 802.11</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg24" value="D" class="form-radio"> <span>D. ANSI Z535</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg24" value="E" class="form-radio"> <span>E. SNI 19-5736</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>25. Agar lampu pada rangkaian penerangan dapat menyala, syarat utamanya adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg25" value="A" class="form-radio"> <span>A. Terbentuk rangkaian tertutup (closed loop)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg25" value="B" class="form-radio"> <span>B. Lampu berdaya tinggi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg25" value="C" class="form-radio"> <span>C. Kabel berwarna merah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg25" value="D" class="form-radio"> <span>D. Sakelar dalam posisi OFF</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg25" value="E" class="form-radio"> <span>E. Lampu LED</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>26. Menurut standar PUIL, sakelar penerangan wajib dipasang pada penghantar...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg26" value="A" class="form-radio"> <span>A. Netral</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg26" value="B" class="form-radio"> <span>B. Fasa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg26" value="C" class="form-radio"> <span>C. Pembumian</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg26" value="D" class="form-radio"> <span>D. Bebas</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg26" value="E" class="form-radio"> <span>E. Netral dan fasa sekaligus</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>27. Fungsi fitting lampu dalam rangkaian penerangan adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg27" value="A" class="form-radio"> <span>A. Memutus arus listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg27" value="B" class="form-radio"> <span>B. Mengubah tegangan listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg27" value="C" class="form-radio"> <span>C. Tempat memasang lampu sekaligus menghubungkan arus ke lampu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg27" value="D" class="form-radio"> <span>D. Melindungi dari arus lebih</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg27" value="E" class="form-radio"> <span>E. Menyimpan energi listrik</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>28. Sensitivitas ELCB/RCD untuk proteksi manusia di stop kontak kamar mandi adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg28" value="A" class="form-radio"> <span>A. 100 mA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg28" value="B" class="form-radio"> <span>B. 500 mA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg28" value="C" class="form-radio"> <span>C. 30 mA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg28" value="D" class="form-radio"> <span>D. 1000 mA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg28" value="E" class="form-radio"> <span>E. 5 A</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>29. Fitting dengan kode E27 memiliki arti...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg29" value="A" class="form-radio"> <span>A. Fitting bayonet 27 mm</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg29" value="B" class="form-radio"> <span>B. Fitting ulir Edison berdiameter 27 mm</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg29" value="C" class="form-radio"> <span>C. Fitting khusus lampu TL 27 watt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg29" value="D" class="form-radio"> <span>D. Fitting untuk tegangan 27 volt</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg29" value="E" class="form-radio"> <span>E. Fitting tahan air 27 bar</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                        <p class="font-semibold mb-2"><span class="lots-badge text-white text-xs px-2 py-1 rounded mr-2">LOTS</span>30. Batas maksimal voltage drop menurut PUIL dari sumber ke beban terjauh adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg30" value="A" class="form-radio"> <span>A. 1%</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg30" value="B" class="form-radio"> <span>B. 3%</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg30" value="C" class="form-radio"> <span>C. 5%</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg30" value="D" class="form-radio"> <span>D. 10%</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg30" value="E" class="form-radio"> <span>E. 15%</span></label>
+                        </div>
+                    </div>
+
+                    <!-- HOTS 31-40 -->
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>31. Seorang teknisi memasang sakelar pada penghantar netral dengan alasan "yang penting lampu bisa mati". Analisis dampak keselamatan dari pemasangan tersebut!</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg31" value="A" class="form-radio"> <span>A. Tidak ada dampak, lampu tetap berfungsi normal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg31" value="B" class="form-radio"> <span>B. Lampu menjadi lebih terang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg31" value="C" class="form-radio"> <span>C. Fitting tetap bertegangan 220V saat sakelar OFF, berpotensi menyebabkan sengatan listrik fatal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg31" value="D" class="form-radio"> <span>D. MCB akan trip otomatis</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg31" value="E" class="form-radio"> <span>E. Konsumsi listrik menjadi lebih hemat</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>32. Sebuah rumah menggunakan kabel 1,5 mm² (KHA 17,5A) dengan MCB 16A. Pemilik menambah beban AC 1 PK (±800W) pada rangkaian yang sudah mendekati batas. Evaluasi risiko yang mungkin terjadi!</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg32" value="A" class="form-radio"> <span>A. Tidak ada risiko karena MCB masih 16A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg32" value="B" class="form-radio"> <span>B. Kabel dapat kepanasan (overload), isolasi meleleh, dan berpotensi menyebabkan kebakaran</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg32" value="C" class="form-radio"> <span>C. Lampu menjadi lebih redup</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg32" value="D" class="form-radio"> <span>D. Tagihan listrik menurun</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg32" value="E" class="form-radio"> <span>E. MCB akan bekerja lebih efisien</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>33. Seorang pemilik rumah mengeluh MCB sering trip. Tuk listrik mengatasinya dengan mengikat tuas MCB agar tidak turun. Analisislah tindakan tersebut dari aspek keselamatan!</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg33" value="A" class="form-radio"> <span>A. Solusi tepat karena MCB tidak perlu diganti</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg33" value="B" class="form-radio"> <span>B. Tindakan berbahaya karena menghilangkan fungsi proteksi, kabel dapat terbakar tanpa pemutusan otomatis</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg33" value="C" class="form-radio"> <span>C. Hemat biaya penggantian MCB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg33" value="D" class="form-radio"> <span>D. Meningkatkan umur MCB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg33" value="E" class="form-radio"> <span>E. Tidak berdampak pada instalasi</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>34. Sebuah rumah akan dipasang water heater 2000W pada tegangan 220V dengan kabel ditanam dalam pipa (metode B2). Tentukan kombinasi kabel dan MCB yang PALING TEPAT!</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg34" value="A" class="form-radio"> <span>A. Kabel 1,5 mm² + MCB 6A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg34" value="B" class="form-radio"> <span>B. Kabel 2,5 mm² + MCB 10A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg34" value="C" class="form-radio"> <span>C. Kabel 2,5 mm² + MCB 20A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg34" value="D" class="form-radio"> <span>D. Kabel 4 mm² + MCB 25A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg34" value="E" class="form-radio"> <span>E. Kabel 1,5 mm² + MCB 20A</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>35. ELCB/RCD di sebuah rumah sering trip tanpa alasan jelas. Langkah troubleshooting yang PALING TEPAT adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg35" value="A" class="form-radio"> <span>A. Mengganti ELCB dengan yang lebih besar ratingnya</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg35" value="B" class="form-radio"> <span>B. Melepas ELCB dari instalasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg35" value="C" class="form-radio"> <span>C. Mengidentifikasi sumber arus bocor dengan metode eliminasi per rangkaian cabang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg35" value="D" class="form-radio"> <span>D. Membiarkan saja karena ELCB memang sensitif</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg35" value="E" class="form-radio"> <span>E. Mengganti semua lampu dengan LED</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>36. Seorang teknisi menerima gambar kerja dengan simbol sakelar tukar, namun ia memasangnya sebagai sakelar tunggal. Dampak fungsional dari kesalahan ini adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg36" value="A" class="form-radio"> <span>A. Lampu menyala lebih terang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg36" value="B" class="form-radio"> <span>B. Lampu tidak dapat dikendalikan dari dua tempat sesuai desain</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg36" value="C" class="form-radio"> <span>C. MCB trip</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg36" value="D" class="form-radio"> <span>D. Konsumsi listrik meningkat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg36" value="E" class="form-radio"> <span>E. Lampu berkedip terus-menerus</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>37. Sebuah instalasi menggunakan kabel NYA di area outdoor tanpa pelindung conduit selama 2 tahun. Prediksi yang PALING MUNGKIN terjadi adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg37" value="A" class="form-radio"> <span>A. Kabel menjadi lebih awet</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg37" value="B" class="form-radio"> <span>B. Isolasi kabel getas, terkelupas, berpotensi hubung singkat dan kebakaran</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg37" value="C" class="form-radio"> <span>C. Konduktivitas kabel meningkat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg37" value="D" class="form-radio"> <span>D. Tidak ada perubahan signifikan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg37" value="E" class="form-radio"> <span>E. Tagihan listrik turun</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>38. Lampu di sebuah ruangan tidak menyala meskipun sakelar ON. Langkah troubleshooting PERTAMA yang paling logis adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg38" value="A" class="form-radio"> <span>A. Langsung membongkar seluruh instalasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg38" value="B" class="form-radio"> <span>B. Memeriksa apakah lampu rusak, lalu uji tegangan di fitting dengan test pen</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg38" value="C" class="form-radio"> <span>C. Mengganti semua kabel</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg38" value="D" class="form-radio"> <span>D. Menambah MCB baru</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg38" value="E" class="form-radio"> <span>E. Menurunkan tegangan PLN</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>39. Sebuah bengkel menggunakan MCB tipe D untuk rangkaian penerangan lampu LED. Evaluasi pemilihan ini!</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg39" value="A" class="form-radio"> <span>A. Pilihan tepat karena tipe D paling canggih</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg39" value="B" class="form-radio"> <span>B. Pilihan kurang tepat; untuk beban resistif seperti penerangan, MCB tipe B lebih sesuai dan lebih sensitif terhadap gangguan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg39" value="C" class="form-radio"> <span>C. MCB tipe D tidak akan bekerja sama sekali</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg39" value="D" class="form-radio"> <span>D. Lampu akan menyala lebih terang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg39" value="E" class="form-radio"> <span>E. Konsumsi listrik berkurang drastis</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="font-semibold mb-2"><span class="hots-badge text-white text-xs px-2 py-1 rounded mr-2">HOTS</span>40. Seorang siswa merancang instalasi penerangan ruang kelas dengan 6 titik lampu, 4 stop kontak, dan 2 sakelar tukar di ujung ruangan. Sintesis komponen pengaman yang PALING TEPAT untuk instalasi tersebut adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg40" value="A" class="form-radio"> <span>A. Cukup satu MCB 32A untuk semua rangkaian</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg40" value="B" class="form-radio"> <span>B. MCB utama + MCB cabang penerangan (6A) + MCB cabang stop kontak (16A) + ELCB 30mA untuk area basah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg40" value="C" class="form-radio"> <span>C. Hanya sekering 30A</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg40" value="D" class="form-radio"> <span>D. Tanpa pengaman karena beban kecil</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="pg40" value="E" class="form-radio"> <span>E. MCB 100A untuk seluruh instalasi</span></label>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!-- BAGIAN B: PILIHAN GANDA KOMPLEKS (30 SOAL) -->
+            <!-- ======================================================= -->
+            <section class="bg-white p-6 rounded-xl shadow-md border-t-8 border-purple-600">
+                <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+                    <h3 class="font-bold text-xl text-purple-900"><i class="fas fa-check-double mr-2"></i>BAGIAN B — Pilihan Ganda Kompleks (30 Soal × 1 Poin = 30)</h3>
+                    <span class="text-xs font-semibold bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Centang SEMUA jawaban benar</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4"><em>Setiap soal memiliki <strong>lebih dari satu jawaban benar</strong>. Centang semua pernyataan yang benar. Nilai penuh hanya jika semua jawaban benar dipilih tanpa kelebihan.</em></p>
+
+                <div class="space-y-4" id="pgk-questions">
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">41. Fungsi utama instalasi penerangan listrik adalah... <em>(pilih semua yang benar)</em></p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk41" value="A" class="form-checkbox"> <span>A. Memberikan penerangan yang cukup</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk41" value="B" class="form-checkbox"> <span>B. Menjamin keselamatan pengguna</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk41" value="C" class="form-checkbox"> <span>C. Mencapai efisiensi energi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk41" value="D" class="form-checkbox"> <span>D. Mendukung estetika tata cahaya</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk41" value="E" class="form-checkbox"> <span>E. Mengubah tegangan tinggi menjadi rendah</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">42. Komponen APD wajib saat bekerja dengan instalasi listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk42" value="A" class="form-checkbox"> <span>A. Helm safety</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk42" value="B" class="form-checkbox"> <span>B. Sepatu safety isolasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk42" value="C" class="form-checkbox"> <span>C. Sarung tangan isolasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk42" value="D" class="form-checkbox"> <span>D. Kacamata safety</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk42" value="E" class="form-checkbox"> <span>E. Dasi kupu-kupu</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">43. Bahaya listrik yang dapat terjadi pada instalasi penerangan meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk43" value="A" class="form-checkbox"> <span>A. Sengatan listrik (electric shock)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk43" value="B" class="form-checkbox"> <span>B. Hubung singkat (short circuit)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk43" value="C" class="form-checkbox"> <span>C. Arc flash (lengkungan api)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk43" value="D" class="form-checkbox"> <span>D. Kebakaran akibat kabel panas</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk43" value="E" class="form-checkbox"> <span>E. Pendinginan ruangan</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">44. Standar yang menjadi acuan instalasi listrik di Indonesia adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk44" value="A" class="form-checkbox"> <span>A. PUIL 2011 (SNI 0225:2011)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk44" value="B" class="form-checkbox"> <span>B. SNI IEC 60364</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk44" value="C" class="form-checkbox"> <span>C. UU No. 30/2009 tentang Ketenagalistrikan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk44" value="D" class="form-checkbox"> <span>D. IEC 60898 (standar MCB)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk44" value="E" class="form-checkbox"> <span>E. ISO 14000 (lingkungan)</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">45. Warna standar penghantar listrik menurut PUIL adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk45" value="A" class="form-checkbox"> <span>A. Fasa: Merah/Hitam/Coklat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk45" value="B" class="form-checkbox"> <span>B. Netral: Biru</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk45" value="C" class="form-checkbox"> <span>C. Pembumian: Hijau-Kuning belang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk45" value="D" class="form-checkbox"> <span>D. Fasa: Biru</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk45" value="E" class="form-checkbox"> <span>E. Netral: Hijau-Kuning</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">46. Karakteristik sistem satu fasa di Indonesia adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk46" value="A" class="form-checkbox"> <span>A. Menggunakan 1 penghantar fasa dan 1 netral</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk46" value="B" class="form-checkbox"> <span>B. Tegangan 220V AC, 50Hz</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk46" value="C" class="form-checkbox"> <span>C. Umum untuk rumah tinggal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk46" value="D" class="form-checkbox"> <span>D. Tegangan 380V</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk46" value="E" class="form-checkbox"> <span>E. Menggunakan 3 fasa</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">47. Jenis kabel yang umum digunakan dalam instalasi penerangan adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk47" value="A" class="form-checkbox"> <span>A. NYA</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk47" value="B" class="form-checkbox"> <span>B. NYM</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk47" value="C" class="form-checkbox"> <span>C. NYY</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk47" value="D" class="form-checkbox"> <span>D. NYAF</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk47" value="E" class="form-checkbox"> <span>E. Kabel UTP jaringan</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">48. Jenis sakelar yang digunakan dalam instalasi penerangan meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk48" value="A" class="form-checkbox"> <span>A. Sakelar tunggal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk48" value="B" class="form-checkbox"> <span>B. Sakelar seri</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk48" value="C" class="form-checkbox"> <span>C. Sakelar tukar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk48" value="D" class="form-checkbox"> <span>D. Sakelar silang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk48" value="E" class="form-checkbox"> <span>E. Sakelar MIDI</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">49. Jenis lampu yang digunakan dalam instalasi penerangan modern adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk49" value="A" class="form-checkbox"> <span>A. Lampu pijar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk49" value="B" class="form-checkbox"> <span>B. Lampu TL (fluorescent)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk49" value="C" class="form-checkbox"> <span>C. Lampu LED</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk49" value="D" class="form-checkbox"> <span>D. Lampu lilin</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk49" value="E" class="form-checkbox"> <span>E. Lampu minyak tanah</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">50. Fungsi pengaman listrik dalam instalasi penerangan meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk50" value="A" class="form-checkbox"> <span>A. Melindungi manusia dari sengatan listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk50" value="B" class="form-checkbox"> <span>B. Melindungi properti dari kebakaran</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk50" value="C" class="form-checkbox"> <span>C. Melindungi peralatan dari arus lebih</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk50" value="D" class="form-checkbox"> <span>D. Menghemat konsumsi listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk50" value="E" class="form-checkbox"> <span>E. Menambah tegangan listrik</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">51. Jenis pengaman listrik yang umum digunakan adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk51" value="A" class="form-checkbox"> <span>A. Sekering (fuse)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk51" value="B" class="form-checkbox"> <span>B. MCB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk51" value="C" class="form-checkbox"> <span>C. ELCB/RCD</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk51" value="D" class="form-checkbox"> <span>D. Sakelar biasa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk51" value="E" class="form-checkbox"> <span>E. Fitting lampu</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">52. Faktor yang mempengaruhi Kemampuan Hantar Arus (KHA) kabel adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk52" value="A" class="form-checkbox"> <span>A. Penampang penghantar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk52" value="B" class="form-checkbox"> <span>B. Metode pemasangan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk52" value="C" class="form-checkbox"> <span>C. Suhu lingkungan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk52" value="D" class="form-checkbox"> <span>D. Jumlah penghantar dalam pipa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk52" value="E" class="form-checkbox"> <span>E. Warna isolasi kabel</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">53. Penampang kabel standar yang umum digunakan dalam instalasi rumah tinggal adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk53" value="A" class="form-checkbox"> <span>A. 1,5 mm²</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk53" value="B" class="form-checkbox"> <span>B. 2,5 mm²</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk53" value="C" class="form-checkbox"> <span>C. 4,0 mm²</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk53" value="D" class="form-checkbox"> <span>D. 0,1 mm²</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk53" value="E" class="form-checkbox"> <span>E. 100 mm²</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">54. Fungsi gambar instalasi listrik meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk54" value="A" class="form-checkbox"> <span>A. Panduan pemasangan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk54" value="B" class="form-checkbox"> <span>B. Alat komunikasi antar pihak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk54" value="C" class="form-checkbox"> <span>C. Dasar perhitungan RAB</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk54" value="D" class="form-checkbox"> <span>D. Dokumentasi pemeliharaan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk54" value="E" class="form-checkbox"> <span>E. Hiasan dokumen proyek</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">55. Jenis diagram yang digunakan dalam instalasi listrik meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk55" value="A" class="form-checkbox"> <span>A. Diagram satu garis (SLD)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk55" value="B" class="form-checkbox"> <span>B. Diagram pengawatan (wiring diagram)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk55" value="C" class="form-checkbox"> <span>C. Gambar denah lokasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk55" value="D" class="form-checkbox"> <span>D. Diagram blok</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk55" value="E" class="form-checkbox"> <span>E. Diagram alir program komputer</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">56. Komponen minimal rangkaian 1 sakelar 1 lampu adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk56" value="A" class="form-checkbox"> <span>A. Sumber tegangan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk56" value="B" class="form-checkbox"> <span>B. Penghantar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk56" value="C" class="form-checkbox"> <span>C. Sakelar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk56" value="D" class="form-checkbox"> <span>D. Fitting dan lampu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk56" value="E" class="form-checkbox"> <span>E. Transformator step-up</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">57. Prinsip keselamatan dalam pemasangan sakelar penerangan adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk57" value="A" class="form-checkbox"> <span>A. Sakelar dipasang pada penghantar fasa</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk57" value="B" class="form-checkbox"> <span>B. Saat OFF, beban terisolasi dari tegangan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk57" value="C" class="form-checkbox"> <span>C. Netral langsung ke beban tanpa sakelar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk57" value="D" class="form-checkbox"> <span>D. Sakelar boleh dipasang di netral</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk57" value="E" class="form-checkbox"> <span>E. Fasa dan netral sama saja</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">58. Kesalahan umum dalam pemasangan instalasi penerangan meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk58" value="A" class="form-checkbox"> <span>A. Sakelar dipasang di netral</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk58" value="B" class="form-checkbox"> <span>B. Menggunakan kabel undersize</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk58" value="C" class="form-checkbox"> <span>C. Sambungan kabel tidak rapat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk58" value="D" class="form-checkbox"> <span>D. Tidak ada sistem pembumian</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk58" value="E" class="form-checkbox"> <span>E. Menggunakan kabel berwarna standar PUIL</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">59. Langkah troubleshooting saat lampu tidak menyala adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk59" value="A" class="form-checkbox"> <span>A. Periksa apakah lampu rusak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk59" value="B" class="form-checkbox"> <span>B. Uji tegangan di fitting dengan test pen</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk59" value="C" class="form-checkbox"> <span>C. Periksa MCB apakah trip</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk59" value="D" class="form-checkbox"> <span>D. Periksa kontinuitas sakelar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk59" value="E" class="form-checkbox"> <span>E. Langsung mengganti seluruh instalasi</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">60. Ruang lingkup pekerjaan instalasi penerangan meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk60" value="A" class="form-checkbox"> <span>A. Perencanaan (gambar kerja)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk60" value="B" class="form-checkbox"> <span>B. Pemasangan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk60" value="C" class="form-checkbox"> <span>C. Pengujian</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk60" value="D" class="form-checkbox"> <span>D. Pemeliharaan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk60" value="E" class="form-checkbox"> <span>E. Pembongkaran total tanpa alasan</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">61. Prosedur LOTO (Lock Out Tag Out) meliputi langkah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk61" value="A" class="form-checkbox"> <span>A. Identifikasi sumber energi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk61" value="B" class="form-checkbox"> <span>B. Matikan sumber listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk61" value="C" class="form-checkbox"> <span>C. Pasang gembok dan label</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk61" value="D" class="form-checkbox"> <span>D. Uji dengan test pen</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk61" value="E" class="form-checkbox"> <span>E. Langsung bekerja tanpa pengujian</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">62. Karakteristik MCB tipe B, C, dan D yang benar adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk62" value="A" class="form-checkbox"> <span>A. Tipe B: 3-5×In, untuk beban resistif</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk62" value="B" class="form-checkbox"> <span>B. Tipe C: 5-10×In, untuk beban induktif sedang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk62" value="C" class="form-checkbox"> <span>C. Tipe D: 10-20×In, untuk beban induktif berat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk62" value="D" class="form-checkbox"> <span>D. Tipe B cocok untuk penerangan rumah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk62" value="E" class="form-checkbox"> <span>E. Semua tipe memiliki karakteristik sama</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">63. Aksesoris pipa conduit meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk63" value="A" class="form-checkbox"> <span>A. Dop (end cap)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk63" value="B" class="form-checkbox"> <span>B. Sok (coupling)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk63" value="C" class="form-checkbox"> <span>C. Elbow (siku)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk63" value="D" class="form-checkbox"> <span>D. Tee (tiga arah)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk63" value="E" class="form-checkbox"> <span>E. Klem/sadel</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">64. Jenis fitting lampu yang umum digunakan adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk64" value="A" class="form-checkbox"> <span>A. E27 (ulir besar)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk64" value="B" class="form-checkbox"> <span>B. E14 (ulir kecil)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk64" value="C" class="form-checkbox"> <span>C. B22 (bayonet)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk64" value="D" class="form-checkbox"> <span>D. G13 (TL)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk64" value="E" class="form-checkbox"> <span>E. Fitting gas elpiji</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">65. Keuntungan lampu LED dibanding lampu pijar adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk65" value="A" class="form-checkbox"> <span>A. Efisiensi energi tinggi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk65" value="B" class="form-checkbox"> <span>B. Umur pakai panjang</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk65" value="C" class="form-checkbox"> <span>C. Tidak mengandung merkuri</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk65" value="D" class="form-checkbox"> <span>D. Panas yang dihasilkan rendah</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk65" value="E" class="form-checkbox"> <span>E. Harga beli paling murah</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">66. Prinsip P3K pada kecelakaan listrik meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk66" value="A" class="form-checkbox"> <span>A. Jangan sentuh korban langsung</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk66" value="B" class="form-checkbox"> <span>B. Putus sumber listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk66" value="C" class="form-checkbox"> <span>C. Gunakan bahan isolator untuk menjauhkan korban</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk66" value="D" class="form-checkbox"> <span>D. Periksa napas dan nadi, lakukan RJP jika perlu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk66" value="E" class="form-checkbox"> <span>E. Siram korban dengan air</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">67. Simbol listrik standar yang benar adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk67" value="A" class="form-checkbox"> <span>A. ⊗ = Lampu</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk67" value="B" class="form-checkbox"> <span>B. ◗ = Stop kontak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk67" value="C" class="form-checkbox"> <span>C. □ = Kotak sambung</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk67" value="D" class="form-checkbox"> <span>D. ⏚ = Grounding</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk67" value="E" class="form-checkbox"> <span>E. ★ = MCB</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">68. Syarat penghantar listrik yang baik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk68" value="A" class="form-checkbox"> <span>A. Konduktivitas tinggi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk68" value="B" class="form-checkbox"> <span>B. Kekuatan mekanis cukup</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk68" value="C" class="form-checkbox"> <span>C. Tahan korosi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk68" value="D" class="form-checkbox"> <span>D. Mudah disambung</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk68" value="E" class="form-checkbox"> <span>E. Isolator yang baik</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">69. Alat yang digunakan untuk menguji instalasi listrik meliputi...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk69" value="A" class="form-checkbox"> <span>A. Test pen</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk69" value="B" class="form-checkbox"> <span>B. Multimeter</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk69" value="C" class="form-checkbox"> <span>C. Megger (insulation tester)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk69" value="D" class="form-checkbox"> <span>D. Earth tester</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk69" value="E" class="form-checkbox"> <span>E. Termometer air</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                        <p class="font-semibold mb-2">70. Hal yang harus dilakukan sebelum memulai pekerjaan instalasi listrik adalah...</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk70" value="A" class="form-checkbox"> <span>A. Membaca gambar kerja</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk70" value="B" class="form-checkbox"> <span>B. Menggunakan APD lengkap</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk70" value="C" class="form-checkbox"> <span>C. Mematikan sumber listrik (LOTO)</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk70" value="D" class="form-checkbox"> <span>D. Menyiapkan alat dan bahan</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" name="pgk70" value="E" class="form-checkbox"> <span>E. Langsung bekerja tanpa persiapan</span></label>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!-- BAGIAN C: BENAR / SALAH (5 SOAL × 5 OPSI PERNYATAAN) -->
+            <!-- ======================================================= -->
+            <section class="bg-white p-6 rounded-xl shadow-md border-t-8 border-green-600">
+                <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+                    <h3 class="font-bold text-xl text-green-900"><i class="fas fa-check-circle mr-2"></i>BAGIAN C — Benar/Salah (5 Soal × 1 Poin = 5)</h3>
+                    <span class="text-xs font-semibold bg-green-100 text-green-800 px-3 py-1 rounded-full">Tentukan B/S tiap pernyataan</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4"><em>Untuk setiap pernyataan di bawah, tentukan apakah <strong>BENAR</strong> atau <strong>SALAH</strong>.</em></p>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <p class="font-semibold mb-3">71. Sakelar penerangan boleh dipasang pada penghantar netral asalkan lampu dapat menyala dan padam dengan baik.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs71" value="B" class="form-radio"> <span>BENAR</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs71" value="S" class="form-radio"> <span>SALAH</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <p class="font-semibold mb-3">72. Menurut PUIL, warna isolasi penghantar netral adalah biru dan pembumian adalah hijau-kuning belang.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs72" value="B" class="form-radio"> <span>BENAR</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs72" value="S" class="form-radio"> <span>SALAH</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <p class="font-semibold mb-3">73. Kabel jenis NYA boleh dipasang di area outdoor tanpa pelindung pipa conduit karena sudah tahan cuaca.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs73" value="B" class="form-radio"> <span>BENAR</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs73" value="S" class="form-radio"> <span>SALAH</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <p class="font-semibold mb-3">74. ELCB/RCD dengan sensitivitas 30 mA berfungsi melindungi manusia dari bahaya sengatan listrik.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs74" value="B" class="form-radio"> <span>BENAR</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs74" value="S" class="form-radio"> <span>SALAH</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                        <p class="font-semibold mb-3">75. Diagram satu garis (SLD) menunjukkan detail koneksi fisik antar komponen dengan warna kabel standar.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs75" value="B" class="form-radio"> <span>BENAR</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="bs75" value="S" class="form-radio"> <span>SALAH</span></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================= -->
+            <!-- BAGIAN D: MENJODOHKAN (5 SOAL × 5 OPSI) -->
+            <!-- ======================================================= -->
+            <section class="bg-white p-6 rounded-xl shadow-md border-t-8 border-orange-600">
+                <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+                    <h3 class="font-bold text-xl text-orange-900"><i class="fas fa-link mr-2"></i>BAGIAN D — Menjodohkan (5 Soal × 1 Poin = 5)</h3>
+                    <span class="text-xs font-semibold bg-orange-100 text-orange-800 px-3 py-1 rounded-full">Pasangkan konsep dengan definisi</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4"><em>Pasangkan setiap konsep pada kolom kiri dengan definisi yang tepat pada kolom kanan (pilih A–E).</em></p>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                        <p class="font-semibold mb-3">76. PUIL</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j76" value="A" class="form-radio"> <span>A. Persyaratan Umum Instalasi Listrik — standar nasional Indonesia</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j76" value="B" class="form-radio"> <span>B. Alat pemadam api ringan jenis CO2</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j76" value="C" class="form-radio"> <span>C. Kemampuan hantar arus kabel</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j76" value="D" class="form-radio"> <span>D. Prosedur pengamanan sumber energi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j76" value="E" class="form-radio"> <span>E. Simbol lampu pada gambar instalasi</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                        <p class="font-semibold mb-3">77. KHA</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j77" value="A" class="form-radio"> <span>A. Persyaratan Umum Instalasi Listrik</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j77" value="B" class="form-radio"> <span>B. Kemampuan Hantar Arus — arus maksimum yang dapat dialirkan kabel secara terus-menerus</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j77" value="C" class="form-radio"> <span>C. Alat pengaman arus bocor</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j77" value="D" class="form-radio"> <span>D. Diagram pengawatan instalasi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j77" value="E" class="form-radio"> <span>E. Jenis kabel tanah</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                        <p class="font-semibold mb-3">78. LOTO</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j78" value="A" class="form-radio"> <span>A. Jenis lampu hemat energi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j78" value="B" class="form-radio"> <span>B. Fitting lampu ulir besar</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j78" value="C" class="form-radio"> <span>C. Lock Out Tag Out — prosedur isolasi sumber energi</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j78" value="D" class="form-radio"> <span>D. Sakelar untuk kendali 3 tempat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j78" value="E" class="form-radio"> <span>E. Warna kabel netral</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                        <p class="font-semibold mb-3">79. ELCB/RCD</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j79" value="A" class="form-radio"> <span>A. Pengaman arus lebih berbasis bimetal</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j79" value="B" class="form-radio"> <span>B. Earth Leakage Circuit Breaker — pengaman arus bocor</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j79" value="C" class="form-radio"> <span>C. Kabel serabut fleksibel</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j79" value="D" class="form-radio"> <span>D. Simbol stop kontak</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j79" value="E" class="form-radio"> <span>E. Tegangan kerja 380V</span></label>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                        <p class="font-semibold mb-3">80. Sakelar Silang</p>
+                        <div class="space-y-1 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j80" value="A" class="form-radio"> <span>A. Sakelar untuk kendali 1 lampu dari 1 tempat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j80" value="B" class="form-radio"> <span>B. Sakelar untuk kendali 2 kelompok lampu dari 1 tempat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j80" value="C" class="form-radio"> <span>C. Sakelar untuk kendali 1 lampu dari 2 tempat</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j80" value="D" class="form-radio"> <span>D. Sakelar untuk kendali 1 lampu dari 3 tempat atau lebih</span></label>
+                            <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="j80" value="E" class="form-radio"> <span>E. Sakelar otomatis berbasis sensor cahaya</span></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hasil & Tombol Aksi -->
+            <section class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6 no-print">
+                <div id="hasilSkor" class="hidden fade-in">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Ujian Tengah Semester</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-4 text-sm">
+                        <div class="bg-blue-800 p-3 rounded-lg"><div class="text-xs opacity-80">PG (60)</div><div class="text-xl font-bold"><span id="skorPG">0</span></div></div>
+                        <div class="bg-purple-800 p-3 rounded-lg"><div class="text-xs opacity-80">PG Kompleks (30)</div><div class="text-xl font-bold"><span id="skorPGK">0</span></div></div>
+                        <div class="bg-green-800 p-3 rounded-lg"><div class="text-xs opacity-80">B/S (5)</div><div class="text-xl font-bold"><span id="skorBS">0</span></div></div>
+                        <div class="bg-orange-800 p-3 rounded-lg"><div class="text-xs opacity-80">Menjodohkan (5)</div><div class="text-xl font-bold"><span id="skorMJ">0</span></div></div>
+                    </div>
+                    <div class="text-5xl font-extrabold my-4 text-yellow-400">TOTAL: <span id="skorTotal">0</span> / 100</div>
+                    <p id="predikat" class="text-lg font-semibold"></p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button type="button" onclick="hitungSemua()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                        <i class="fas fa-calculator mr-2"></i> Kirim & Lihat Hasil
+                    </button>
+                    <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                        <i class="fas fa-file-pdf mr-2"></i> Unduh PDF
+                    </button>
+                    <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                    </button>
+                    <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                        <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                    </button>
+                </div>
+            </section>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+            <p class="text-xs mt-2 opacity-70">Ujian Tengah Semester — Materi Pertemuan 1–9</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ============ KUNCI JAWABAN ============
+        // PG (1 jawaban benar per soal)
+        const kunciPG = {
+            pg1:'A',pg2:'B',pg3:'C',pg4:'D',pg5:'B',pg6:'C',pg7:'A',pg8:'C',pg9:'D',pg10:'A',
+            pg11:'B',pg12:'A',pg13:'B',pg14:'C',pg15:'C',pg16:'C',pg17:'C',pg18:'B',pg19:'B',pg20:'A',
+            pg21:'C',pg22:'C',pg23:'C',pg24:'B',pg25:'A',pg26:'B',pg27:'C',pg28:'C',pg29:'B',pg30:'C',
+            pg31:'C',pg32:'B',pg33:'B',pg34:'C',pg35:'C',pg36:'B',pg37:'B',pg38:'B',pg39:'B',pg40:'B'
+        };
+
+        // PG Kompleks (semua jawaban benar harus dicentang)
+        const kunciPGK = {
+            pgk41:['A','B','C','D'], pgk42:['A','B','C','D'], pgk43:['A','B','C','D'],
+            pgk44:['A','B','C','D'], pgk45:['A','B','C'], pgk46:['A','B','C'],
+            pgk47:['A','B','C','D'], pgk48:['A','B','C','D'], pgk49:['A','B','C'],
+            pgk50:['A','B','C'], pgk51:['A','B','C'], pgk52:['A','B','C','D'],
+            pgk53:['A','B','C'], pgk54:['A','B','C','D'], pgk55:['A','B','C','D'],
+            pgk56:['A','B','C','D'], pgk57:['A','B','C'], pgk58:['A','B','C','D'],
+            pgk59:['A','B','C','D'], pgk60:['A','B','C','D'], pgk61:['A','B','C','D'],
+            pgk62:['A','B','C','D'], pgk63:['A','B','C','D','E'], pgk64:['A','B','C','D'],
+            pgk65:['A','B','C','D'], pgk66:['A','B','C','D'], pgk67:['A','B','C','D'],
+            pgk68:['A','B','C','D'], pgk69:['A','B','C','D'], pgk70:['A','B','C','D']
+        };
+
+        // Benar/Salah
+        const kunciBS = { bs71:'S', bs72:'B', bs73:'S', bs74:'B', bs75:'S' };
+
+        // Menjodohkan
+        const kunciMJ = { j76:'A', j77:'B', j78:'C', j79:'B', j80:'D' };
+
+        // ============ FUNGSI HITUNG ============
+        function hitungSemua() {
+            const form = document.getElementById('utsForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi data diri dan jawab SEMUA soal terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            // Hitung PG (40 soal × 1,5 = 60)
+            let skorPG = 0;
+            for (let i = 1; i <= 40; i++) {
+                const j = form.querySelector(`input[name="pg${i}"]:checked`);
+                if (j && j.value === kunciPG[`pg${i}`]) skorPG += 1.5;
+            }
+
+            // Hitung PG Kompleks (30 soal × 1 = 30)
+            let skorPGK = 0;
+            for (let i = 41; i <= 70; i++) {
+                const checks = form.querySelectorAll(`input[name="pgk${i}"]:checked`);
+                const dipilih = Array.from(checks).map(c => c.value).sort();
+                const benar = kunciPGK[`pgk${i}`].slice().sort();
+                if (dipilih.length === benar.length && dipilih.every((v, idx) => v === benar[idx])) {
+                    skorPGK += 1;
+                }
+            }
+
+            // Hitung B/S (5 soal × 1 = 5)
+            let skorBS = 0;
+            for (let i = 71; i <= 75; i++) {
+                const j = form.querySelector(`input[name="bs${i}"]:checked`);
+                if (j && j.value === kunciBS[`bs${i}`]) skorBS += 1;
+            }
+
+            // Hitung Menjodohkan (5 soal × 1 = 5)
+            let skorMJ = 0;
+            for (let i = 76; i <= 80; i++) {
+                const j = form.querySelector(`input[name="j${i}"]:checked`);
+                if (j && j.value === kunciMJ[`j${i}`]) skorMJ += 1;
+            }
+
+            const total = skorPG + skorPGK + skorBS + skorMJ;
+
+            // Tampilkan hasil
+            document.getElementById('skorPG').innerText = skorPG.toFixed(1);
+            document.getElementById('skorPGK').innerText = skorPGK;
+            document.getElementById('skorBS').innerText = skorBS;
+            document.getElementById('skorMJ').innerText = skorMJ;
+            document.getElementById('skorTotal').innerText = total.toFixed(1);
+
+            let predikat = '';
+            if (total >= 90) predikat = '🏆 A (Sangat Baik)';
+            else if (total >= 80) predikat = '🥇 B (Baik)';
+            else if (total >= 70) predikat = '🥈 C (Cukup)';
+            else if (total >= 60) predikat = '🥉 D (Kurang)';
+            else predikat = '⚠️ E (Perlu Remedial)';
+            document.getElementById('predikat').innerText = predikat;
+
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            alert(`✅ Perhitungan Selesai!\n\nPG: ${skorPG.toFixed(1)}/60\nPG Kompleks: ${skorPGK}/30\nB/S: ${skorBS}/5\nMenjodohkan: ${skorMJ}/5\nTOTAL: ${total.toFixed(1)}/100\n\nPredikat: ${predikat}`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('utsForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const total = document.getElementById('skorTotal').innerText;
+
+            if (total === '0' || !total) {
+                alert('⚠️ Silakan klik "Kirim & Lihat Hasil" terlebih dahulu!');
+                return;
+            }
+
+            const subject = `Hasil UTS Instalasi Penerangan - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut hasil UTS Instalasi Penerangan Listrik saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\n\nRincian Nilai:\n- Pilihan Ganda (40 soal): ${document.getElementById('skorPG').innerText}/60\n- PG Kompleks (30 soal): ${document.getElementById('skorPGK').innerText}/30\n- Benar/Salah (5 soal): ${document.getElementById('skorBS').innerText}/5\n- Menjodohkan (5 soal): ${document.getElementById('skorMJ').innerText}/5\n\nTOTAL: ${total}/100\nPredikat: ${document.getElementById('predikat').innerText}\n\nTerima kasih.`;
+
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Semua jawaban akan dihapus. Yakin ingin mulai ulang?')) {
+                document.getElementById('utsForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
