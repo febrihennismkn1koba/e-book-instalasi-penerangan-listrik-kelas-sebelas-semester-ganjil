@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 12: Rangkaian Penerangan dengan Sakelar Seri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .circuit-box { font-family: monospace; font-size: 0.85rem; line-height: 1.6; background: #f8fafc; border: 2px solid #1e40af; border-radius: 0.5rem; padding: 1rem; white-space: pre; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 12</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Rangkaian Penerangan dengan Sakelar Seri</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mempelajari pengertian, prinsip kerja, rangkaian dua kelompok lampu, diagram pengawatan, serta teknik pemasangan dan pengujian instalasi penerangan dengan sakelar seri (double switch).
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="11.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 11</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Dalam banyak aplikasi instalasi penerangan rumah tinggal, seringkali diperlukan pengendalian dua kelompok lampu dari satu titik sakelar. Contoh paling umum adalah ruang tamu yang memiliki lampu utama dan lampu aksen (dekoratif), atau kamar tidur dengan lampu plafon dan lampu baca. Untuk kebutuhan ini, digunakan <strong>sakelar seri (double switch)</strong> — sebuah sakelar yang mampu mengendalikan dua kelompok lampu secara independen dari satu tempat.
+            </p>
+            <p class="mb-4 text-justify">
+                Sakelar seri merupakan pengembangan logis dari sakelar tunggal yang telah dipelajari pada pertemuan sebelumnya. Jika sakelar tunggal memiliki 2 terminal (1 masuk, 1 keluar), maka sakelar seri memiliki <strong>3 terminal</strong> (1 common/masuk, 2 keluar). Pemahaman yang matang tentang sakelar tunggal menjadi prasyarat mutlak sebelum mempelajari sakelar seri, karena prinsip dasarnya sama — hanya kompleksitasnya yang meningkat.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari pengertian sakelar seri, prinsip kerjanya dalam mengendalikan dua kelompok lampu, diagram pengawatan yang benar, serta teknik pemasangan dan pengujian yang sesuai standar PUIL. Penguasaan materi ini menjadi jembatan penting sebelum melangkah ke sakelar tukar dan sakelar silang yang lebih kompleks.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-toggle-on mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Sakelar Seri (Double Switch):</strong> Sakelar dengan 3 terminal (1 common, 2 keluar) yang mengendalikan dua kelompok lampu secara independen dari satu tempat.</li>
+                    <li><strong>Prinsip Kerja:</strong> Satu tuas dengan dua posisi (atau dua tuas dalam satu unit) yang memutus/menyambung dua jalur fasa terpisah.</li>
+                    <li><strong>Rangkaian Paralel:</strong> Kedua kelompok lampu dihubungkan secara paralel terhadap sumber tegangan.</li>
+                    <li><strong>Identifikasi Terminal:</strong> Terminal common (L) = masuk dari fasa; L1 dan L2 = keluar ke masing-masing kelompok lampu.</li>
+                    <li><strong>Pengujian:</strong> Uji kontinuitas, polaritas, dan fungsi setiap kelompok lampu secara terpisah.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Rangkaian Sakelar Seri — Prinsip dan Pemasangan</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk memahami cara kerja dan teknik pemasangan sakelar seri untuk mengendalikan dua kelompok lampu.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Sakelar Seri</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 12: Hanya Satu Lampu yang Menyala</h3>
+            <p class="text-gray-700 mb-4">
+                Seorang siswa praktik memasang rangkaian sakelar seri untuk mengendalikan dua kelompok lampu di ruang tamu: lampu utama (4 titik) dan lampu aksen (2 titik). Setelah pemasangan selesai, ia menyalakan MCB dan menguji rangkaian. Hasilnya: tuas kiri berfungsi normal (lampu utama menyala/mati), tetapi tuas kanan tidak memengaruhi lampu aksen — lampu aksen tetap menyala terus meskipun tuas kanan di posisi OFF. Setelah diperiksa, ternyata siswa tersebut <strong>menyambungkan netral langsung ke lampu aksen tanpa melalui terminal L2 sakelar</strong>, sehingga lampu aksen selalu mendapat tegangan penuh tanpa kendali.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kesalahan ini terjadi karena <strong>ketidaktelitian dalam membaca diagram pengawatan</strong> dan identifikasi terminal. Setiap kelompok lampu harus memiliki jalur fasa sendiri yang melalui terminal keluar sakelar (L1 atau L2). Netral boleh digabung (paralel), tetapi fasa harus terpisah dan terkendali. <strong>Prinsip mutlak:</strong> Setiap beban yang ingin dikendalikan harus diputus fasanya melalui sakelar.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">12.1 Landasan Teoretis Sakelar Seri</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">12.1.1 Konstruksi Sakelar Seri</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Sakelar seri (double switch) memiliki konstruksi yang lebih kompleks dibanding sakelar tunggal:
+                        <br><br>
+                        • <strong>Dua tuas (toggle)</strong> dalam satu frame, atau satu tuas dengan dua posisi<br>
+                        • <strong>Tiga terminal sekrup:</strong> 1 common (L) dan 2 keluar (L1, L2)<br>
+                        • <strong>Dua mekanisme kontak internal</strong> yang bekerja independen<br>
+                        • <strong>Bodi isolator</strong> dari bahan tahan panas (bakelit/PC)<br>
+                        • <strong>Frame/plat</strong> untuk pemasangan di dinding (1 module atau 2 module)
+                        <br><br>
+                        Rating umum: 10A/250V AC per tuas, standar DIN.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">12.1.2 Standar PUIL untuk Sakelar Seri</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Pasal 5.5.2:</strong> Sakelar harus memutus penghantar fasa (bukan netral) — berlaku untuk semua terminal keluar.</li>
+                        <li><strong>Pasal 5.5.3:</strong> Ketinggian pemasangan 120-150 cm dari lantai.</li>
+                        <li><strong>Pasal 5.5.5:</strong> Sakelar di area basah harus IP44 minimal.</li>
+                        <li><strong>Pasal 5.5.7:</strong> Terminal harus dapat diakses untuk pemeliharaan.</li>
+                        <li><strong>Pasal 5.5.10:</strong> Setiap kelompok beban harus memiliki pengaman (MCB) yang sesuai dengan KHA kabel.</li>
+                        <li><strong>Pasal 5.5.12:</strong> Sambungan pada terminal common harus mampu menahan arus total kedua kelompok lampu.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">12.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Pengertian Sakelar Seri -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-info-circle mr-2"></i>1. Pengertian Sakelar Seri</h3>
+                    <p class="text-gray-700 mb-3">
+                        <strong>Sakelar seri</strong> (disebut juga <em>double switch</em> atau <em>sakelar deret</em>) adalah jenis sakelar yang memiliki dua mekanisme pemutus dalam satu unit, sehingga mampu mengendalikan <strong>dua kelompok lampu secara independen</strong> dari satu titik pemasangan.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-check-circle mr-2"></i>Ciri-ciri Sakelar Seri</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Memiliki <strong>3 terminal</strong>: 1 common (L), 2 keluar (L1, L2)</li>
+                                <li>Memiliki <strong>2 tuas</strong> atau 1 tuas dengan 2 posisi</li>
+                                <li>Setiap tuas mengendalikan 1 kelompok lampu</li>
+                                <li>Ukuran fisik sama dengan sakelar tunggal (1 module)</li>
+                                <li>Simbol gambar: dua garis putus sejajar</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Aplikasi Khas</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Ruang tamu: lampu utama + lampu aksen</li>
+                                <li>Kamar tidur: lampu plafon + lampu baca</li>
+                                <li>Dapur: lampu utama + lampu exhaust fan</li>
+                                <li>Teras: lampu depan + lampu samping</li>
+                                <li>Gudang: lampu umum + lampu kerja</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Perbedaan dengan Sakelar Tunggal:</strong> Sakelar tunggal hanya memiliki 2 terminal (1 masuk, 1 keluar) dan mengendalikan 1 kelompok lampu. Sakelar seri memiliki 3 terminal (1 masuk, 2 keluar) dan mengendalikan 2 kelompok lampu secara independen.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Prinsip Kerja -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-cogs mr-2"></i>2. Prinsip Kerja Sakelar Seri</h3>
+                    <p class="text-gray-700 mb-3">
+                        Sakelar seri bekerja berdasarkan prinsip <strong>pembagian arus fasa ke dua jalur terpisah</strong>. Arus dari sumber (fasa) masuk ke terminal common (L), kemudian dapat dialirkan ke terminal L1 atau L2 (atau keduanya) tergantung posisi tuas.
+                    </p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   PRINSIP KERJA SAKELAR SERI                                │
+└─────────────────────────────────────────────────────────────┘
+
+   Terminal Sakelar Seri (tampak belakang):
+   
+           ┌─────────────────────┐
+           │   SAKELAR SERI      │
+           │                     │
+    L1 ●───┤  (keluar grup 1)    │
+           │                     │
+    L2 ●───┤  (keluar grup 2)    │
+           │                     │
+     L ●───┤  (common/masuk)     │
+           └─────────────────────┘
+   
+   L  = Terminal common (masuk dari fasa sumber)
+   L1 = Terminal keluar 1 (ke kelompok lampu 1)
+   L2 = Terminal keluar 2 (ke kelompok lampu 2)
+
+   POSISI TUAS:
+   ┌──────────┬────────────┬────────────┐
+   │ Tuas 1   │ Tuas 2     │ Kondisi    │
+   ├──────────┼────────────┼────────────┤
+   │ OFF      │ OFF        │ Semua mati │
+   │ ON       │ OFF        │ Grup 1 ON  │
+   │ OFF      │ ON         │ Grup 2 ON  │
+   │ ON       │ ON         │ Semua ON   │
+   └──────────┴────────────┴────────────┘
+                    </div>
+
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-toggle-on mr-2"></i>Alur Arus Saat ON</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Arus dari PLN → MCB → terminal L (common)</li>
+                                <li>Tuas ON → kontak internal menghubungkan L ke L1 (atau L2)</li>
+                                <li>Arus mengalir melalui kabel balik ke fitting lampu</li>
+                                <li>Lampu menyala</li>
+                                <li>Arus kembali ke sumber via netral (paralel)</li>
+                            </ol>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-toggle-off mr-2"></i>Alur Arus Saat OFF</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Tuas OFF → kontak internal terbuka</li>
+                                <li>Jalur dari L ke L1 (atau L2) terputus</li>
+                                <li>Tidak ada arus yang mengalir ke fitting</li>
+                                <li>Lampu padam</li>
+                                <li>Fitting aman dari tegangan (karena fasa terputus)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Rangkaian Dua Kelompok Lampu -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-project-diagram mr-2"></i>3. Rangkaian Dua Kelompok Lampu</h3>
+                    <p class="text-gray-700 mb-3">
+                        Rangkaian sakelar seri pada dasarnya adalah <strong>dua rangkaian sakelar tunggal yang digabungkan</strong> dengan satu sumber fasa bersama. Kedua kelompok lampu dihubungkan secara <strong>paralel</strong> terhadap sumber tegangan.
+                    </p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   RANGKAIAN DUA KELOMPOK LAMPU DENGAN SAKELAR SERI         │
+└─────────────────────────────────────────────────────────────┘
+
+   [PLN 220V]
+        │
+   [MCB 10A/16A]
+        │
+        ├──── FASA (Merah) ─────────────────┐
+        │                                    │
+        │                               [Terminal L]
+        │                                    │
+        │                         ┌──────────┴──────────┐
+        │                         │   SAKELAR SERI      │
+        │                         │                     │
+        │                         │  [L1]──┐   [L2]──┐  │
+        │                         └────────┼─────────┼──┘
+        │                                  │         │
+        │                           (Merah)│  (Merah)│
+        │                                  ▼         ▼
+        │                            ┌──────────┐ ┌──────────┐
+        │                            │ FITTING  │ │ FITTING  │
+        │                            │ GRUP 1   │ │ GRUP 2   │
+        │                            │ (Lampu)  │ │ (Lampu)  │
+        │                            └────┬─────┘ └────┬─────┘
+        │                                 │            │
+        ├──── NETRAL (Biru) ──────────────┴────────────┘
+        │                                 (PARALEL)
+        │
+   ─────┴──────────────────────────────────────────────────────
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Karakteristik Rangkaian Paralel</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Tegangan:</strong> Setiap kelompok lampu mendapat tegangan penuh 220V</li>
+                            <li><strong>Arus:</strong> Arus total = arus grup 1 + arus grup 2</li>
+                            <li><strong>Kemandirian:</strong> Jika satu lampu mati, grup lain tetap menyala</li>
+                            <li><strong>Kontrol independen:</strong> Setiap grup dapat dinyalakan/dimatikan terpisah</li>
+                            <li><strong>Penampang kabel:</strong> Terminal common harus menanggung arus total kedua grup</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-calculator mr-2"></i>Contoh Perhitungan Beban</h4>
+                        <p class="text-sm text-gray-700">
+                            <strong>Kasus:</strong> Grup 1 = 4 lampu LED 10W, Grup 2 = 2 lampu LED 15W. Tegangan 220V.
+                            <br><br>
+                            <strong>Penyelesaian:</strong><br>
+                            • Daya total = (4 × 10) + (2 × 15) = 40 + 30 = <strong>70 Watt</strong><br>
+                            • Arus total = P/V = 70/220 = <strong>0.32 A</strong><br>
+                            • Arus grup 1 = 40/220 = <strong>0.18 A</strong><br>
+                            • Arus grup 2 = 30/220 = <strong>0.14 A</strong><br>
+                            • Kabel yang digunakan: NYA/NYM 1.5 mm² (KHA ±17.5A) sudah sangat memadai<br>
+                            • MCB: 6A atau 10A tipe B sudah cukup
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Diagram Pengawatan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-drafting-compass mr-2"></i>4. Diagram Pengawatan (Wiring Diagram)</h3>
+                    <p class="text-gray-700 mb-3">
+                        Diagram pengawatan menunjukkan detail koneksi fisik antar komponen dengan warna kabel standar PUIL. Diagram ini menjadi panduan langsung saat pemasangan.
+                    </p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   DIAGRAM PENGAWATAN: Sakelar Seri — 2 Kelompok Lampu      │
+└─────────────────────────────────────────────────────────────┘
+
+   Sumber PLN (dari MCB)
+   ┌──────┐
+   │ L ●──┼──── (MERAH) ──────┐
+   │      │                    │
+   │ N ●──┼──── (BIRU) ───┐   │
+   │      │                │   │
+   └──────┘                │   │
+                           │   │
+                      [Terminal L - COMMON]
+                           │
+                ┌──────────┴──────────┐
+                │   SAKELAR SERI      │
+                │                     │
+                │  [L1]──┐   [L2]──┐  │
+                └────────┼─────────┼──┘
+                         │         │
+                  (MERAH)│  (MERAH)│
+                         ▼         ▼
+                  ┌──────────┐ ┌──────────┐
+                  │ FITTING  │ │ FITTING  │
+                  │ GRUP 1   │ │ GRUP 2   │
+                  │  ●    ●  │ │  ●    ●  │
+                  │  │    │  │ │  │    │  │
+                  │  │    └──┼─┼──┘    │  │
+                  │  │       │ │       │  │
+                  │  │       │ │       │  │
+                  └──┼───────┼─┼───────┼──┘
+                     │       │ │       │
+                     └───────┴─┴───────┘
+                             │
+                        (BIRU - NETRAL)
+                             │
+                             ▼
+                     Kembali ke sumber N
+
+   KETERANGAN WARNA:
+   🔴 MERAH   = Fasa (dari MCB → sakelar → fitting)
+   🔵 BIRU    = Netral (langsung ke semua fitting, paralel)
+   🟢🟡 HIJAU-KUNING = Ground (jika diperlukan)
+                    </div>
+
+                    <div class="mt-4 grid md:grid-cols-3 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-route mr-2"></i>Jalur Fasa</h4>
+                            <ol class="list-decimal list-inside text-xs text-gray-700 space-y-1">
+                                <li>Sumber L → MCB</li>
+                                <li>MCB → Terminal L (common) sakelar</li>
+                                <li>Terminal L1 → fitting grup 1</li>
+                                <li>Terminal L2 → fitting grup 2</li>
+                            </ol>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-route mr-2"></i>Jalur Netral</h4>
+                            <ol class="list-decimal list-inside text-xs text-gray-700 space-y-1">
+                                <li>Sumber N → langsung ke fitting grup 1</li>
+                                <li>Sumber N → langsung ke fitting grup 2</li>
+                                <li>Kedua fitting terhubung paralel</li>
+                                <li>TIDAK melalui sakelar</li>
+                            </ol>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>Aturan Penting</h4>
+                            <ul class="list-disc list-inside text-xs text-gray-700 space-y-1">
+                                <li>Fasa WAJIB melalui sakelar</li>
+                                <li>Netral TIDAK melalui sakelar</li>
+                                <li>Terminal common menanggung arus total</li>
+                                <li>Gunakan warna kabel standar PUIL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Teknik Pemasangan dan Pengujian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-tools mr-2"></i>5. Teknik Pemasangan dan Pengujian</h3>
+                    
+                    <h4 class="font-bold text-gray-800 mb-3 mt-2"><i class="fas fa-clipboard-list mr-2"></i>A. Prosedur Pemasangan</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Persiapan Alat dan Bahan</h5>
+                                <p class="text-sm text-gray-700">Siapkan: obeng plus/min, test pen, tang kombinasi, cutter, sakelar seri, kabel NYA/NYM 1.5 mm² (merah untuk fasa & balik, biru untuk netral), kotak doos, fitting × 2, lampu × 2 kelompok.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Matikan Sumber Listrik (LOTO)</h5>
+                                <p class="text-sm text-gray-700">Matikan MCB utama, kunci dengan gembok, beri label. Verifikasi dengan test pen bahwa semua penghantar tidak bertegangan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Kotak Doos dan Fitting</h5>
+                                <p class="text-sm text-gray-700">Tanam/pasang kotak doos untuk sakelar. Pasang kedua fitting lampu di posisi yang telah ditentukan (plafon/dinding).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Tarik Kabel Sesuai Diagram</h5>
+                                <p class="text-sm text-gray-700">Tarik kabel fasa (merah) dari MCB ke terminal L sakelar. Tarik 2 kabel balik (merah) dari L1 dan L2 ke fitting masing-masing. Tarik kabel netral (biru) dari MCB ke kedua fitting (paralel).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Identifikasi Terminal Sakelar</h5>
+                                <p class="text-sm text-gray-700">Periksa markings pada sakelar seri. Biasanya: <strong>L</strong> (atau tanda panah masuk) = common; <strong>L1</strong> (atau angka 1) = keluar grup 1; <strong>L2</strong> (atau angka 2) = keluar grup 2. Jika tidak jelas, gunakan multimeter untuk mengidentifikasi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Sambungkan Kabel ke Terminal</h5>
+                                <p class="text-sm text-gray-700">Kupas isolasi ±10-15 mm. Sambungkan kabel fasa ke terminal L, kabel balik grup 1 ke L1, kabel balik grup 2 ke L2. Kencangkan sekrup terminal dengan kuat. Lakukan pull test pada setiap sambungan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">7</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Sambung Netral ke Fitting (Paralel)</h5>
+                                <p class="text-sm text-gray-700">Hubungkan kabel netral (biru) dari MCB ke terminal netral fitting grup 1, lalu sambungkan dari fitting 1 ke fitting 2 (paralel). Gunakan terminal box jika diperlukan percabangan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">8</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Sakelar ke Kotak dan Tutup</h5>
+                                <p class="text-sm text-gray-700">Masukkan sakelar ke kotak doos, kencangkan dengan sekrup/kaki katak. Pasang cover sakelar. Pastikan kedua tuas dapat bergerak bebas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-3 mt-6"><i class="fas fa-clipboard-check mr-2"></i>B. Prosedur Pengujian</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Pemeriksaan Visual</h5>
+                                <p class="text-sm text-gray-700">Periksa kerapian pemasangan, tidak ada konduktor telanjang, isolasi kabel utuh, warna kabel sesuai standar, sakelar terpasang rata dan kuat.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Kontinuitas (Sebelum Bertegangan)</h5>
+                                <p class="text-sm text-gray-700">Gunakan multimeter mode Ohm/continuity. Uji: (a) fasa dari MCB ke terminal L sakelar — harus terhubung; (b) L1 ke fitting grup 1 — harus terhubung; (c) L2 ke fitting grup 2 — harus terhubung; (d) netral ke kedua fitting — harus terhubung; (e) TIDAK ada short antara fasa-netral (∞ Ω).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi Tuas 1 (Grup 1)</h5>
+                                <p class="text-sm text-gray-700">Nyalakan MCB. Operasikan tuas 1 ON → lampu grup 1 harus menyala, grup 2 tetap mati. Tuas 1 OFF → grup 1 padam. Ulangi beberapa kali untuk konsistensi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi Tuas 2 (Grup 2)</h5>
+                                <p class="text-sm text-gray-700">Operasikan tuas 2 ON → lampu grup 2 harus menyala, grup 1 tetap mati. Tuas 2 OFF → grup 2 padam. Pastikan kedua tuas bekerja independen.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Kombinasi Kedua Tuas</h5>
+                                <p class="text-sm text-gray-700">Uji 4 kondisi: (1) kedua OFF = semua mati; (2) tuas 1 ON, tuas 2 OFF = hanya grup 1 nyala; (3) tuas 1 OFF, tuas 2 ON = hanya grup 2 nyala; (4) kedua ON = semua nyala. Pastikan semua kombinasi berfungsi normal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Polaritas dan Keselamatan</h5>
+                                <p class="text-sm text-gray-700">Gunakan test pen. Verifikasi: saat tuas OFF, fitting tidak bertegangan (test pen tidak menyala di kontak tengah fitting). Pastikan fasa terputus sempurna oleh sakelar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <p class="text-sm text-gray-700"><strong>⚠️ Peringatan:</strong> Jangan pernah menyambungkan netral ke terminal sakelar! Sakelar seri hanya memutus/menyambung fasa. Jika netral yang diputus, fitting akan tetap bertegangan saat tuas OFF — sangat berbahaya.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Identifikasi terminal common (L) dengan cermat sebelum menyambung — biasanya ditandai dengan warna berbeda atau simbol panah.</li>
+                    <li>Gunakan kabel dengan warna berbeda untuk kabel balik grup 1 dan grup 2 (misalnya merah dan hitam) agar mudah diidentifikasi.</li>
+                    <li>Pastikan terminal common mampu menahan arus total kedua grup — gunakan penampang kabel yang memadai.</li>
+                    <li>Lakukan uji fungsi setiap tuas secara terpisah sebelum uji kombinasi.</li>
+                    <li>Dokumentasikan diagram pengawatan yang telah dipasang untuk pemeliharaan di masa depan.</li>
+                    <li>Gunakan terminal box (doos percabangan) jika diperlukan percabangan netral ke banyak fitting.</li>
+                    <li>Selalu lakukan pull test pada setiap sambungan terminal.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Salah mengidentifikasi terminal common (L) dengan terminal keluar (L1/L2) → kedua grup menyala bersamaan atau tidak terkendali.</li>
+                    <li>Menyambungkan netral ke terminal sakelar → fitting tetap bertegangan saat OFF (sangat berbahaya).</li>
+                    <li>Tidak menyambungkan salah satu kabel balik ke terminal keluar → satu grup lampu tidak terkendali.</li>
+                    <li>Menggunakan penampang kabel terlalu kecil pada terminal common → kabel panas karena menanggung arus total.</li>
+                    <li>Sambungan longgar di terminal → panas berlebih → risiko kebakaran.</li>
+                    <li>Tidak melakukan uji kontinuitas sebelum menyalakan MCB.</li>
+                    <li>Mencampuradukkan warna kabel → menyulitkan pemeliharaan.</li>
+                    <li>Memasang sakelar seri di area basah tanpa proteksi IP44.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Sakelar seri (double switch) adalah komponen pengendali yang mampu mengendalikan dua kelompok lampu secara independen dari satu titik. Dengan 3 terminal (1 common/L, 2 keluar/L1 dan L2), sakelar seri bekerja berdasarkan prinsip pembagian arus fasa ke dua jalur terpisah yang masing-masing dapat diputus/menyambung melalui tuas. Kedua kelompok lampu dihubungkan secara paralel terhadap sumber tegangan, sehingga setiap grup mendapat tegangan penuh 220V dan dapat dikendalikan secara mandiri. Diagram pengawatan menunjukkan bahwa fasa dari MCB masuk ke terminal common, kemudian keluar melalui L1 dan L2 ke masing-masing fitting, sementara netral langsung dihubungkan paralel ke semua fitting. Pemasangan yang benar mengikuti prosedur 8 langkah: persiapan, LOTO, pasang doos & fitting, tarik kabel, identifikasi terminal, sambung ke sakelar, sambung netral paralel, dan pasang cover. Pengujian meliputi pemeriksaan visual, uji kontinuitas, uji fungsi tuas 1, uji fungsi tuas 2, uji kombinasi, dan uji polaritas. Penguasaan sakelar seri menjadi fondasi penting sebelum mempelajari sakelar tukar dan silang pada pertemuan berikutnya.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>PT Brodo Surya Alam Tbk. (2020). <em>Katalog Komponen Instalasi Listrik — Sakelar dan Stop Kontak</em>.</li>
+                <li>IEC. (2015). <em>IEC 60669-1: Switches for household and similar fixed-electrical installations</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="11.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 11</a>
+            <a href="13.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 13: Sakelar Tukar <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 12 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 12</h2>
+                <p class="text-gray-600 mt-2">Rangkaian Penerangan dengan Sakelar Seri</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Pengertian sakelar seri (double switch) yang paling tepat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Sakelar yang mengendalikan satu lampu dari dua tempat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Sakelar dengan dua mekanisme pemutus dalam satu unit yang mampu mengendalikan dua kelompok lampu secara independen dari satu titik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Sakelar yang hanya memutus netral</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Sakelar yang digunakan untuk mengendalikan motor listrik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="E" class="form-radio text-blue-600"> <span>E. Sakelar yang memiliki 4 terminal untuk 4 lampu</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Jumlah terminal yang dimiliki sakelar seri adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. 1 terminal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. 2 terminal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. 3 terminal (1 common, 2 keluar)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. 4 terminal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="E" class="form-radio text-blue-600"> <span>E. 5 terminal</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Fungsi terminal common (L) pada sakelar seri adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Menghubungkan ke lampu langsung</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Sebagai terminal masuk dari penghantar fasa sumber</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Sebagai terminal netral</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Sebagai terminal pembumian</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="E" class="form-radio text-blue-600"> <span>E. Sebagai terminal cadangan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Kedua kelompok lampu pada rangkaian sakelar seri dihubungkan secara...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Seri terhadap sumber tegangan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Paralel terhadap sumber tegangan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. Kombinasi seri-paralel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Tidak terhubung sama sekali</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="E" class="form-radio text-blue-600"> <span>E. Melalui trafo step-down</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Warna isolasi kabel yang digunakan untuk penghantar balik dari terminal L1/L2 sakelar ke fitting lampu adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Biru</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Hijau-kuning</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Merah, hitam, atau coklat (warna fasa)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Putih</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="E" class="form-radio text-blue-600"> <span>E. Bebas, tidak ada ketentuan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Berdasarkan studi kasus 12, penyebab lampu aksen tetap menyala meskipun tuas kanan OFF adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Lampu LED rusak</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. MCB terlalu besar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Netral disambungkan langsung ke lampu aksen tanpa melalui terminal L2 sakelar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Fitting lampu rusak</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="E" class="form-radio text-blue-600"> <span>E. Tegangan PLN terlalu tinggi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Jika grup 1 terdiri dari 4 lampu LED 10W dan grup 2 terdiri dari 2 lampu LED 15W, maka arus total yang mengalir melalui terminal common sakelar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. 0.14 A</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. 0.18 A</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. 0.32 A</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. 1.5 A</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="E" class="form-radio text-blue-600"> <span>E. 10 A</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Langkah pengujian yang dilakukan SETELAH pemasangan selesai dan SEBELUM menyalakan MCB adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Uji fungsi tuas 1</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. Uji kombinasi kedua tuas</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Uji kontinuitas dengan multimeter</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Uji polaritas dengan test pen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="E" class="form-radio text-blue-600"> <span>E. Uji isolasi dengan Megger</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Perbedaan utama antara sakelar tunggal dan sakelar seri adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Sakelar tunggal lebih mahal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Sakelar tunggal memiliki 2 terminal dan mengendalikan 1 grup lampu, sedangkan sakelar seri memiliki 3 terminal dan mengendalikan 2 grup lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Sakelar seri hanya digunakan di industri</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Sakelar tunggal tidak memerlukan MCB</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="E" class="form-radio text-blue-600"> <span>E. Tidak ada perbedaan, keduanya sama</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Aplikasi yang PALING TEPAT untuk sakelar seri adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Mengendalikan satu lampu dari dua tempat (ujung tangga)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Mengendalikan satu lampu dari tiga tempat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Mengendalikan lampu utama dan lampu aksen di ruang tamu dari satu sakelar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Mengendalikan motor listrik 3 fasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="E" class="form-radio text-blue-600"> <span>E. Mengendalikan lampu darurat (emergency)</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan pengertian sakelar seri, jumlah terminalnya, dan fungsi masing-masing terminal! Berikan contoh aplikasi sakelar seri dalam kehidupan sehari-hari!</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Uraikan prinsip kerja sakelar seri dalam mengendalikan dua kelompok lampu! Jelaskan alur arus listrik saat kedua tuas ON, saat hanya satu tuas ON, dan saat kedua tuas OFF!</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Gambarkan (dengan deskripsi teks) diagram pengawatan sakelar seri untuk dua kelompok lampu! Jelaskan warna kabel yang digunakan untuk setiap jalur dan mengapa warna kabel harus mengikuti standar PUIL!</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 12 di atas! Identifikasi kesalahan pemasangan yang dilakukan, jelaskan mengapa lampu aksen tetap menyala meskipun tuas OFF, dan berikan solusi pemasangan yang benar sesuai standar PUIL!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan prosedur pengujian lengkap yang harus dilakukan setelah pemasangan sakelar seri selesai! Jelaskan tujuan dan alat yang digunakan pada setiap tahap pengujian!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 12
+        const kunciJawaban = {
+            q1: 'B', q2: 'C', q3: 'B', q4: 'B', q5: 'C',
+            q6: 'C', q7: 'C', q8: 'C', q9: 'B', q10: 'C'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            // Hitung skor PG
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            // Tampilkan hasil
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            
+            // Scroll ke hasil
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 12 (Sakelar Seri) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 12 (Rangkaian Penerangan dengan Sakelar Seri) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 17: Pengujian Instalasi Penerangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .circuit-box { font-family: monospace; font-size: 0.85rem; line-height: 1.5; background: #f8fafc; border: 2px solid #1e40af; border-radius: 0.5rem; padding: 1rem; white-space: pre; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 17</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Pengujian Instalasi Penerangan</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mempelajari prosedur pengujian instalasi penerangan secara sistematis: pemeriksaan visual, uji kontinuitas, uji polaritas, uji isolasi, uji fungsi rangkaian, serta identifikasi dan perbaikan kesalahan instalasi sesuai standar PUIL sebelum instalasi dioperasikan.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="16.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 16</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Setelah instalasi penerangan selesai dipasang, pekerjaan belum berakhir. Tahap <strong>pengujian (testing & commissioning)</strong> merupakan fase kritis yang menentukan apakah instalasi aman, andal, dan siap dioperasikan. Pengujian yang komprehensif bukan hanya kewajiban teknis, melainkan juga <strong>tuntutan hukum</strong> berdasarkan PUIL 2011 — setiap instalasi listrik wajib diuji sebelum dialiri tegangan penuh dan secara berkala selama masa operasional.
+            </p>
+            <p class="mb-4 text-justify">
+                Statistik menunjukkan bahwa lebih dari <strong>60% kebakaran listrik</strong> di Indonesia disebabkan oleh instalasi yang tidak diuji dengan benar — baik karena kesalahan polaritas, isolasi yang buruk, kontinuitas pembumian yang terputus, maupun sambungan yang longgar. Seorang teknisi profesional harus menguasai prosedur pengujian secara sistematis untuk menjamin bahwa instalasi yang diserahkannya aman bagi pengguna.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari enam tahapan pengujian instalasi penerangan: (1) pemeriksaan visual, (2) pemeriksaan kontinuitas, (3) pengujian polaritas, (4) pengujian isolasi, (5) pengujian fungsi rangkaian, serta (6) identifikasi dan perbaikan kesalahan instalasi. Penguasaan keenam tahapan ini akan menjadi kompetensi penting yang membedakan teknisi profesional dengan teknisi amatir.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-clipboard-check mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Testing & Commissioning:</strong> Serangkaian pengujian sistematis untuk memastikan instalasi aman, andal, dan sesuai standar sebelum dioperasikan.</li>
+                    <li><strong>Urutan Pengujian PUIL:</strong> Visual → Kontinuitas (tanpa tegangan) → Polaritas → Isolasi → Fungsi (dengan tegangan).</li>
+                    <li><strong>Prinsip "Dead Testing":</strong> Pengujian kontinuitas dan polaritas awal dilakukan dalam kondisi instalasi TIDAK bertegangan.</li>
+                    <li><strong>Prinsip "Live Testing":</strong> Pengujian fungsi dan polaritas akhir dilakukan setelah instalasi dipastikan aman.</li>
+                    <li><strong>Dokumentasi:</strong> Setiap hasil pengujian wajib dicatat dalam sertifikat pengujian (test certificate).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Prosedur Pengujian Instalasi Penerangan Sesuai PUIL</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk melihat demonstrasi lengkap pengujian instalasi dari awal hingga sertifikat pengujian diterbitkan.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Pengujian Instalasi</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 17: Sengatan Listrik Akibat Tidak Ada Uji Polaritas</h3>
+            <p class="text-gray-700 mb-4">
+                Sebuah rumah baru selesai dipasang instalasi penerangannya. Teknisi langsung menyalakan MCB utama tanpa melakukan pengujian polaritas. Beberapa hari kemudian, pemilik rumah mengganti lampu di ruang tamu. Ia mematikan sakelar seperti biasa, lalu membuka fitting. Tiba-tiba tangannya tersengat listrik keras dan ia terjatuh. Setelah diselidiki, ternyata teknisi <strong>tertukar menyambungkan fasa dan netral</strong> di panel — sehingga sakelar memutus netral, bukan fasa. Akibatnya, fitting tetap bertegangan 220V meskipun sakelar OFF.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kasus ini menunjukkan bahwa <strong>pengujian polaritas bukan formalitas</strong>, melainkan nyawa pengguna bergantung padanya. Jika teknisi melakukan uji polaritas sesuai prosedur PUIL, kesalahan ini akan terdeteksi sebelum instalasi dioperasikan. <strong>Prinsip mutlak:</strong> Jangan pernah mengoperasikan instalasi sebelum semua pengujian selesai dan lulus.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">17.1 Landasan Teoretis Pengujian Instalasi</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">17.1.1 Ketentuan PUIL tentang Pengujian</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        PUIL 2011 (SNI 0225:2011) Bagian 6 mengatur secara rinci tentang pengujian instalasi listrik:
+                        <br><br>
+                        • <strong>Pasal 6.1:</strong> Setiap instalasi baru harus diuji sebelum dioperasikan<br>
+                        • <strong>Pasal 6.2:</strong> Pengujian harus dilakukan oleh orang yang kompeten<br>
+                        • <strong>Pasal 6.3:</strong> Urutan pengujian wajib mengikuti: visual → kontinuitas → polaritas → isolasi → fungsi<br>
+                        • <strong>Pasal 6.4:</strong> Hasil pengujian harus didokumentasikan dalam sertifikat<br>
+                        • <strong>Pasal 6.5:</strong> Pengujian berkala wajib dilakukan minimal setiap 5 tahun (rumah) atau 3 tahun (industri)
+                        <br><br>
+                        Pelanggaran terhadap ketentuan ini dapat berakibat pidana jika menimbulkan korban jiwa.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">17.1.2 Prinsip Urutan Pengujian</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Urutan pengujian yang ditetapkan PUIL bukan tanpa alasan. Setiap tahap memiliki logika keselamatan:
+                        <br><br>
+                        <strong>1. Visual (paling aman):</strong> Tidak perlu alat, tidak ada risiko<br>
+                        <strong>2. Kontinuitas (tanpa tegangan):</strong> Menggunakan multimeter, instalasi OFF<br>
+                        <strong>3. Polaritas (tanpa tegangan):</strong> Memastikan fasa-netral tidak tertukar<br>
+                        <strong>4. Isolasi (tegangan uji 500V DC):</strong> Menggunakan Megger, instalasi OFF<br>
+                        <strong>5. Fungsi (dengan tegangan):</strong> Tahap terakhir, setelah semua aman
+                        <br><br>
+                        Mengubah urutan pengujian dapat membahayakan penguji dan merusak peralatan uji.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">17.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Pemeriksaan Visual -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-eye mr-2"></i>1. Pemeriksaan Visual</h3>
+                    <p class="text-gray-700 mb-3">Pemeriksaan visual adalah tahap pertama dan paling dasar. Tujuannya adalah mengidentifikasi cacat yang terlihat tanpa menggunakan alat ukur. Pemeriksaan ini harus dilakukan dalam kondisi <strong>instalasi tidak bertegangan</strong>.</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4"><i class="fas fa-list-check mr-2"></i>Checklist Pemeriksaan Visual</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">No</th>
+                                    <th class="px-4 py-3">Aspek yang Diperiksa</th>
+                                    <th class="px-4 py-3">Kriteria Lulus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">1</td>
+                                    <td class="px-4 py-3">Kondisi kabel</td>
+                                    <td class="px-4 py-3">Isolasi utuh, tidak terkelupas, tidak terbakar, tidak terjepit</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">2</td>
+                                    <td class="px-4 py-3">Warna penghantar</td>
+                                    <td class="px-4 py-3">Fasa (merah/hitam/coklat), Netral (biru), Ground (hijau-kuning)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">3</td>
+                                    <td class="px-4 py-3">Pemasangan komponen</td>
+                                    <td class="px-4 py-3">Sakelar, fitting, stop kontak terpasang kuat, rata, tidak goyang</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">4</td>
+                                    <td class="px-4 py-3">Sambungan kabel</td>
+                                    <td class="px-4 py-3">Semua sambungan di dalam kotak doos, terisolasi, tidak ada konduktor telanjang</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">5</td>
+                                    <td class="px-4 py-3">Pipa conduit</td>
+                                    <td class="px-4 py-3">Terpasang kuat, klem rapat, sad (bush) di setiap ujung</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">6</td>
+                                    <td class="px-4 py-3">Panel/MCB</td>
+                                    <td class="px-4 py-3">Rating MCB sesuai kabel, labeling jelas, aksesibel</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">7</td>
+                                    <td class="px-4 py-3">Sistem pembumian</td>
+                                    <td class="px-4 py-3">Kabel ground terhubung ke semua komponen logam</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">8</td>
+                                    <td class="px-4 py-3">Kebersihan area</td>
+                                    <td class="px-4 py-3">Tidak ada sisa material, alat, atau sampah di area instalasi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Tips:</strong> Bawa checklist cetak dan tandai setiap item yang sudah diperiksa. Foto kondisi instalasi sebelum dan sesudah untuk dokumentasi. Jika ditemukan cacat, <strong>perbaiki dulu</strong> sebelum lanjut ke tahap pengujian berikutnya.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Pemeriksaan Kontinuitas -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-wave-square mr-2"></i>2. Pemeriksaan Kontinuitas</h3>
+                    <p class="text-gray-700 mb-3">Uji kontinuitas bertujuan memastikan bahwa semua penghantar tersambung dengan baik dan tidak ada yang putus di tengah jalan. Pengujian ini dilakukan <strong>dalam kondisi instalasi TIDAK bertegangan</strong> (MCB OFF, semua beban dilepas).</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4"><i class="fas fa-tools mr-2"></i>Alat yang Digunakan</h4>
+                    <ul class="list-disc list-inside text-sm text-gray-700 mb-4">
+                        <li><strong>Multimeter digital</strong> pada mode Ohm (Ω) atau continuity test (bunyi beep)</li>
+                        <li>Atau <strong>battery dan bell test set</strong> (alat tradisional)</li>
+                    </ul>
+
+                    <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-clipboard-list mr-2"></i>Prosedur Uji Kontinuitas</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Kontinuitas Penghantar Proteksi (Ground)</h5>
+                                <p class="text-sm text-gray-700">Ukur tahanan antara terminal ground di panel dengan titik ground terjauh. Hasil harus <strong>≤ 0,5 Ω</strong>. Ini memastikan jalur pembumian utuh dan efektif.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Kontinuitas Penghantar Fasa</h5>
+                                <p class="text-sm text-gray-700">Ukur dari MCB fasa → sakelar → fitting. Dengan sakelar ON, hasil harus <strong>≈ 0 Ω</strong> (sambungan baik).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Kontinuitas Penghantar Netral</h5>
+                                <p class="text-sm text-gray-700">Ukur dari busbar netral di panel → fitting. Hasil harus <strong>≈ 0 Ω</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Kontinuitas Cincin (untuk ring circuit)</h5>
+                                <p class="text-sm text-gray-700">Untuk instalasi stop kontak sistem ring, ukur kontinuitas loop. Ujung awal dan akhir harus tersambung membentuk cincin tertutup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <p class="text-sm text-gray-700"><strong>⚠️ Kriteria Kegagalan:</strong> Jika multimeter menunjukkan <strong>∞ Ω (open circuit)</strong>, berarti ada penghantar yang putus. Jika menunjukkan <strong>tahanan tinggi (>1 Ω)</strong>, berarti sambungan longgar atau korosi. Keduanya harus diperbaiki sebelum lanjut.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Pengujian Polaritas -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-exchange-alt mr-2"></i>3. Pengujian Polaritas</h3>
+                    <p class="text-gray-700 mb-3">Uji polaritas bertujuan memastikan bahwa <strong>fasa dan netral tidak tertukar</strong>, dan <strong>sakelar dipasang pada fasa</strong> (bukan netral). Ini adalah pengujian KRITIS untuk keselamatan pengguna.</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4"><i class="fas fa-bullseye mr-2"></i>Tiga Hal yang Diuji dalam Polaritas</h4>
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200 text-center">
+                            <i class="fas fa-plug text-3xl text-red-600 mb-2"></i>
+                            <h5 class="font-bold text-red-800 mb-1">Polaritas Fasa</h5>
+                            <p class="text-xs text-gray-700">Fasa harus terhubung ke terminal pusat fitting (kontak tengah), bukan ke ulir luar.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center">
+                            <i class="fas fa-toggle-on text-3xl text-blue-600 mb-2"></i>
+                            <h5 class="font-bold text-blue-800 mb-1">Sakelar di Fasa</h5>
+                            <p class="text-xs text-gray-700">Sakelar HARUS memutus fasa, bukan netral. Saat OFF, fitting tidak boleh bertegangan.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 text-center">
+                            <i class="fas fa-circle-dot text-3xl text-yellow-600 mb-2"></i>
+                            <h5 class="font-bold text-yellow-800 mb-1">Stop Kontak</h5>
+                            <p class="text-xs text-gray-700">Lubang kanan = fasa, lubang kiri = netral (menghadap stop kontak). Ground di tengah atas.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-list-ol mr-2"></i>Prosedur Uji Polaritas</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Polaritas di Fitting (Tanpa Tegangan)</h5>
+                                <p class="text-sm text-gray-700">Dengan MCB OFF, ukur dengan multimeter: terminal pusat fitting harus terhubung ke fasa (melalui sakelar ON), dan ulir luar terhubung ke netral.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi Sakelar (Dengan Tegangan)</h5>
+                                <p class="text-sm text-gray-700">Setelah uji tanpa tegangan lulus, nyalakan MCB. Gunakan test pen: saat sakelar OFF, test pen TIDAK boleh menyala di kontak tengah fitting. Saat sakelar ON, test pen HARUS menyala.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Stop Kontak (Dengan Tegangan)</h5>
+                                <p class="text-sm text-gray-700">Gunakan <strong>socket tester</strong> (alat khusus polaritas). Colokkan ke stop kontak — lampu indikator akan menunjukkan apakah polaritas benar, terbalik, atau ground hilang.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Mengapa Polaritas Sangat Penting?</h4>
+                        <p class="text-sm text-gray-700">Jika sakelar dipasang pada netral (polaritas terbalik), saat sakelar OFF lampu tetap mati — TETAPI fitting tetap bertegangan 220V terhadap tanah. Pengguna yang mengganti lampu tanpa mematikan MCB utama akan <strong>tersengat listrik</strong>. Inilah mengapa uji polaritas adalah pengujian NYAWA.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Pengujian Isolasi -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-shield-alt mr-2"></i>4. Pengujian Isolasi (Insulation Resistance Test)</h3>
+                    <p class="text-gray-700 mb-3">Uji isolasi bertujuan memastikan bahwa isolasi kabel dan komponen mampu menahan tegangan kerja tanpa terjadi kebocoran arus. Pengujian ini menggunakan alat khusus bernama <strong>Megger (Insulation Tester)</strong> yang memberikan tegangan uji DC tinggi (biasanya 500V DC untuk instalasi 220V).</p>
+                    
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-200 mb-4">
+                        <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>PERINGATAN KESELAMATAN</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li>Pengujian isolasi menghasilkan <strong>tegangan tinggi 500V DC</strong> — dapat mematikan!</li>
+                            <li>Semua beban (lampu, peralatan elektronik) HARUS dilepas sebelum uji</li>
+                            <li>Sakelar harus dalam posisi ON saat pengujian</li>
+                            <li>Jangan menyentuh konduktor saat Megger aktif</li>
+                            <li>Setelah uji, <strong>discharge (buang muatan)</strong> konduktor dengan menghubungkannya ke ground sebentar</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-clipboard-list mr-2"></i>Prosedur Uji Isolasi</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-purple-50 p-3 rounded-lg">
+                            <span class="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-purple-800">Persiapan</h5>
+                                <p class="text-sm text-gray-700">MCB OFF. Lepas semua lampu, peralatan elektronik, dan ELCB/RCD (karena bisa rusak oleh tegangan uji 500V). Semua sakelar posisi ON.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-purple-50 p-3 rounded-lg">
+                            <span class="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-purple-800">Uji Fasa–Netral</h5>
+                                <p class="text-sm text-gray-700">Hubungkan probe Megger antara fasa dan netral di panel. Tekan tombol test. Baca nilai tahanan isolasi. Harus <strong>≥ 1 MΩ</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-purple-50 p-3 rounded-lg">
+                            <span class="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-purple-800">Uji Fasa–Ground</h5>
+                                <p class="text-sm text-gray-700">Hubungkan probe antara fasa dan ground. Hasil harus <strong>≥ 1 MΩ</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-purple-50 p-3 rounded-lg">
+                            <span class="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-purple-800">Uji Netral–Ground</h5>
+                                <p class="text-sm text-gray-700">Hubungkan probe antara netral dan ground. Hasil harus <strong>≥ 1 MΩ</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-purple-50 p-3 rounded-lg">
+                            <span class="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-purple-800">Discharge dan Pemulihan</h5>
+                                <p class="text-sm text-gray-700">Setelah selesai, hubungkan setiap konduktor ke ground sebentar untuk membuang muatan. Pasang kembali semua beban dan ELCB/RCD.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-table mr-2"></i>Tabel Interpretasi Hasil Uji Isolasi</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left text-gray-600 mt-2">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                    <tr>
+                                        <th class="px-4 py-2">Nilai Tahanan</th>
+                                        <th class="px-4 py-2">Interpretasi</th>
+                                        <th class="px-4 py-2">Tindakan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b bg-green-50">
+                                        <td class="px-4 py-2 font-medium">≥ 1 MΩ</td>
+                                        <td class="px-4 py-2">Isolasi BAIK</td>
+                                        <td class="px-4 py-2">Lanjut ke uji berikutnya</td>
+                                    </tr>
+                                    <tr class="border-b bg-yellow-50">
+                                        <td class="px-4 py-2 font-medium">0.5 - 1 MΩ</td>
+                                        <td class="px-4 py-2">Isolasi MARGIN</td>
+                                        <td class="px-4 py-2">Investigasi lebih lanjut, monitor berkala</td>
+                                    </tr>
+                                    <tr class="bg-red-50">
+                                        <td class="px-4 py-2 font-medium">< 0.5 MΩ</td>
+                                        <td class="px-4 py-2">Isolasi BURUK</td>
+                                        <td class="px-4 py-2">WAJIB diperbaiki sebelum dioperasikan</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Pengujian Fungsi Rangkaian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-lightbulb mr-2"></i>5. Pengujian Fungsi Rangkaian</h3>
+                    <p class="text-gray-700 mb-3">Setelah semua pengujian tanpa tegangan (dead testing) lulus, tahap selanjutnya adalah pengujian fungsi dengan tegangan penuh (live testing). Tujuannya memastikan instalasi bekerja sesuai desain.</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4"><i class="fas fa-list-check mr-2"></i>Checklist Uji Fungsi</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Tegangan Suplai</h5>
+                                <p class="text-sm text-gray-700">Ukur tegangan di panel dengan multimeter AC. Harus <strong>220V ± 10%</strong> (198-242V). Jika di luar rentang, hubungi PLN.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi Lampu</h5>
+                                <p class="text-sm text-gray-700">Nyalakan setiap sakelar. Lampu harus menyala normal (tidak berkedip, tidak redup). Matikan sakelar — lampu harus padam total.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi Sakelar Tukar/Silang</h5>
+                                <p class="text-sm text-gray-700">Untuk sakelar tukar/silang, uji semua kombinasi posisi. Setiap perubahan posisi sakelar mana pun harus mengubah kondisi lampu (ON↔OFF).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi Stop Kontak</h5>
+                                <p class="text-sm text-gray-700">Gunakan socket tester atau alat uji. Pastikan tegangan 220V ada, polaritas benar, dan ground terhubung.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi ELCB/RCD</h5>
+                                <p class="text-sm text-gray-700">Tekan tombol "TEST" pada ELCB/RCD. Harus trip dalam waktu < 300 ms. Jika tidak trip, ganti ELCB/RCD.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi MCB</h5>
+                                <p class="text-sm text-gray-700">Operasikan MCB ON/OFF beberapa kali. Harus berfungsi mulus. Tidak boleh trip tanpa sebab saat beban normal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Catatan:</strong> Jika ada lampu yang berkedip, redup, atau tidak menyala, MATIKAN MCB segera dan lakukan troubleshooting. Jangan memaksakan instalasi beroperasi dalam kondisi abnormal.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Identifikasi dan Perbaikan Kesalahan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-search-minus mr-2"></i>6. Identifikasi dan Perbaikan Kesalahan Instalasi</h3>
+                    <p class="text-gray-700 mb-3">Ketika pengujian menemukan kesalahan, teknisi harus mampu mengidentifikasi penyebab dan memperbaikinya secara sistematis. Berikut adalah kesalahan umum dan solusinya:</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-red-100">
+                                <tr>
+                                    <th class="px-4 py-3">Gejala</th>
+                                    <th class="px-4 py-3">Kemungkinan Penyebab</th>
+                                    <th class="px-4 py-3">Solusi Perbaikan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-red-700">Lampu tidak menyala</td>
+                                    <td class="px-4 py-3">• Lampu rusak<br>• Kabel putus<br>• Sambungan longgar<br>• MCB trip</td>
+                                    <td class="px-4 py-3">• Ganti lampu<br>• Uji kontinuitas, perbaiki kabel putus<br>• Kencangkan sambungan<br>• Reset MCB, cari penyebab trip</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-red-700">Lampu berkedip</td>
+                                    <td class="px-4 py-3">• Sambungan longgar<br>• Tegangan tidak stabil<br>• Lampu LED tidak kompatibel</td>
+                                    <td class="px-4 py-3">• Kencangkan semua sambungan<br>• Periksa tegangan suplai<br>• Ganti lampu dengan yang sesuai</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-red-700">MCB trip terus</td>
+                                    <td class="px-4 py-3">• Hubung singkat<br>• Beban lebih<br>• ELCB mendeteksi arus bocor<br>• MCB rusak</td>
+                                    <td class="px-4 py-3">• Cari dan perbaiki short circuit<br>• Kurangi beban atau naikkan kapasitas<br>• Cari sumber kebocoran arus<br>• Ganti MCB</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-red-700">Fitting bertegangan saat sakelar OFF</td>
+                                    <td class="px-4 py-3">• Sakelar dipasang di netral (polaritas terbalik)</td>
+                                    <td class="px-4 py-3">• Pindahkan sakelar ke penghantar fasa</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-red-700">Tahanan isolasi rendah (<1 MΩ)</td>
+                                    <td class="px-4 py-3">• Isolasi kabel rusak/terkelupas<br>• Sambungan tidak terisolasi baik<br>• Kelembaban tinggi</td>
+                                    <td class="px-4 py-3">• Ganti kabel yang rusak<br>• Perbaiki isolasi sambungan<br>• Keringkan area, tingkatkan proteksi IP</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-red-700">Ground tidak terhubung</td>
+                                    <td class="px-4 py-3">• Kabel ground putus<br>• Sambungan ground longgar<br>• Elektroda ground rusak</td>
+                                    <td class="px-4 py-3">• Perbaiki kabel ground<br>• Kencangkan sambungan<br>• Ganti/perbaiki elektroda ground</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2 mt-6"><i class="fas fa-project-diagram mr-2"></i>Metode Troubleshooting Sistematis</h4>
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   METODE TROUBLESHOOTING SISTEMATIS (5 LANGKAH)             │
+└─────────────────────────────────────────────────────────────┘
+
+ LANGKAH 1: OBSERVASI
+ ├─ Amati gejala (lampu mati, MCB trip, dll)
+ ├─ Tanyakan kepada pengguna kapan masalah muncul
+ └─ Catat semua informasi relevan
+
+ LANGKAH 2: ISOLASI MASALAH
+ ├─ Bagi instalasi menjadi beberapa zona
+ ├─ Uji setiap zona secara terpisah
+ └─ Identifikasi zona yang bermasalah
+
+ LANGKAH 3: ANALISIS PENYEBAB
+ ├─ Gunakan multimeter untuk mengukur tegangan, arus, tahanan
+ ├─ Bandingkan dengan nilai normal
+ └─ Tentukan komponen yang rusak/abnormal
+
+ LANGKAH 4: PERBAIKAN
+ ├─ Matikan sumber listrik (LOTO)
+ ├─ Ganti/perbaiki komponen yang rusak
+ └─ Pastikan perbaikan sesuai standar PUIL
+
+ LANGKAH 5: VERIFIKASI
+ ├─ Ulangi pengujian pada zona yang diperbaiki
+ ├─ Pastikan masalah teratasi
+ └─ Dokumentasikan perbaikan yang dilakukan
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <p class="text-sm text-gray-700"><strong>⚠️ Peringatan:</strong> Jangan pernah mem-bypass pengaman (MCB/ELCB) dengan alasan apapun! Jangan menggunakan kawat jumper untuk "mengakali" masalah. Semua perbaikan harus sesuai standar PUIL dan didokumentasikan dengan baik.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Selalu ikuti urutan pengujian PUIL: visual → kontinuitas → polaritas → isolasi → fungsi.</li>
+                    <li>Gunakan checklist cetak untuk setiap pengujian — jangan mengandalkan ingatan.</li>
+                    <li>Foto kondisi instalasi sebelum dan sesudah pengujian untuk dokumentasi.</li>
+                    <li>Calibrate alat ukur (multimeter, Megger) secara berkala untuk akurasi.</li>
+                    <li>Lakukan pengujian di siang hari agar pencahayaan cukup untuk inspeksi visual.</li>
+                    <li>Gunakan APD lengkap saat pengujian dengan tegangan (sarung tangan isolasi, kacamata safety).</li>
+                    <li>Dokumentasikan semua hasil pengujian dalam sertifikat yang ditandatangani.</li>
+                    <li>Jika ragu, konsultasikan dengan teknisi senior atau supervisor.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Mengubah urutan pengujian PUIL (misalnya uji isolasi sebelum kontinuitas).</li>
+                    <li>Tidak melepas beban elektronik sebelum uji isolasi — alat bisa rusak oleh tegangan 500V.</li>
+                    <li>Lupa melakukan discharge setelah uji isolasi — risiko sengatan listrik.</li>
+                    <li>Mengoperasikan instalasi sebelum semua pengujian selesai.</li>
+                    <li>Tidak mendokumentasikan hasil pengujian — masalah hukum di kemudian hari.</li>
+                    <li>Mengabaikan hasil uji yang "mepet" (misalnya 0.9 MΩ) — bisa memburuk seiring waktu.</li>
+                    <li>Mem-bypass ELCB/RCD yang sering trip tanpa mencari penyebabnya.</li>
+                    <li>Tidak melakukan LOTO saat troubleshooting — risiko fatal.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Pengujian instalasi penerangan adalah tahap kritis yang menentukan keamanan dan keandalan instalasi sebelum dioperasikan. Berdasarkan PUIL 2011, pengujian harus mengikuti urutan sistematis: (1) pemeriksaan visual untuk identifikasi cacat fisik, (2) uji kontinuitas untuk memastikan semua penghantar tersambung (tahanan ground ≤0.5 Ω), (3) uji polaritas untuk memastikan fasa-netral tidak tertukar dan sakelar di fasa, (4) uji isolasi dengan Megger 500V DC (tahanan minimal 1 MΩ), (5) uji fungsi rangkaian dengan tegangan penuh, serta (6) identifikasi dan perbaikan kesalahan dengan metode troubleshooting sistematis. Setiap tahap pengujian wajib didokumentasikan dalam sertifikat pengujian. Mengabaikan pengujian bukan hanya pelanggaran teknis, tetapi juga pelanggaran hukum yang dapat berakibat pidana jika menimbulkan korban jiwa. Teknisi profesional adalah teknisi yang tidak pernah mengoperasikan instalasi sebelum semua pengujian selesai dan lulus.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>IEC. (2016). <em>IEC 60364-6: Low-voltage electrical installations — Part 6: Verification</em>.</li>
+                <li>IET. (2018). <em>Guidance Note 3: Inspection & Testing</em>. Stevenage: Institution of Engineering and Technology.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="16.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 16</a>
+            <a href="18.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 18: Praktik & Evaluasi <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 17 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 17</h2>
+                <p class="text-gray-600 mt-2">Pengujian Instalasi Penerangan</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Urutan pengujian instalasi listrik yang benar sesuai PUIL 2011 adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Fungsi → isolasi → polaritas → kontinuitas → visual</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Visual → kontinuitas → polaritas → isolasi → fungsi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Isolasi → kontinuitas → visual → polaritas → fungsi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Polaritas → visual → fungsi → isolasi → kontinuitas</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="E" class="form-radio text-blue-600"> <span>E. Kontinuitas → fungsi → visual → isolasi → polaritas</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Alat yang digunakan untuk mengukur tahanan isolasi kabel pada tegangan uji 500V DC adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Multimeter analog</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Tang ampere (clamp meter)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Megger (insulation tester)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Test pen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="E" class="form-radio text-blue-600"> <span>E. Oscilloscope</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Nilai tahanan isolasi minimal yang harus dipenuhi oleh instalasi penerangan menurut PUIL adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. 0.1 Ω</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. 1 kΩ</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. 1 MΩ</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. 10 MΩ</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="E" class="form-radio text-blue-600"> <span>E. 100 MΩ</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Tujuan utama pengujian polaritas pada instalasi penerangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Mengukur besar arus yang mengalir</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Memastikan fasa dan netral tidak tertukar serta sakelar dipasang pada fasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. Mengukur tahanan isolasi kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Memastikan lampu menyala terang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="E" class="form-radio text-blue-600"> <span>E. Mengukur frekuensi listrik</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Sebelum melakukan uji isolasi dengan Megger, hal yang WAJIB dilakukan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Menyalakan semua lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Melepas semua beban elektronik dan ELCB/RCD karena bisa rusak oleh tegangan 500V DC</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Menyiram kabel dengan air</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Membuka semua kotak sambung</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="E" class="form-radio text-blue-600"> <span>E. Mengganti semua kabel</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Alat yang digunakan untuk menguji polaritas stop kontak dengan cepat dan akurat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Tang kombinasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Socket tester (polaritas tester)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Obeng isolasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Cutter</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="E" class="form-radio text-blue-600"> <span>E. Gergaji besi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Jika hasil uji tahanan isolasi menunjukkan nilai 0.3 MΩ, tindakan yang harus dilakukan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. Mengabaikan karena masih ada tahanan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. Mengoperasikan instalasi seperti biasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. Memperbaiki instalasi sebelum dioperasikan karena isolasi buruk (< 1 MΩ)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. Menambah jumlah lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="E" class="form-radio text-blue-600"> <span>E. Mengganti MCB dengan rating lebih besar</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Berdasarkan studi kasus 17, penyebab pemilik rumah tersengat listrik saat mengganti lampu adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Lampu yang digunakan terlalu terang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. MCB terlalu kecil</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Teknisi tidak melakukan uji polaritas, sehingga sakelar terpasang di netral dan fitting tetap bertegangan saat sakelar OFF</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Tegangan PLN terlalu tinggi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="E" class="form-radio text-blue-600"> <span>E. Kabel terlalu kecil penampangnya</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Langkah pertama dalam metode troubleshooting sistematis adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Langsung mengganti semua komponen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Observasi gejala dan mengumpulkan informasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Mem-bypass pengaman</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Menyalakan MCB tanpa pemeriksaan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="E" class="form-radio text-blue-600"> <span>E. Membongkar seluruh instalasi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Setelah selesai melakukan uji isolasi dengan Megger, langkah yang WAJIB dilakukan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Langsung menyentuh konduktor</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Melakukan discharge (membuang muatan) konduktor dengan menghubungkannya ke ground sebentar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Menyalakan MCB segera</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Meninggalkan area kerja</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="E" class="form-radio text-blue-600"> <span>E. Menyiram kabel dengan air</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan mengapa urutan pengujian instalasi listrik sesuai PUIL harus diikuti secara ketat! Apa risiko jika urutan diubah (misalnya uji isolasi dilakukan sebelum uji kontinuitas)?</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Uraikan prosedur lengkap pengujian isolasi dengan Megger! Sebutkan alat yang digunakan, langkah-langkah persiapan, prosedur pengujian, dan tindakan keselamatan yang harus dilakukan!</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Jelaskan pentingnya uji polaritas dalam instalasi penerangan! Apa yang terjadi jika sakelar dipasang pada netral (polaritas terbalik)? Bagaimana cara menguji polaritas yang benar?</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 17 di atas! Identifikasi kesalahan yang dilakukan teknisi, jelaskan mengapa fitting tetap bertegangan saat sakelar OFF, dan berikan solusi pengujian yang seharusnya dilakukan sesuai PUIL!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan metode troubleshooting sistematis (5 langkah) untuk menyelesaikan masalah instalasi listrik! Berikan contoh penerapan metode tersebut pada kasus "MCB trip terus-menerus"!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 17
+        const kunciJawaban = {
+            q1: 'B', q2: 'C', q3: 'C', q4: 'B', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'C', q9: 'B', q10: 'B'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 17 (Pengujian Instalasi) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 17 (Pengujian Instalasi Penerangan) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

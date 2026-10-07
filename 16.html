@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 16: Pemasangan Instalasi Penerangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .circuit-box { font-family: monospace; font-size: 0.85rem; line-height: 1.5; background: #f8fafc; border: 2px solid #1e40af; border-radius: 0.5rem; padding: 1rem; white-space: pre; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 16</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Pemasangan Instalasi Penerangan</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mempelajari tahapan pemasangan instalasi penerangan secara sistematis: persiapan alat dan bahan, membaca gambar kerja, menentukan jalur instalasi, pemasangan pipa/conduit, pemasangan kotak sambung, sakelar dan fitting, serta penarikan dan penyambungan kabel sesuai standar PUIL.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="15.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 15</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Setelah mempelajari teori, komponen, rangkaian, dan teknik penyambungan pada pertemuan-pertemuan sebelumnya, tibalah saatnya bagi siswa untuk memasuki tahap <strong>implementasi praktis</strong>: pemasangan instalasi penerangan secara utuh. Pertemuan ini merupakan puncak dari seluruh kompetensi yang telah dibangun, di mana semua pengetahuan teoretis diterjemahkan menjadi keterampilan tangan yang nyata.
+            </p>
+            <p class="mb-4 text-justify">
+                Pemasangan instalasi penerangan bukan sekadar aktivitas "menempel kabel ke dinding". Ia merupakan proses sistematis yang memerlukan perencanaan matang, pemahaman gambar kerja yang baik, ketepatan dalam menentukan jalur, ketelitian dalam memasang setiap komponen, dan keterampilan dalam menarik serta menyambung kabel. Kesalahan pada satu tahap dapat berakibat pada kegagalan seluruh instalasi, bahkan membahayakan keselamatan pengguna.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari enam tahapan utama pemasangan instalasi penerangan: (1) persiapan alat dan bahan, (2) membaca gambar kerja, (3) menentukan jalur instalasi, (4) pemasangan pipa/conduit, (5) pemasangan kotak sambung, sakelar, dan fitting, serta (6) penarikan dan penyambungan kabel. Penguasaan keenam tahapan ini akan menjadi bekal penting bagi siswa untuk melaksanakan pekerjaan instalasi secara profesional sesuai standar PUIL.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-tools mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Pemasangan Instalasi:</strong> Proses fisik memasang seluruh komponen instalasi penerangan sesuai gambar kerja dan standar PUIL.</li>
+                    <li><strong>Alur Sistematis:</strong> Persiapan → Baca Gambar → Tentukan Jalur → Pasang Pipa → Pasang Komponen → Tarik & Sambung Kabel.</li>
+                    <li><strong>Kepatuhan Standar:</strong> Setiap tahap harus mengikuti ketentuan PUIL 2011 (SNI 0225:2011).</li>
+                    <li><strong>K3 Mutlak:</strong> Keselamatan kerja adalah prioritas utama dalam setiap tahap pemasangan.</li>
+                    <li><strong>Dokumentasi:</strong> Setiap tahap pemasangan harus didokumentasikan untuk jaminan kualitas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Tahapan Pemasangan Instalasi Penerangan Rumah Tinggal</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk melihat demonstrasi lengkap pemasangan instalasi penerangan dari awal hingga siap dialiri tegangan.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Pemasangan Instalasi</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 16: Kabel Tidak Bisa Ditarik Karena Pipa Penuh</h3>
+            <p class="text-gray-700 mb-4">
+                Seorang teknisi muda memasang instalasi penerangan di sebuah rumah baru. Ia menggunakan pipa conduit PVC 16 mm dan memasukkan <strong>9 kabel NYA 1.5 mm²</strong> ke dalam pipa sepanjang 8 meter dengan 4 tikungan 90°. Saat mencoba menarik kabel, kabel macet di tikungan kedua dan tidak bisa ditarik sama sekali. Setelah pipa dibongkar, terlihat bahwa kabel-kabel saling membelit dan isolasi beberapa kabel terkelupas akibat gesekan. Pekerjaan harus diulang dari awal dengan pipa yang lebih besar dan jumlah tikungan yang dikurangi. Kerugian waktu dan material sangat besar.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kasus ini menunjukkan pentingnya memahami <strong>daya tampung pipa conduit</strong> (maksimal 40% isi pipa menurut PUIL), <strong>batas jumlah tikungan</strong> (maksimal 4 tikungan 90° antara dua kotak sambung), dan <strong>teknik penarikan kabel</strong> yang benar. Perencanaan yang matang pada tahap awal akan menghemat waktu, material, dan tenaga. <strong>"Ukur dua kali, potong sekali"</strong> — prinsip ini berlaku juga dalam pemasangan instalasi.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">16.1 Landasan Teoretis Pemasangan Instalasi</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">16.1.1 Alur Pemasangan Sistematis</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Pemasangan instalasi penerangan harus mengikuti alur sistematis untuk menjamin kualitas dan keselamatan:
+                        <br><br>
+                        <strong>1. Persiapan</strong> — alat, bahan, dan gambar kerja<br>
+                        <strong>2. Perencanaan Jalur</strong> — marking dan layout<br>
+                        <strong>3. Pemasangan Pipa</strong> — conduit dan aksesoris<br>
+                        <strong>4. Pemasangan Komponen</strong> — doos, sakelar, fitting<br>
+                        <strong>5. Penarikan Kabel</strong> — menggunakan kawat tarik<br>
+                        <strong>6. Penyambungan</strong> — terminal atau las dop<br>
+                        <strong>7. Pengujian</strong> — sebelum dialiri tegangan
+                        <br><br>
+                        Mengurutkan tahapan dengan benar akan menghindari pekerjaan ulang (rework) yang boros.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">16.1.2 Ketentuan PUIL untuk Pemasangan</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Pasal 5.2:</strong> Jalur instalasi harus direncanakan sedemikian rupa sehingga mudah diakses untuk pemeliharaan.</li>
+                        <li><strong>Pasal 5.3:</strong> Pipa conduit harus memiliki daya tampung maksimal 40% dari luas penampang pipa.</li>
+                        <li><strong>Pasal 5.4:</strong> Jumlah tikungan antara dua kotak sambung maksimal 4 × 90° (360° total).</li>
+                        <li><strong>Pasal 5.5:</strong> Ketinggian sakelar 120-150 cm dari lantai, stop kontak 30-40 cm atau 120 cm.</li>
+                        <li><strong>Pasal 5.6:</strong> Kotak sambung harus aksesibel dan tidak boleh ditanam permanen.</li>
+                        <li><strong>Pasal 5.7:</strong> Jarak minimum pipa dari sumber panas atau pipa air 15 cm.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">16.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Persiapan Alat dan Bahan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-toolbox mr-2"></i>1. Persiapan Alat dan Bahan</h3>
+                    <p class="text-gray-700 mb-3">Persiapan yang matang adalah kunci keberhasilan pemasangan. Berikut daftar alat dan bahan yang umumnya diperlukan:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-wrench mr-2"></i>Peralatan Tangan</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Obeng plus dan minus (isolasi 1000V)</li>
+                                <li>Tang kombinasi, tang pengupas kabel</li>
+                                <li>Tang lancip dan tang pengupas isolasi</li>
+                                <li>Cutter dan gergaji besi</li>
+                                <li>Palu dan pahat (untuk instalasi tanam)</li>
+                                <li>Bor listrik + mata bor beton/kayu</li>
+                                <li>Waterpass dan meteran</li>
+                                <li>Test pen dan multimeter</li>
+                                <li>Kawat tarik (fish tape / snake)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-boxes mr-2"></i>Bahan Material</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Kabel NYA/NYM sesuai penampang</li>
+                                <li>Pipa conduit PVC (16/20 mm)</li>
+                                <li>Aksesoris pipa (sok, elbow, tee, klem)</li>
+                                <li>Kotak sambung in-bow/out-bow</li>
+                                <li>Sakelar (tunggal/seri/tukar)</li>
+                                <li>Fitting lampu (E27/B22)</li>
+                                <li>Lampu LED sesuai kebutuhan</li>
+                                <li>MCB dan box panel</li>
+                                <li>Sekrup, fischer, lakban, terminal</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Tips Persiapan:</strong> Sebelum mulai bekerja, lakukan <strong>inventory check</strong> — pastikan semua alat dan bahan tersedia dalam kondisi baik. Siapkan juga <strong>APD lengkap</strong>: helm, sarung tangan, sepatu safety, dan kacamata pelindung. Pekerjaan yang dimulai dengan persiapan buruk cenderung menghasilkan kualitas yang buruk pula.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Membaca Gambar Kerja -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-drafting-compass mr-2"></i>2. Membaca Gambar Kerja</h3>
+                    <p class="text-gray-700 mb-3">Gambar kerja adalah <strong>"peta"</strong> yang memandu seluruh proses pemasangan. Membaca gambar kerja dengan benar akan menghemat waktu dan menghindari kesalahan fatal. Berikut langkah-langkah sistematis membaca gambar kerja instalasi:</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Periksa Identitas Gambar</h5>
+                                <p class="text-sm text-gray-700">Nama proyek, nomor gambar, tanggal, revisi terbaru, skala, dan nama perencana. Pastikan Anda memegang gambar versi terbaru.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pelajari Legenda Simbol</h5>
+                                <p class="text-sm text-gray-700">Setiap gambar memiliki legenda simbol. Pahami arti setiap simbol: lampu, sakelar, stop kontak, MCB, kotak sambung, jalur pipa, dll.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Identifikasi Denah Ruangan</h5>
+                                <p class="text-sm text-gray-700">Pahami layout ruangan, posisi pintu, jendela, dan furniture. Ini akan menentukan posisi optimal sakelar dan lampu.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Telusuri Alur Rangkaian</h5>
+                                <p class="text-sm text-gray-700">Ikuti alur dari panel → MCB → jalur pipa → sakelar → fitting. Pahami pembagian rangkaian dan kelompok beban.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Periksa Spesifikasi Teknis</h5>
+                                <p class="text-sm text-gray-700">Penampang kabel, jenis pipa, rating MCB, tipe sakelar, dan keterangan khusus lainnya. Catat semua informasi penting.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Bandingkan dengan Kondisi Lapangan</h5>
+                                <p class="text-sm text-gray-700">Verifikasi apakah gambar sesuai dengan kondisi aktual. Jika ada perbedaan, konsultasikan dengan perencana sebelum melanjutkan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Jenis-Jenis Gambar Kerja yang Perlu Dipahami</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Denah tata letak (layout):</strong> Menunjukkan posisi komponen pada denah ruangan</li>
+                            <li><strong>Diagram satu garis (SLD):</strong> Menunjukkan alur distribusi daya secara umum</li>
+                            <li><strong>Diagram pengawatan (wiring):</strong> Menunjukkan detail koneksi antar komponen</li>
+                            <li><strong>Detail pemasangan:</strong> Gambar detail cara memasang komponen tertentu</li>
+                            <li><strong>Bill of Materials (BOM):</strong> Daftar jenis dan jumlah material yang dibutuhkan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Menentukan Jalur Instalasi -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-route mr-2"></i>3. Menentukan Jalur Instalasi</h3>
+                    <p class="text-gray-700 mb-3">Penentuan jalur instalasi yang tepat akan menghasilkan pemasangan yang rapi, aman, dan mudah dipelihara. Berikut prinsip-prinsip penentuan jalur:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-check-circle mr-2"></i>Prinsip Jalur yang Baik</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Sedikit mungkin tikungan (minimalisir hambatan tarik)</li>
+                                <li>Jalur terpendek yang memungkinkan (hemat kabel)</li>
+                                <li>Menghindari sumber panas, air, dan bahan kimia</li>
+                                <li>Aksesibel untuk pemeliharaan</li>
+                                <li>Estetis (tidak mengganggu tampilan ruangan)</li>
+                                <li>Vertikal atau horizontal (tidak diagonal sembarangan)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-ban mr-2"></i>Hal yang Harus Dihindari</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Melewati area basah tanpa proteksi IP memadai</li>
+                                <li>Melewati area struktural (kolom, balok) tanpa izin</li>
+                                <li>Berpotongan dengan pipa air/gas</li>
+                                <li>Terlalu dekat sumber panas (>40°C)</li>
+                                <li>Melewati pintu atau area yang sering dibongkar</li>
+                                <li>Jalur yang sulit dijangkau untuk pemeliharaan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-ruler mr-2"></i>Standar Ketinggian dan Jarak (PUIL)</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Komponen</th>
+                                    <th class="px-4 py-3">Ketinggian/Jarak Standar</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Sakelar</td>
+                                    <td class="px-4 py-3">120-150 cm dari lantai</td>
+                                    <td class="px-4 py-3">Di samping pintu, tinggi sejajar bahu</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Stop Kontak (umum)</td>
+                                    <td class="px-4 py-3">30-40 cm dari lantai</td>
+                                    <td class="px-4 py-3">Untuk peralatan rumah tangga</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Stop Kontak (meja)</td>
+                                    <td class="px-4 py-3">120 cm dari lantai</td>
+                                    <td class="px-4 py-3">Sejajar dengan meja kerja</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Jalur pipa horizontal</td>
+                                    <td class="px-4 py-3">15-20 cm dari plafon</td>
+                                    <td class="px-4 py-3">Atau tersembunyi di plafon</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Jarak dari sumber panas</td>
+                                    <td class="px-4 py-3">Minimal 15 cm</td>
+                                    <td class="px-4 py-3">Dari kompor, water heater, dll</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Teknik Marking:</strong> Gunakan benang sipat (chalk line) untuk membuat garis lurus horizontal/vertikal. Tandai posisi setiap komponen dengan pensil. Foto hasil marking sebelum pengeboran untuk dokumentasi.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Pemasangan Pipa/Conduit -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-grip-lines mr-2"></i>4. Pemasangan Pipa/Conduit</h3>
+                    <p class="text-gray-700 mb-3">Pipa conduit adalah "tulang punggung" instalasi yang melindungi kabel dari gangguan mekanis dan lingkungan. Pemasangan pipa yang benar akan menjamin keawetan instalasi.</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4"><i class="fas fa-list-ol mr-2"></i>Langkah-Langkah Pemasangan Pipa</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Potong Pipa Sesuai Ukuran</h5>
+                                <p class="text-sm text-gray-700">Gunakan gergaji besi atau pipe cutter. Potong tegak lurus agar sambungan rapat. Hilangkan sisa/bavia dengan cutter atau kikir.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Aksesoris (Sok, Elbow, Tee)</h5>
+                                <p class="text-sm text-gray-700">Oleskan lem PVC pada ujung pipa dan dalam aksesoris. Sambungkan dengan cepat dan tahan beberapa detik hingga lem mengering. Pastikan tidak ada celah.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Klem/Sadel Pengikat</h5>
+                                <p class="text-sm text-gray-700">Pasang klem setiap jarak 60-90 cm (horizontal) atau 1-1.5 m (vertikal). Gunakan fischer dan sekrup yang sesuai dengan jenis dinding (beton/bata/gypsum).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Kotak Sambung di Titik Percabangan</h5>
+                                <p class="text-sm text-gray-700">Setiap percabangan, perubahan arah drastis, atau ujung pipa harus diakhiri dengan kotak sambung. Pastikan kotak terpasang rata dengan permukaan dinding.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Sad (Bush) di Ujung Pipa</h5>
+                                <p class="text-sm text-gray-700">Setiap ujung pipa yang masuk ke kotak sambung harus dipasangi sad (bush) untuk melindungi isolasi kabel dari goresan tajam saat penarikan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>Aturan Penting Pemasangan Pipa (PUIL)</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Daya tampung maksimal 40%:</strong> Luas penampang total kabel tidak boleh melebihi 40% luas penampang dalam pipa</li>
+                            <li><strong>Maksimal 4 tikungan 90°:</strong> Antara dua kotak sambung, total tikungan tidak boleh melebihi 360°</li>
+                            <li><strong>Jarak klem:</strong> Horizontal 60-90 cm, vertikal 1-1.5 m</li>
+                            <li><strong>Jarak dari sumber panas:</strong> Minimal 15 cm</li>
+                            <li><strong>Pipa outdoor:</strong> Harus tahan UV (tipe heavy duty) dan memiliki drainase</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-calculator mr-2"></i>Contoh Perhitungan Daya Tampung Pipa</h4>
+                        <p class="text-sm text-gray-700">
+                            <strong>Kasus:</strong> Pipa PVC 20 mm (luas penampang dalam = 314 mm²) akan diisi kabel NYA 1.5 mm² (diameter luar ±3 mm, luas penampang ≈ 7 mm²).
+                            <br><br>
+                            <strong>Perhitungan:</strong><br>
+                            • Daya tampung maksimal = 40% × 314 = <strong>125.6 mm²</strong><br>
+                            • Jumlah kabel maksimal = 125.6 / 7 = <strong>17.9 → 17 kabel</strong><br>
+                            • Dalam praktik, untuk kemudahan penarikan, disarankan maksimal <strong>60-70% dari kapasitas teoritis</strong> → sekitar 10-12 kabel.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Pemasangan Kotak Sambung, Sakelar, dan Fitting -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-cubes mr-2"></i>5. Pemasangan Kotak Sambung, Sakelar, dan Fitting</h3>
+                    <p class="text-gray-700 mb-3">Setelah pipa terpasang, tahap selanjutnya adalah memasang komponen-komponen utama pada posisi yang telah ditentukan.</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-box mr-2"></i>Kotak Sambung (Doos)</h4>
+                            <ul class="list-disc list-inside text-xs text-gray-700 space-y-1">
+                                <li><strong>In-bow:</strong> Tanam dalam dinding, rata dengan permukaan</li>
+                                <li><strong>Out-bow:</strong> Tempel di permukaan dinding</li>
+                                <li>Pasang dengan semen (in-bow) atau sekrup+fischer (out-bow)</li>
+                                <li>Pastikan kotak kuat dan tidak goyang</li>
+                                <li>Tutup harus bisa dibuka untuk pemeliharaan</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-toggle-on mr-2"></i>Sakelar</h4>
+                            <ul class="list-disc list-inside text-xs text-gray-700 space-y-1">
+                                <li>Ketinggian 120-150 cm dari lantai</li>
+                                <li>Posisi di samping pintu (sisi handle)</li>
+                                <li>Pasang frame terlebih dahulu, lalu mekanisme</li>
+                                <li>Kencangkan sekrup kaki katak secara merata</li>
+                                <li>Pastikan tuas bergerak bebas</li>
+                                <li>Pasang cover terakhir</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Fitting Lampu</h4>
+                            <ul class="list-disc list-inside text-xs text-gray-700 space-y-1">
+                                <li>Pasang di plafon atau dinding sesuai desain</li>
+                                <li>Gunakan fisher yang sesuai beban lampu</li>
+                                <li>Untuk lampu berat (>3 kg), gunakan angkur baut</li>
+                                <li>Pastikan fitting terpasang kuat dan tidak goyang</li>
+                                <li>Terminal fitting harus mudah diakses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-clipboard-list mr-2"></i>Urutan Pemasangan yang Disarankan</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                            <li>Pasang semua kotak sambung (doos) di posisi yang telah ditandai</li>
+                            <li>Pasang fitting lampu di plafon/dinding</li>
+                            <li>Pasang kotak sakelar di dinding (tanpa mekanisme dulu)</li>
+                            <li>Setelah kabel ditarik, baru pasang mekanisme sakelar dan fitting</li>
+                            <li>Pasang cover sakelar setelah semua pekerjaan kabel selesai</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 6. Penarikan dan Penyambungan Kabel -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-wave-square mr-2"></i>6. Penarikan dan Penyambungan Kabel</h3>
+                    <p class="text-gray-700 mb-3">Ini adalah tahap paling kritis dalam pemasangan instalasi. Kesalahan pada tahap ini bisa merusak kabel, menyulitkan pemeliharaan, atau bahkan membahayakan keselamatan.</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4"><i class="fas fa-arrow-right mr-2"></i>A. Teknik Penarikan Kabel</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Masukkan Kawat Tarik (Fish Tape)</h5>
+                                <p class="text-sm text-gray-700">Gunakan kawat tarik baja (fish tape) atau nilon. Masukkan dari satu ujung pipa ke ujung lainnya. Untuk pipa panjang atau banyak tikungan, gunakan pelumas kabel (cable lubricant).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Ikat Kabel pada Kawat Tarik</h5>
+                                <p class="text-sm text-gray-700">Ikat ujung kabel pada kawat tarik dengan simpul yang kuat dan ramping (tidak boleh lebih besar dari diameter pipa). Bungkus dengan lakban agar tidak nyangkut.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Tarik Kabel Perlahan</h5>
+                                <p class="text-sm text-gray-700">Satu orang menarik di ujung, satu orang memasukkan di ujung lain. Tarik perlahan dan stabil — jangan menyentak. Jika macet, jangan dipaksa — cari penyebabnya.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Sisakan Kabel Secukupnya</h5>
+                                <p class="text-sm text-gray-700">Sisakan kabel sepanjang 15-20 cm di setiap kotak sambung untuk memudahkan penyambungan. Jangan memotong terlalu pendek.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2 mt-6"><i class="fas fa-link mr-2"></i>B. Teknik Penyambungan Kabel</h4>
+                    <p class="text-gray-700 mb-3">Penyambungan kabel mengikuti prinsip 3K (Kuat, Konduktif, terIsolasi) yang telah dipelajari pada pertemuan sebelumnya. Dalam konteks pemasangan instalasi, metode yang paling umum digunakan adalah:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-check-circle mr-2"></i>Terminal Wago (Direkomendasikan)</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Cepat, aman, dan andal</li>
+                                <li>Tidak perlu alat khusus</li>
+                                <li>Transparan — mudah diperiksa</li>
+                                <li>Cocok untuk kotak sambung</li>
+                                <li>Standar instalasi modern</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-fire mr-2"></i>Pilinan + Las Dop (Tradisional)</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Murah namun butuh keterampilan</li>
+                                <li>Wajib dilas dengan timah</li>
+                                <li>Diisolasi dengan lakban listrik/heat shrink</li>
+                                <li>Hanya di dalam kotak sambung</li>
+                                <li>Harus aksesibel untuk pemeliharaan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <p class="text-sm text-gray-700"><strong>⚠️ Larangan Keras:</strong> Jangan pernah menyambung kabel di luar kotak sambung! Jangan membiarkan sambungan telanjang tanpa isolasi! Jangan menggunakan lakban biasa (bukan lakban listrik)! Semua sambungan harus di dalam kotak doos yang aksesibel.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Buat checklist persiapan sebelum mulai bekerja — jangan ada yang terlewat.</li>
+                    <li>Foto setiap tahap pemasangan untuk dokumentasi dan antisipasi masalah.</li>
+                    <li>Gunakan waterpass untuk memastikan pipa dan kotak terpasang lurus.</li>
+                    <li>Beri label pada setiap kabel di kedua ujungnya untuk memudahkan identifikasi.</li>
+                    <li>Gunakan pelumas kabel saat menarik kabel melalui pipa panjang atau banyak tikungan.</li>
+                    <li>Sisakan kabel 15-20 cm di setiap kotak untuk kemudahan penyambungan.</li>
+                    <li>Kerjakan secara bertahap — jangan terburu-buru.</li>
+                    <li>Bersihkan area kerja setiap selesai bekerja (prinsip 5R).</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Tidak membaca gambar kerja secara utuh → salah posisi komponen.</li>
+                    <li>Mengisi pipa melebihi 40% → kabel macet saat ditarik.</li>
+                    <li>Terlalu banyak tikungan → kabel sulit ditarik.</li>
+                    <li>Tidak memasang sad (bush) di ujung pipa → isolasi kabel tergores.</li>
+                    <li>Memasang sakelar di netral → bahaya sengatan listrik.</li>
+                    <li>Menyambung kabel di luar kotak doos → tidak aksesibel, berbahaya.</li>
+                    <li>Tidak memberi label pada kabel → kesulitan saat pemeliharaan.</li>
+                    <li>Memotong kabel terlalu pendek → tidak cukup untuk penyambungan.</li>
+                    <li>Tidak melakukan uji kontinuitas sebelum menyalakan MCB.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Pemasangan instalasi penerangan adalah proses sistematis yang terdiri dari enam tahapan utama: (1) persiapan alat dan bahan yang matang, (2) membaca gambar kerja secara cermat, (3) menentukan jalur instalasi yang optimal sesuai PUIL, (4) memasang pipa/conduit dengan memperhatikan daya tampung 40% dan maksimal 4 tikungan 90° antar kotak, (5) memasang kotak sambung, sakelar (ketinggian 120-150 cm), dan fitting pada posisi yang tepat, serta (6) menarik dan menyambung kabel dengan teknik yang benar. Setiap tahapan harus mengikuti standar PUIL 2011 dan prinsip K3 untuk menjamin keselamatan dan keandalan instalasi. Kesalahan pada tahap awal akan berakibat domino pada tahap-tahap berikutnya, sehingga perencanaan yang matang adalah kunci keberhasilan. Penguasaan keenam tahapan ini akan menjadi fondasi penting bagi siswa untuk melaksanakan pekerjaan instalasi secara profesional pada pertemuan-pertemuan selanjutnya (pengujian dan evaluasi).
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>PT Supreme Cable. (2020). <em>Panduan Pemasangan Kabel Instalasi</em>.</li>
+                <li>IEC. (2018). <em>IEC 61082: Preparation of documents used in electrotechnology</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="15.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 15</a>
+            <a href="17.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 17: Pengujian Instalasi <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 16 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 16</h2>
+                <p class="text-gray-600 mt-2">Pemasangan Instalasi Penerangan</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Tahapan PERTAMA yang harus dilakukan sebelum memulai pemasangan instalasi penerangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Langsung menarik kabel ke dalam pipa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Persiapan alat, bahan, dan mempelajari gambar kerja secara menyeluruh</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Menyalakan MCB untuk menguji jalur</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Mengecat dinding terlebih dahulu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="E" class="form-radio text-blue-600"> <span>E. Memasang lampu tanpa membaca gambar</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Dalam membaca gambar kerja instalasi, langkah yang HARUS dilakukan pertama kali adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Langsung mengebor dinding</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Memeriksa identitas gambar, legenda simbol, dan memastikan memegang versi terbaru</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Menghitung biaya material</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Menebak-nebak arti simbol</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="E" class="form-radio text-blue-600"> <span>E. Mengabaikan gambar dan bekerja sesuai kebiasaan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Menurut standar PUIL, ketinggian pemasangan sakelar yang tepat dari lantai adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. 30-40 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. 50-70 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. 120-150 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. 200-220 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="E" class="form-radio text-blue-600"> <span>E. Setinggi plafon</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Menurut PUIL, daya tampung maksimal kabel di dalam pipa conduit adalah... dari luas penampang pipa.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. 20%</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. 40%</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. 60%</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. 80%</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="E" class="form-radio text-blue-600"> <span>E. 100%</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Jumlah tikungan maksimal yang diperbolehkan antara dua kotak sambung dalam satu jalur pipa conduit adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. 2 × 90° (180° total)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. 4 × 90° (360° total)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. 6 × 90° (540° total)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Tidak ada batasan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="E" class="form-radio text-blue-600"> <span>E. 1 × 90° saja</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Fungsi sad (bush) yang dipasang di ujung pipa conduit yang masuk ke kotak sambung adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Menghantarkan arus listrik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Melindungi isolasi kabel dari goresan tajam ujung pipa saat penarikan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Sebagai penghias pipa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Mengunci pipa agar tidak bergerak</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="E" class="form-radio text-blue-600"> <span>E. Menambah daya tampung pipa</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Alat yang digunakan untuk menarik kabel melalui pipa conduit yang panjang dan memiliki tikungan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. Tang kombinasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. Obeng isolasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. Kawat tarik (fish tape/snake)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. Test pen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="E" class="form-radio text-blue-600"> <span>E. Cutter</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Jarak klem pengikat pipa conduit yang dipasang secara horizontal yang sesuai standar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Setiap 10 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. Setiap 60-90 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Setiap 3 meter</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Setiap 5 meter</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="E" class="form-radio text-blue-600"> <span>E. Tidak perlu klem</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Panjang sisa kabel yang harus disisakan di setiap kotak sambung untuk memudahkan penyambungan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. 1-2 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. 5-7 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. 15-20 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. 50-60 cm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="E" class="form-radio text-blue-600"> <span>E. 1 meter</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Berdasarkan studi kasus 16, penyebab kabel tidak bisa ditarik melalui pipa adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Kabel terlalu pendek</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Pipa terlalu besar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Jumlah kabel melebihi daya tampung pipa (melebihi 40%) dan terlalu banyak tikungan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Kawat tarik terlalu kuat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="E" class="form-radio text-blue-600"> <span>E. MCB terlalu kecil</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Uraikan 6 tahapan sistematis dalam pemasangan instalasi penerangan! Jelaskan mengapa setiap tahapan harus dilakukan secara berurutan dan tidak boleh dilewati!</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Jelaskan langkah-langkah sistematis dalam membaca gambar kerja instalasi penerangan! Mengapa setiap langkah tersebut penting untuk dilakukan sebelum memulai pemasangan fisik?</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Sebutkan dan jelaskan ketentuan PUIL terkait pemasangan pipa conduit! Berikan alasan mengapa setiap ketentuan tersebut penting untuk dipatuhi!</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 16 di atas! Identifikasi kesalahan yang dilakukan teknisi, jelaskan mengapa kabel tidak bisa ditarik, dan berikan solusi pemasangan yang benar sesuai standar PUIL!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan teknik penarikan kabel melalui pipa conduit yang benar! Jelaskan langkah-langkahnya, alat yang digunakan, dan hal-hal yang harus dihindari agar kabel tidak rusak saat ditarik!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 16
+        const kunciJawaban = {
+            q1: 'B', q2: 'B', q3: 'C', q4: 'B', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'B', q9: 'C', q10: 'C'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 16 (Pemasangan Instalasi) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 16 (Pemasangan Instalasi Penerangan) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

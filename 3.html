@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 3: Standar dan Peraturan Instalasi Penerangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 3</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Standar dan Peraturan Instalasi Penerangan</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Memahami PUIL, standar SNI, simbol-simbol listrik, dan prinsip-prinsip instalasi yang aman untuk menjamin keandalan dan keselamatan sistem kelistrikan.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="2.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 2</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Setiap pekerjaan instalasi listrik tidak dapat dilakukan secara sembarangan. Di Indonesia, terdapat seperangkat standar dan peraturan yang menjadi acuan wajib bagi setiap teknisi, perencana, maupun pengawas instalasi listrik. Standar ini bukan hanya dokumen administratif, melainkan <strong>payung hukum dan teknis</strong> yang menjamin keselamatan manusia, keandalan sistem, serta perlindungan properti dari bahaya kebakaran listrik.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari standar utama instalasi listrik di Indonesia yaitu PUIL (Persyaratan Umum Instalasi Listrik), standar SNI yang relevan, simbol-simbol listrik yang menjadi bahasa universal teknisi, serta prinsip-prinsip dasar instalasi yang aman. Pemahaman yang kuat terhadap materi ini akan menjadi fondasi bagi siswa dalam merancang, memasang, dan menguji instalasi penerangan yang sesuai regulasi pada pertemuan-pertemuan berikutnya.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-gavel mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>PUIL:</strong> Persyaratan Umum Instalasi Listrik — standar nasional Indonesia yang wajib dipatuhi dalam setiap pekerjaan instalasi listrik.</li>
+                    <li><strong>SNI:</strong> Standar Nasional Indonesia — acuan teknis untuk komponen dan material listrik yang digunakan.</li>
+                    <li><strong>Simbol Listrik:</strong> Bahasa grafis universal yang digunakan dalam gambar kerja instalasi untuk merepresentasikan komponen listrik.</li>
+                    <li><strong>Derajat Proteksi (IP):</strong> Kode internasional yang menunjukkan tingkat ketahanan suatu peralatan terhadap debu dan air.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Mengenal PUIL dan Standar Instalasi Listrik Indonesia</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk memahami pentingnya standar dalam pekerjaan instalasi listrik.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video PUIL & Standar Listrik</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 3: Kebakaran Akibat Instalasi Tidak Standar</h3>
+            <p class="text-gray-700 mb-4">
+                Sebuah ruko di kawasan padat penduduk terbakar pada dini hari. Hasil investigasi tim pemadam kebakaran dan PLN menunjukkan bahwa kebakaran dipicu oleh instalasi listrik yang tidak memenuhi standar PUIL: ukuran kabel terlalu kecil untuk beban yang dipasang, tidak ada pengaman MCB yang sesuai, sambungan kabel tidak diisolasi dengan baik, dan tidak ada sistem pembumian. Kerugian material ditaksir ratusan juta rupiah.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kepatuhan terhadap PUIL dan standar SNI bukan formalitas. Setiap pasal dalam PUIL lahir dari pengalaman nyata kecelakaan dan kerugian. Seorang teknisi profesional <strong>wajib</strong> memahami dan menerapkan standar ini dalam setiap pekerjaannya.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">3.1 Landasan Hukum dan Standar</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">3.1.1 Hierarki Regulasi Kelistrikan</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>UU No. 30 Tahun 2009</strong> tentang Ketenagalistrikan</li>
+                        <li><strong>PP No. 14 Tahun 2012</strong> tentang Kegiatan Usaha Penyediaan Tenaga Listrik</li>
+                        <li><strong>Permen ESDM No. 12 Tahun 2016</strong> tentang Instalasi Listrik</li>
+                        <li><strong>PUIL 2011 / SNI 0225:2011</strong> — Persyaratan Umum Instalasi Listrik</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">3.1.2 Tujuan Standar Instalasi</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Keselamatan manusia</strong> dari bahaya sengatan listrik</li>
+                        <li><strong>Perlindungan properti</strong> dari bahaya kebakaran</li>
+                        <li><strong>Keandalan sistem</strong> instalasi dalam jangka panjang</li>
+                        <li><strong>Interoperabilitas</strong> antar komponen dari berbagai merek</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">3.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">1. Pengenalan Standar Instalasi Listrik</h3>
+                    <p class="text-gray-700 mb-3">Standar instalasi listrik adalah dokumen teknis yang memuat ketentuan-ketentuan wajib terkait perencanaan, pemasangan, pengujian, dan pemeliharaan instalasi listrik. Di Indonesia, standar utama yang berlaku adalah:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Standar</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">PUIL 2011 (SNI 0225:2011)</td>
+                                    <td class="px-4 py-3">Persyaratan Umum Instalasi Listrik — acuan utama instalasi arus kuat di Indonesia.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">SNI IEC 60364</td>
+                                    <td class="px-4 py-3">Adopsi standar internasional IEC untuk instalasi listrik bangunan.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">SNI 04-0225-2000</td>
+                                    <td class="px-4 py-3">Persyaratan umum instalasi listrik (versi sebelumnya).</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">IEC 60898 / SNI</td>
+                                    <td class="px-4 py-3">Standar untuk MCB (Miniature Circuit Breaker).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">2. PUIL dan Penerapannya</h3>
+                    <p class="text-gray-700 mb-3"><strong>PUIL (Persyaratan Umum Instalasi Listrik)</strong> adalah standar nasional Indonesia yang mengatur secara rinci semua aspek instalasi listrik. Beberapa pasal penting dalam PUIL yang wajib dipahami siswa:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Pasal 1 — Ruang Lingkup:</strong> PUIL berlaku untuk instalasi listrik tegangan rendah (hingga 1000 V AC).</li>
+                        <li><strong>Pasal 2 — Keselamatan:</strong> Setiap instalasi harus menjamin keselamatan manusia, ternak, dan harta benda.</li>
+                        <li><strong>Pasal 5 — Pembumian:</strong> Setiap instalasi wajib memiliki sistem pembumian (grounding) yang sesuai.</li>
+                        <li><strong>Pasal 8 — Pengaman:</strong> Wajib menggunakan pengaman arus lebih (MCB/fuse) dan pengaman arus bocor (ELCB/RCD) pada kondisi tertentu.</li>
+                        <li><strong>Pasal 10 — Warna Penghantar:</strong> Fase = Merah/Kuning/Hitam; Netral = Biru; Ground = Hijau-Kuning.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">3. Ketentuan Keselamatan Instalasi</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-shield-alt mr-2"></i>Proteksi Kontak Langsung</h4>
+                            <p class="text-sm text-gray-700">Mencegah tubuh manusia menyentuh bagian bertegangan melalui: isolasi dasar, selubung/penghalang, dan penempatan di jangkauan tangan.</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                            <h4 class="font-bold text-orange-800 mb-2"><i class="fas fa-bolt mr-2"></i>Proteksi Kontak Tidak Langsung</h4>
+                            <p class="text-sm text-gray-700">Mencegah bahaya saat terjadi gangguan isolasi melalui: pembumian, equipotential bonding, dan pemutusan otomatis (MCB/ELCB).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">4. Simbol dan Tanda Instalasi Listrik</h3>
+                    <p class="text-gray-700 mb-3">Simbol listrik adalah bahasa grafis universal yang digunakan dalam gambar kerja. Berikut simbol-simbol dasar yang wajib dikuasai:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Komponen</th>
+                                    <th class="px-4 py-3">Simbol (Deskripsi)</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Lampu</td>
+                                    <td class="px-4 py-3">Lingkaran dengan silang di dalamnya (⊗)</td>
+                                    <td class="px-4 py-3">Mewakili beban penerangan</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Sakelar Tunggal</td>
+                                    <td class="px-4 py-3">Garis putus dengan tuas satu arah</td>
+                                    <td class="px-4 py-3">Pemutus satu jalur fasa</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Sakelar Seri</td>
+                                    <td class="px-4 py-3">Garis putus dengan dua tuas sejajar</td>
+                                    <td class="px-4 py-3">Mengendalikan dua kelompok lampu</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Stop Kontak</td>
+                                    <td class="px-4 py-3">Semi-lingkaran dengan dua garis vertikal</td>
+                                    <td class="px-4 py-3">Titik pengambilan daya</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">MCB</td>
+                                    <td class="px-4 py-3">Kotak dengan garis putus di tengah</td>
+                                    <td class="px-4 py-3">Pengaman arus lebih</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Grounding</td>
+                                    <td class="px-4 py-3">Tiga garis horizontal menurun</td>
+                                    <td class="px-4 py-3">Titik pembumian</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">5. Prinsip Instalasi yang Aman dan Memenuhi Standar</h3>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2 text-center"><i class="fas fa-1 text-2xl mb-2"></i>Perencanaan</h4>
+                            <p class="text-xs text-gray-700">Membaca PUIL, menghitung beban, membuat gambar kerja sesuai standar.</p>
+                        </div>
+                        <div class="flex-1 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2 text-center"><i class="fas fa-2 text-2xl mb-2"></i>Material</h4>
+                            <p class="text-xs text-gray-700">Menggunakan komponen bersertifikat SNI dan sesuai spesifikasi teknis.</p>
+                        </div>
+                        <div class="flex-1 bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2 text-center"><i class="fas fa-3 text-2xl mb-2"></i>Pemasangan</h4>
+                            <p class="text-xs text-gray-700">Mengikuti gambar kerja, menjaga kerapian, dan mematuhi warna penghantar.</p>
+                        </div>
+                        <div class="flex-1 bg-purple-50 p-4 rounded-lg border border-purple-200">
+                            <h4 class="font-bold text-purple-800 mb-2 text-center"><i class="fas fa-4 text-2xl mb-2"></i>Pengujian</h4>
+                            <p class="text-xs text-gray-700">Uji kontinuitas, polaritas, isolasi, dan fungsi sebelum dialiri tegangan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Derajat Proteksi IP -->
+        <section class="mb-12 bg-indigo-50 border border-indigo-200 p-6 rounded-xl">
+            <h3 class="font-bold text-indigo-800 mb-3"><i class="fas fa-tint-slash mr-2"></i>Kode IP (Ingress Protection)</h3>
+            <p class="text-gray-700 text-sm mb-3">Kode IP menunjukkan ketahanan peralatan terhadap benda padat (angka pertama) dan cairan (angka kedua). Contoh:</p>
+            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                <li><strong>IP20:</strong> Stop kontak indoor standar (tahan sentuhan jari, tidak tahan air)</li>
+                <li><strong>IP44:</strong> Stop kontak tahan percikan air (untuk kamar mandi)</li>
+                <li><strong>IP65:</strong> Lampu outdoor (tahan debu total dan semprotan air)</li>
+                <li><strong>IP67:</strong> Peralatan yang dapat direndam sementara</li>
+            </ul>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Selalu sediakan salinan PUIL terbaru di bengkel kerja sebagai referensi.</li>
+                    <li>Periksa sertifikasi SNI pada setiap komponen sebelum dipasang.</li>
+                    <li>Biasakan membaca gambar kerja secara utuh sebelum memulai pemasangan.</li>
+                    <li>Gunakan simbol standar PUIL/SNI dalam setiap gambar kerja yang dibuat.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Menggunakan kabel tanpa label SNI (kabel banci) yang berbahaya.</li>
+                    <li>Tidak menerapkan sistem pembumian pada instalasi logam.</li>
+                    <li>Mencampuradukkan warna penghantar (misal: netral menggunakan warna merah).</li>
+                    <li>Mengabaikan kode IP saat memasang peralatan di area basah/outdoor.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Standar dan peraturan instalasi listrik (PUIL, SNI, IEC) adalah fondasi hukum dan teknis yang tidak boleh diabaikan. Setiap teknisi wajib memahami pasal-pasal penting PUIL, mengenal simbol-simbol listrik standar, memahami kode IP, serta menerapkan prinsip instalasi yang aman. Kepatuhan terhadap standar bukan hanya kewajiban profesional, tetapi juga wujud tanggung jawab terhadap keselamatan manusia dan kelestarian properti.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Republik Indonesia. (2009). <em>UU No. 30 Tahun 2009 tentang Ketenagalistrikan</em>.</li>
+                <li>International Electrotechnical Commission. (2005). <em>IEC 60364: Low-voltage electrical installations</em>.</li>
+                <li>Departemen Tenaga Kerja dan Transmigrasi. (2005). <em>Pedoman Keselamatan dan Kesehatan Kerja di Bidang Listrik</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="2.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 2</a>
+            <a href="4.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 4: Sumber & Sistem <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 3 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 3</h2>
+                <p class="text-gray-600 mt-2">Standar dan Peraturan Instalasi Penerangan</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Standar nasional Indonesia yang menjadi acuan utama dan wajib dalam setiap pekerjaan instalasi listrik adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. PUIL (Persyaratan Umum Instalasi Listrik)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. ISO 9001</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. SNI ISO 14001</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Standar perusahaan lokal</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Kepanjangan dari SNI dalam konteks material listrik adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Sistem Nasional Infrastruktur</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Standar Nasional Indonesia</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Sertifikasi Nasional Industri</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Spesifikasi Normal Instalasi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Menurut PUIL, warna isolasi kabel yang digunakan untuk penghantar NETRAL adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Merah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Hijau-Kuning</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Biru</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Hitam</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Alat pengaman yang berfungsi memutus arus secara otomatis saat terjadi arus lebih (overload) atau hubung singkat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Sakelar biasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Fitting lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. MCB (Miniature Circuit Breaker)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Stop kontak</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Sistem yang berfungsi untuk mengalirkan arus gangguan ke bumi guna melindungi manusia dari sengatan listrik disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Sistem penyaluran</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Sistem pembumian (grounding)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Sistem distribusi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Sistem transmisi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Jenis gambar instalasi yang menampilkan hubungan komponen secara sederhana dalam satu garis tunggal disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Diagram satu garis (single line diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Diagram pengawatan (wiring diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Gambar perspektif 3D</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Foto instalasi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Kode IP (Ingress Protection) yang menunjukkan peralatan tahan terhadap debu total dan semprotan air (cocok untuk outdoor) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. IP20</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. IP44</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. IP33</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. IP65</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Tegangan kerja standar untuk instalasi penerangan rumah tinggal di Indonesia (sistem satu fasa) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. 110 Volt</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. 380 Volt</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. 220 Volt</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. 1000 Volt</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Standar internasional yang banyak diadopsi oleh SNI untuk instalasi listrik tegangan rendah adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. IEC (International Electrotechnical Commission)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. IEEE (Institute of Electrical and Electronics Engineers)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. ANSI (American National Standards Institute)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. JIS (Japanese Industrial Standards)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Lembaga yang menerbitkan PUIL di Indonesia adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Kementerian Pendidikan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. PLN (Persero)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Kementerian ESDM</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. BSN (Badan Standardisasi Nasional) bersama SPLN</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan apa yang dimaksud dengan PUIL dan mengapa standar ini wajib dipatuhi oleh setiap teknisi listrik di Indonesia!</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Sebutkan dan jelaskan warna standar penghantar listrik menurut PUIL untuk: (a) fasa, (b) netral, dan (c) pembumian (grounding)!</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Jelaskan perbedaan antara diagram satu garis (single line diagram) dengan diagram pengawatan (wiring diagram)! Kapan masing-masing digunakan?</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 3 di atas! Identifikasi minimal tiga pelanggaran standar PUIL yang terjadi dan jelaskan bagaimana seharusnya instalasi yang benar!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Jelaskan pentingnya kode IP (Ingress Protection) dalam pemilihan peralatan listrik! Berikan contoh penerapannya untuk instalasi indoor dan outdoor!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 3
+        const kunciJawaban = {
+            q1: 'A', q2: 'B', q3: 'C', q4: 'C', q5: 'B',
+            q6: 'A', q7: 'D', q8: 'C', q9: 'A', q10: 'D'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            // Hitung skor PG
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            // Tampilkan hasil
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            
+            // Scroll ke hasil
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 3 (Standar & Peraturan) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 3 (Standar dan Peraturan Instalasi Penerangan) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

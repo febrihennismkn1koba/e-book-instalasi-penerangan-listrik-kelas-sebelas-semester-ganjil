@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 8: Gambar dan Simbol Instalasi Penerangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .symbol-box { font-family: monospace; font-size: 1.5rem; text-align: center; padding: 0.5rem; border: 2px solid #1e40af; border-radius: 0.5rem; background: #eff6ff; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 8</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Gambar dan Simbol Instalasi Penerangan</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Memahami fungsi gambar instalasi, simbol-simbol listrik standar PUIL/SNI, diagram satu garis, diagram pengawatan, serta teknik membaca dan menginterpretasi gambar kerja instalasi penerangan.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="7.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 7</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Gambar instalasi listrik adalah <strong>bahasa universal</strong> bagi para teknisi, perencana, dan pengawas instalasi. Tanpa gambar kerja yang jelas dan standar, pemasangan instalasi listrik akan menjadi proses yang subjektif, rawan kesalahan, sulit dipelihara, dan berpotensi membahayakan keselamatan. Sama seperti arsitek yang membutuhkan gambar denah sebelum membangun rumah, teknisi listrik membutuhkan gambar instalasi sebelum menarik kabel pertama.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari fungsi gambar instalasi, simbol-simbol listrik standar yang berlaku di Indonesia (berdasarkan PUIL dan SNI), perbedaan antara diagram satu garis dan diagram pengawatan, serta teknik membaca gambar instalasi penerangan secara sistematis. Penguasaan materi ini sangat penting karena setiap pekerjaan instalasi — mulai dari perencanaan hingga pemeliharaan — selalu dimulai dari dan kembali ke gambar kerja.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-drafting-compass mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Gambar Instalasi:</strong> Representasi grafis dari suatu sistem instalasi listrik menggunakan simbol-simbol standar.</li>
+                    <li><strong>Simbol Listrik:</strong> Tanda grafis baku yang mewakili komponen listrik (lampu, sakelar, stop kontak, MCB, dll).</li>
+                    <li><strong>Diagram Satu Garis (Single Line Diagram):</strong> Gambar yang menyederhanakan sistem dengan satu garis per penghantar, menunjukkan alur distribusi secara umum.</li>
+                    <li><strong>Diagram Pengawatan (Wiring Diagram):</strong> Gambar detail yang menunjukkan hubungan fisik antar komponen secara lengkap.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Mengenal Simbol dan Gambar Instalasi Listrik</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk memahami cara membaca simbol-simbol listrik dan jenis-jenis diagram instalasi.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Simbol & Gambar Instalasi</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 8: Kesalahan Fatal Akibat Salah Membaca Gambar</h3>
+            <p class="text-gray-700 mb-4">
+                Seorang teknisi pemula ditugaskan memasang instalasi penerangan di sebuah ruang kelas. Ia menerima gambar kerja dari perencana, namun karena tidak memahami simbol dengan benar, ia mengira simbol sakelar tukar (SPDT) adalah sakelar tunggal. Akibatnya, lampu yang seharusnya dapat dikendalikan dari dua tempat (depan dan belakang kelas) hanya dapat dikendalikan dari satu tempat. Pekerjaan harus dibongkar ulang, material terbuang, dan klien kecewa.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kemampuan membaca simbol dan gambar instalasi bukan sekadar keterampilan teknis, melainkan <strong>kompentensi profesional</strong> yang wajib dikuasai. Kesalahan interpretasi gambar dapat berakibat pada kesalahan pemasangan, pemborosan material, hingga potensi bahaya keselamatan. <strong>Sebelum memasang kabel, bacalah gambarnya dengan teliti.</strong></p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">8.1 Landasan Teoretis Gambar Teknik Listrik</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">8.1.1 Standar Gambar Listrik</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Gambar teknik listrik di Indonesia mengacu pada beberapa standar internasional dan nasional:
+                        <br><br>
+                        • <strong>PUIL 2011 (SNI 0225:2011)</strong> — acuan utama di Indonesia<br>
+                        • <strong>IEC 60617</strong> — standar simbol grafis internasional<br>
+                        • <strong>IEC 61082</strong> — standar dokumen dan diagram listrik<br>
+                        • <strong>SNI 04-0225-2000</strong> — standar simbol listrik nasional
+                        <br><br>
+                        Kepatuhan terhadap standar ini menjamin gambar dapat dipahami oleh teknisi mana pun di seluruh Indonesia dan dunia.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">8.1.2 Prinsip Penyajian Gambar</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Keseragaman:</strong> Simbol yang sama harus memiliki arti yang sama di semua gambar.</li>
+                        <li><strong>Kesederhanaan:</strong> Gambar harus sederhana namun informatif.</li>
+                        <li><strong>Kelengkapan:</strong> Semua informasi penting harus tercantum (legenda, keterangan, skala).</li>
+                        <li><strong>Keterbacaan:</strong> Gambar harus mudah dibaca dan dipahami.</li>
+                        <li><strong>Konsistensi:</strong> Menggunakan konvensi yang sama dalam satu set gambar.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">8.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Fungsi Gambar Instalasi -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-file-alt mr-2"></i>1. Fungsi Gambar Instalasi</h3>
+                    <p class="text-gray-700 mb-3">Gambar instalasi listrik memiliki beberapa fungsi vital dalam pekerjaan kelistrikan:</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-map mr-2"></i>Panduan Pemasangan</h4>
+                            <p class="text-sm text-gray-700">Memberikan instruksi detail tentang lokasi, jenis, dan hubungan antar komponen yang harus dipasang.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-comments mr-2"></i>Alat Komunikasi</h4>
+                            <p class="text-sm text-gray-700">Menjadi media komunikasi antara perencana, teknisi, pengawas, dan pemilik proyek.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-calculator mr-2"></i>Dasar Perhitungan RAB</h4>
+                            <p class="text-sm text-gray-700">Menjadi dasar untuk menghitung kebutuhan material, panjang kabel, dan biaya pekerjaan (RAB).</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                            <h4 class="font-bold text-purple-800 mb-2"><i class="fas fa-archive mr-2"></i>Dokumentasi & Pemeliharaan</h4>
+                            <p class="text-sm text-gray-700">Disimpan sebagai dokumentasi untuk keperluan pemeliharaan, perbaikan, atau pengembangan di masa depan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Simbol-simbol Listrik -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-icons mr-2"></i>2. Simbol-simbol Listrik Standar</h3>
+                    <p class="text-gray-700 mb-3">Berikut adalah simbol-simbol listrik standar yang wajib dikuasai dalam instalasi penerangan (berdasarkan PUIL dan IEC 60617):</p>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2 mt-4">A. Simbol Beban (Lampu)</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Komponen</th>
+                                    <th class="px-4 py-3">Simbol</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Lampu Umum</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">⊗</span></td>
+                                    <td class="px-4 py-3">Lingkaran dengan silang di dalamnya</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Lampu Plafon</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">⊗</span><br><small>(dengan garis bawah)</small></td>
+                                    <td class="px-4 py-3">Lampu yang dipasang di plafon</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Lampu Dinding</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">⊗</span><br><small>(dengan garis samping)</small></td>
+                                    <td class="px-4 py-3">Lampu yang dipasang di dinding</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Lampu Emergency</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">⊗E</span></td>
+                                    <td class="px-4 py-3">Lampu darurat dengan baterai cadangan</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2 mt-6">B. Simbol Sakelar</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Jenis Sakelar</th>
+                                    <th class="px-4 py-3">Simbol</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Sakelar Tunggal</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">—/</span><br><small>(1 tuas)</small></td>
+                                    <td class="px-4 py-3">Garis putus dengan satu tuas ke satu arah</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Sakelar Seri (Double)</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">—//</span><br><small>(2 tuas sejajar)</small></td>
+                                    <td class="px-4 py-3">Dua tuas sejajar untuk dua kelompok lampu</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Sakelar Tukar (SPDT)</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">—\/</span><br><small>(1 common, 2 traveler)</small></td>
+                                    <td class="px-4 py-3">Tuas bercabang dua untuk kendali 2 tempat</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Sakelar Silang (Intermediate)</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">—X—</span><br><small>(4 terminal)</small></td>
+                                    <td class="px-4 py-3">Simbol silang untuk kendali 3+ tempat</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-2 mt-6">C. Simbol Stop Kontak dan Komponen Lain</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Komponen</th>
+                                    <th class="px-4 py-3">Simbol</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Stop Kontak (Umum)</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">◗</span><br><small>(semi-lingkaran + 2 garis)</small></td>
+                                    <td class="px-4 py-3">Semi-lingkaran dengan dua garis vertikal di atasnya</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Stop Kontak + Ground</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">◗⏚</span></td>
+                                    <td class="px-4 py-3">Dengan simbol pembumian tambahan</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Kotak Sambung (Doos)</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">□</span></td>
+                                    <td class="px-4 py-3">Persegi untuk tempat sambungan kabel</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">MCB</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">—□/—</span></td>
+                                    <td class="px-4 py-3">Kotak dengan garis putus di tengah</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">ELCB/RCD</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">—□~—</span></td>
+                                    <td class="px-4 py-3">Dengan simbol deteksi arus bocor</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Grounding (Pembumian)</td>
+                                    <td class="px-4 py-3"><span class="symbol-box">⏚</span><br><small>(3 garis horizontal menurun)</small></td>
+                                    <td class="px-4 py-3">Titik pembumian sistem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 3. Diagram Satu Garis -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-sitemap mr-2"></i>3. Diagram Satu Garis (Single Line Diagram)</h3>
+                    <p class="text-gray-700 mb-3">Diagram satu garis (Single Line Diagram/SLD) adalah representasi grafis yang <strong>menyederhanakan</strong> sistem instalasi listrik dengan menggunakan satu garis untuk mewakili setiap penghantar (fasa, netral, atau ground). Diagram ini menunjukkan alur distribusi daya secara umum tanpa detail pengawatan.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2">🎯 Tujuan</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Memberikan gambaran sistem secara keseluruhan</li>
+                                <li>Menunjukkan alur distribusi dari sumber ke beban</li>
+                                <li>Memudahkan analisis sistem</li>
+                                <li>Menjadi dasar untuk perhitungan teknis</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2">📋 Isi Diagram</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Sumber listrik (PLN/genset)</li>
+                                <li>Panel utama (MDP) dan panel bagi (SDP/LVDP)</li>
+                                <li>Pengaman utama (MCB/MCCB utama)</li>
+                                <li>Pengaman cabang</li>
+                                <li>Beban-beban utama</li>
+                                <li>Rating dan spesifikasi</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 p-4 rounded-lg border-l-4 border-blue-500">
+                        <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Contoh Sederhana SLD Rumah Tinggal:</h4>
+                        <pre class="text-xs text-gray-700 font-mono overflow-x-auto">
+    [PLN 220V]
+        │
+    [kWh Meter]
+        │
+    [MCB Utama 16A]
+        │
+        ├─── [MCB Cabang 1: 6A] ─── Rangkaian Lampu
+        │
+        ├─── [MCB Cabang 2: 10A] ─── Stop Kontak
+        │
+        └─── [MCB Cabang 3: 16A] ─── AC
+                        </pre>
+                    </div>
+                </div>
+
+                <!-- 4. Diagram Pengawatan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-project-diagram mr-2"></i>4. Diagram Pengawatan (Wiring Diagram)</h3>
+                    <p class="text-gray-700 mb-3">Diagram pengawatan (wiring diagram) adalah gambar yang menunjukkan <strong>hubungan fisik secara detail</strong> antar komponen dalam sebuah rangkaian. Diagram ini digunakan sebagai panduan langsung saat pemasangan instalasi.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2">🎯 Tujuan</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Panduan pemasangan komponen</li>
+                                <li>Menunjukkan koneksi kabel secara detail</li>
+                                <li>Memudahkan troubleshooting</li>
+                                <li>Memastikan polaritas dan sambungan benar</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                            <h4 class="font-bold text-orange-800 mb-2">📋 Isi Diagram</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Posisi fisik setiap komponen</li>
+                                <li>Jalur kabel dengan warna standar</li>
+                                <li>Terminal dan titik sambung</li>
+                                <li>Nomor kabel dan referensi</li>
+                                <li>Detail penyambungan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Contoh Wiring Diagram: 1 Sakelar Tunggal — 1 Lampu</h4>
+                        <pre class="text-xs text-gray-700 font-mono overflow-x-auto">
+    [Fasa - Merah] ──┬── [Terminal Sakelar IN]
+                     │
+                     │   [Terminal Sakelar OUT]
+                     │          │
+                     │          ▼
+                     │     [Fitting Lampu] ─── [Lampu]
+                     │          │
+    [Netral - Biru] ─┴──────────┘
+                        </pre>
+                        <p class="text-xs text-gray-600 mt-2"><strong>Prinsip:</strong> Sakelar memutus/menyambung penghantar FASA, bukan netral.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Membaca Gambar Instalasi -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-search mr-2"></i>5. Membaca Gambar Instalasi Penerangan</h3>
+                    <p class="text-gray-700 mb-3">Membaca gambar instalasi adalah keterampilan sistematis untuk menginterpretasi informasi teknis dari gambar kerja. Berikut langkah-langkah yang harus diikuti:</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Baca Judul dan Keterangan Gambar</h4>
+                                <p class="text-sm text-gray-700">Periksa nama proyek, tanggal, nomor gambar, skala, dan nama perencana. Pastikan Anda memiliki gambar versi terbaru.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Pelajari Legenda/Daftar Simbol</h4>
+                                <p class="text-sm text-gray-700">Setiap gambar kerja memiliki legenda yang menjelaskan arti setiap simbol yang digunakan. Hafalkan atau catat simbol-simbol kunci.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Identifikasi Sumber dan Pengaman Utama</h4>
+                                <p class="text-sm text-gray-700">Temukan posisi sumber listrik (PLN), kWh meter, dan MCB utama. Ini adalah titik awal alur distribusi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Telusuri Alur Distribusi</h4>
+                                <p class="text-sm text-gray-700">Ikuti jalur dari sumber → pengaman utama → pengaman cabang → beban. Pahami pembagian rangkaian.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Periksa Detail Komponen</h4>
+                                <p class="text-sm text-gray-700">Perhatikan jenis sakelar, fitting, stop kontak, penampang kabel, dan jalur pipa yang ditunjukkan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Verifikasi dengan Gambar Lain</h4>
+                                <p class="text-sm text-gray-700">Bandingkan diagram satu garis dengan diagram pengawatan dan gambar denah untuk memastikan konsistensi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">7</span>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Tanyakan Jika Ragu</h4>
+                                <p class="text-sm text-gray-700">Jangan pernah menebak. Jika ada bagian yang tidak jelas, konfirmasi kepada perencana atau supervisor sebelum memasang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Selalu sediakan salinan standar simbol (PUIL/IEC 60617) di meja kerja.</li>
+                    <li>Buat catatan pribadi berisi simbol-simbol yang sering digunakan.</li>
+                    <li>Biasakan membaca gambar secara utuh sebelum mulai memasang.</li>
+                    <li>Gunakan pensil dan penghapus saat membuat sketsa sementara.</li>
+                    <li>Periksa legenda setiap kali menerima gambar baru — simbol bisa berbeda antar perencana.</li>
+                    <li>Gunakan software CAD (AutoCAD, EPLAN) untuk gambar profesional.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Langsung memasang tanpa membaca gambar secara utuh.</li>
+                    <li>Salah mengidentifikasi simbol sakelar (tunggal vs tukar vs silang).</li>
+                    <li>Mengabaikan legenda dan membuat asumsi sendiri.</li>
+                    <li>Tidak membedakan diagram satu garis dengan diagram pengawatan.</li>
+                    <li>Menggunakan simbol non-standar yang membingungkan teknisi lain.</li>
+                    <li>Tidak memeriksa konsistensi antar gambar (denah, SLD, wiring).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Gambar dan simbol instalasi listrik adalah bahasa universal teknisi. Gambar instalasi berfungsi sebagai panduan pemasangan, alat komunikasi, dasar perhitungan RAB, dan dokumentasi pemeliharaan. Simbol-simbol listrik standar (PUIL/IEC 60617) mewakili komponen seperti lampu, sakelar, stop kontak, MCB, dan grounding. Diagram satu garis (SLD) memberikan gambaran sistem secara umum, sedangkan diagram pengawatan (wiring diagram) menunjukkan detail koneksi fisik antar komponen. Membaca gambar instalasi harus dilakukan secara sistematis: mulai dari judul, legenda, sumber, alur distribusi, detail komponen, hingga verifikasi silang. Penguasaan materi ini adalah fondasi bagi setiap teknisi listrik profesional.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>IEC. (2015). <em>IEC 60617: Database for graphic symbols for electrical diagrams</em>. Geneva: International Electrotechnical Commission.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>IEC. (2018). <em>IEC 61082: Preparation of documents used in electrotechnology</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="7.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 7</a>
+            <a href="9.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 9: Rangkaian 1 Sakelar 1 Lampu <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 8 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 8</h2>
+                <p class="text-gray-600 mt-2">Gambar dan Simbol Instalasi Penerangan</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Fungsi utama gambar instalasi listrik dalam pekerjaan kelistrikan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Sebagai panduan pemasangan, alat komunikasi, dan dokumentasi instalasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Sebagai hiasan dokumen proyek</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Sebagai alat untuk menghitung keuntungan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Sebagai pengganti multimeter</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Simbol listrik standar yang umum digunakan untuk mewakili lampu penerangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Persegi panjang dengan huruf L</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Lingkaran dengan silang di dalamnya (⊗)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Segitiga dengan titik di tengah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Lingkaran kosong tanpa isi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Diagram yang menyederhanakan sistem instalasi listrik dengan satu garis untuk setiap penghantar dan menunjukkan alur distribusi secara umum disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Diagram pengawatan (wiring diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Gambar denah arsitektur</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Diagram satu garis (single line diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Gambar perspektif 3D</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Diagram yang menunjukkan hubungan fisik secara detail antar komponen dan digunakan sebagai panduan langsung saat pemasangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Diagram pengawatan (wiring diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Diagram satu garis (single line diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. Diagram blok</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Foto instalasi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Simbol yang digunakan untuk mewakili sakelar tunggal dalam gambar instalasi adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Garis putus dengan satu tuas ke satu arah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Garis putus dengan dua tuas sejajar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Garis putus dengan tuas bercabang dua</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Garis lurus tanpa putus</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Standar internasional yang menjadi acuan simbol-simbol grafis untuk diagram listrik adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. ISO 9001</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. IEC 60617</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. IEEE 802.11</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. ANSI Z535</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Langkah PERTAMA yang harus dilakukan saat membaca gambar instalasi adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. Membaca judul, keterangan gambar, dan memeriksa versi terbaru</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. Langsung mulai memasang kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. Menghitung jumlah lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. Menebak arti simbol</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Simbol stop kontak pada gambar instalasi umumnya digambarkan sebagai...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Lingkaran dengan huruf S</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. Semi-lingkaran dengan dua garis vertikal di atasnya</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Persegi dengan tanda silang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Segitiga dengan titik di tengah</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Perbedaan utama antara diagram satu garis dan diagram pengawatan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Diagram satu garis lebih detail daripada diagram pengawatan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Diagram pengawatan tidak menggunakan simbol</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Diagram satu garis menunjukkan gambaran umum sistem, sedangkan diagram pengawatan menunjukkan detail koneksi fisik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Tidak ada perbedaan, keduanya sama</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Berdasarkan studi kasus 8, kesalahan yang dilakukan teknisi adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Menggunakan kabel yang salah ukuran</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Tidak memasang MCB</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Memasang sakelar di netral</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Salah mengidentifikasi simbol sakelar tukar sebagai sakelar tunggal karena tidak memahami simbol dengan benar</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan minimal 4 (empat) fungsi gambar instalasi listrik dalam pekerjaan kelistrikan! Berikan contoh konkret untuk masing-masing fungsi!</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Sebutkan dan gambarkan (dengan deskripsi) simbol-simbol listrik standar untuk: (a) lampu, (b) sakelar tunggal, (c) sakelar tukar, (d) stop kontak, dan (e) MCB! Jelaskan mengapa standarisasi simbol sangat penting!</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Bandingkan diagram satu garis (single line diagram) dengan diagram pengawatan (wiring diagram) ditinjau dari tujuan, tingkat detail, isi, dan penggunaannya! Kapan masing-masing diagram digunakan?</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 8 di atas! Identifikasi kesalahan yang dilakukan, jelaskan dampak kesalahannya, dan berikan solusi agar kesalahan serupa tidak terulang!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan langkah-langkah sistematis dalam membaca gambar instalasi penerangan! Mengapa setiap langkah tersebut penting untuk dilakukan sebelum memulai pemasangan?</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 8
+        const kunciJawaban = {
+            q1: 'A', q2: 'B', q3: 'C', q4: 'A', q5: 'A',
+            q6: 'B', q7: 'A', q8: 'B', q9: 'C', q10: 'D'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            // Hitung skor PG
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            // Tampilkan hasil
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            
+            // Scroll ke hasil
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 8 (Gambar & Simbol) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 8 (Gambar dan Simbol Instalasi Penerangan) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

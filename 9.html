@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 9: Rangkaian Penerangan Satu Sakelar Satu Lampu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .circuit-box { font-family: monospace; font-size: 0.85rem; line-height: 1.6; background: #f8fafc; border: 2px solid #1e40af; border-radius: 0.5rem; padding: 1rem; white-space: pre; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 9</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Rangkaian Penerangan Satu Sakelar Satu Lampu</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mempelajari rangkaian dasar paling fundamental dalam instalasi penerangan listrik: satu sakelar mengendalikan satu lampu. Memahami prinsip kerja, komponen, diagram, serta identifikasi kesalahan rangkaian.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="8.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 8</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Rangkaian penerangan satu sakelar satu lampu adalah <strong>bangun dasar paling fundamental</strong> dalam instalasi penerangan listrik. Seluruh rangkaian penerangan yang kompleks — mulai dari sakelar seri, sakelar tukar, hingga instalasi gedung bertingkat — pada hakikatnya merupakan pengembangan dari rangkaian sederhana ini. Oleh karena itu, penguasaan yang matang terhadap rangkaian ini menjadi prasyarat mutlak sebelum melangkah ke rangkaian yang lebih rumit.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari prinsip kerja rangkaian satu sakelar satu lampu, komponen-komponen yang terlibat, cara membaca dan membuat diagram satu garis serta diagram pengawatan, serta kemampuan mengidentifikasi kesalahan umum dalam pemasangan. Pemahaman yang benar pada tahap ini akan menjadi fondasi kokoh bagi kompetensi pemasangan instalasi penerangan secara profesional.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-lightbulb mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Rangkaian Dasar:</strong> Kombinasi minimal sumber tegangan, penghantar, sakelar, dan beban (lampu) yang membentuk loop tertutup.</li>
+                    <li><strong>Sakelar di Fasa:</strong> Prinsip keselamatan mutlak — sakelar pengendali wajib dipasang pada penghantar fasa, bukan netral.</li>
+                    <li><strong>Diagram Satu Garis (SLD):</strong> Representasi sederhana alur distribusi daya menggunakan simbol standar.</li>
+                    <li><strong>Diagram Pengawatan (Wiring Diagram):</strong> Gambar detail koneksi fisik antar komponen sebagai panduan pemasangan.</li>
+                    <li><strong>Troubleshooting:</strong> Kemampuan mengidentifikasi dan memperbaiki kesalahan rangkaian secara sistematis.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Rangkaian 1 Sakelar 1 Lampu — Prinsip dan Pemasangan</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk memahami cara kerja dan teknik pemasangan rangkaian dasar penerangan listrik.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Rangkaian 1 Sakelar 1 Lampu</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 9: Sengatan Listrik Saat Mengganti Lampu</h3>
+            <p class="text-gray-700 mb-4">
+                Seorang pemilik rumah ingin mengganti lampu yang mati di ruang tamu. Ia mematikan sakelar dinding seperti biasa, lalu naik tangga dan membuka fitting untuk melepaskan lampu lama. Tiba-tiba tangannya tersengat listrik dan ia terjatuh dari tangga. Setelah diselidiki, ternyata tukang listrik yang memasang instalasi sebelumnya <strong>memasang sakelar pada penghantar netral</strong>, bukan pada fasa. Akibatnya, meskipun sakelar OFF (lampu mati), penghantar fasa tetap terhubung langsung ke fitting — fitting tersebut tetap bertegangan 220V terhadap tanah.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kesalahan pemasangan sakelar di netral adalah <strong>pelanggaran prinsip keselamatan paling fatal</strong> dalam instalasi penerangan. Meskipun lampu mati secara visual, beban (fitting) tetap "hidup" dan berbahaya. <strong>Prinsip mutlak:</strong> Sakelar <strong>wajib</strong> dipasang pada penghantar fasa agar saat OFF, tidak ada tegangan yang sampai ke beban.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">9.1 Landasan Teoretis Rangkaian Listrik</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">9.1.1 Hukum Kirchhoff dan Rangkaian Tertutup</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Agar arus listrik dapat mengalir dan beban (lampu) bekerja, harus terbentuk <strong>rangkaian tertutup (closed loop)</strong>. Hukum Kirchhoff menyatakan bahwa jumlah arus yang masuk ke suatu titik percabangan sama dengan jumlah arus yang keluar. Pada rangkaian satu sakelar satu lampu (tanpa percabangan), arus yang mengalir melalui sumber, sakelar, dan lampu adalah sama besar.
+                        <br><br>
+                        <strong>V<sub>sumber</sub> = V<sub>sakelar</sub> + V<sub>lampu</sub></strong>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">9.1.2 Fungsi Sakelar dalam Rangkaian</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Sakelar berfungsi sebagai <strong>pengendali aliran arus</strong> dengan cara memutus (OFF) atau menyambung (ON) rangkaian. Dalam instalasi penerangan, sakelar hanya memutus <strong>satu penghantar</strong> — yaitu penghantar fasa. Penghantar netral langsung terhubung ke beban tanpa melalui sakelar.
+                        <br><br>
+                        <strong>ON:</strong> Sakelar menutup → arus mengalir → lampu menyala<br>
+                        <strong>OFF:</strong> Sakelar membuka → arus berhenti → lampu padam
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">9.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Prinsip Kerja Rangkaian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-sync-alt mr-2"></i>1. Prinsip Kerja Rangkaian</h3>
+                    <p class="text-gray-700 mb-3">Rangkaian satu sakelar satu lampu bekerja berdasarkan prinsip aliran arus listrik dalam rangkaian tertutup. Berikut adalah alur kerjanya:</p>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-toggle-on mr-2"></i>Kondisi ON (Lampu Menyala)</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Sakelar dalam posisi ON (tertutup)</li>
+                                <li>Arus mengalir dari sumber PLN (fasa)</li>
+                                <li>Melewati MCB pengaman</li>
+                                <li>Melewati sakelar (karena tertutup)</li>
+                                <li>Masuk ke fitting lampu</li>
+                                <li>Menyalakan filamen/LED lampu</li>
+                                <li>Kembali ke sumber via penghantar netral</li>
+                            </ol>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-toggle-off mr-2"></i>Kondisi OFF (Lampu Padam)</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Sakelar dalam posisi OFF (terbuka)</li>
+                                <li>Alur arus terputus di sakelar</li>
+                                <li>Tidak ada arus yang mengalir ke lampu</li>
+                                <li>Filamen/LED tidak mendapat energi</li>
+                                <li>Lampu padam</li>
+                                <li>Tidak ada tegangan di fitting (aman)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Prinsip Kunci:</strong> Sakelar hanya memutus/menyambung <strong>penghantar fasa</strong>. Penghantar netral <strong>selalu terhubung langsung</strong> ke beban. Ini menjamin bahwa saat sakelar OFF, beban benar-benar terisolasi dari sumber tegangan.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Komponen Rangkaian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-cubes mr-2"></i>2. Komponen Rangkaian</h3>
+                    <p class="text-gray-700 mb-3">Rangkaian satu sakelar satu lampu minimal terdiri dari komponen-komponen berikut:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">No</th>
+                                    <th class="px-4 py-3">Komponen</th>
+                                    <th class="px-4 py-3">Fungsi</th>
+                                    <th class="px-4 py-3">Spesifikasi Umum</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">1</td>
+                                    <td class="px-4 py-3 font-medium">Sumber Tegangan</td>
+                                    <td class="px-4 py-3">Menyuplai energi listrik ke rangkaian</td>
+                                    <td class="px-4 py-3">PLN 220V AC, 50Hz</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">2</td>
+                                    <td class="px-4 py-3 font-medium">MCB Pengaman</td>
+                                    <td class="px-4 py-3">Melindungi dari arus lebih dan hubung singkat</td>
+                                    <td class="px-4 py-3">MCB 6A atau 10A tipe B</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">3</td>
+                                    <td class="px-4 py-3 font-medium">Penghantar Fasa</td>
+                                    <td class="px-4 py-3">Membawa arus bertegangan dari sumber ke sakelar</td>
+                                    <td class="px-4 py-3">Kabel NYA/NYM 1.5 mm², warna merah/hitam/coklat</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">4</td>
+                                    <td class="px-4 py-3 font-medium">Sakelar Tunggal</td>
+                                    <td class="px-4 py-3">Memutus/menyambung aliran arus fasa</td>
+                                    <td class="px-4 py-3">Sakelar 10A/250V, 1 module</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">5</td>
+                                    <td class="px-4 py-3 font-medium">Penghantar Balik (ke Lampu)</td>
+                                    <td class="px-4 py-3">Meneruskan arus dari sakelar ke fitting</td>
+                                    <td class="px-4 py-3">Kabel NYA/NYM 1.5 mm²</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">6</td>
+                                    <td class="px-4 py-3 font-medium">Fitting Lampu</td>
+                                    <td class="px-4 py-3">Tempat memasang lampu dan menghubungkan ke arus</td>
+                                    <td class="px-4 py-3">E27 atau B22, rating 4A/250V</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">7</td>
+                                    <td class="px-4 py-3 font-medium">Lampu</td>
+                                    <td class="px-4 py-3">Mengubah energi listrik menjadi cahaya</td>
+                                    <td class="px-4 py-3">LED 5-15 Watt (setara 40-100W pijar)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">8</td>
+                                    <td class="px-4 py-3 font-medium">Penghantar Netral</td>
+                                    <td class="px-4 py-3">Jalur balik arus dari beban ke sumber</td>
+                                    <td class="px-4 py-3">Kabel NYA/NYM 1.5 mm², warna biru</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 3. Diagram Satu Garis -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-sitemap mr-2"></i>3. Diagram Satu Garis (Single Line Diagram)</h3>
+                    <p class="text-gray-700 mb-3">Diagram satu garis menyederhanakan rangkaian dengan satu garis untuk setiap penghantar. Diagram ini menunjukkan alur distribusi secara umum tanpa detail pengawatan.</p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────┐
+│   DIAGRAM SATU GARIS: 1 Sakelar — 1 Lampu          │
+└────────────────────────────────────────────────────┘
+
+   [PLN 220V]
+        │
+   [kWh Meter]
+        │
+   [MCB 6A/10A]
+        │
+        ├──────────── L (Fasa) ────────────┐
+        │                                   │
+        │                              [Sakelar]
+        │                                   │
+        │                                   ▼
+        │                              [Fitting]──[Lampu]
+        │                                   │
+        └──────────── N (Netral) ───────────┘
+
+   Simbol:
+   ─────── = Penghantar
+   [MCB]   = Pengaman arus lebih
+   [Sakelar] = Pemutus fasa
+   [Fitting] = Tempat lampu
+   [Lampu]  = Beban penerangan
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3"><strong>Catatan:</strong> Diagram satu garis tidak menunjukkan detail fisik koneksi, hanya alur distribusi daya. Untuk pemasangan aktual, diperlukan diagram pengawatan.</p>
+                </div>
+
+                <!-- 4. Diagram Pengawatan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-project-diagram mr-2"></i>4. Diagram Pengawatan (Wiring Diagram)</h3>
+                    <p class="text-gray-700 mb-3">Diagram pengawatan menunjukkan detail koneksi fisik antar komponen dengan warna kabel standar PUIL. Diagram ini menjadi panduan langsung saat pemasangan.</p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────┐
+│   DIAGRAM PENGAWATAN: 1 Sakelar — 1 Lampu          │
+└─────────────────────────────────────────────────────┘
+
+   Sumber PLN
+   ┌──────┐
+   │ L ●──┼─────── (MERAH) ──────┐
+   │      │                       │
+   │ N ●──┼─────── (BIRU) ───┐   │
+   │      │                   │   │
+   │ PE●──┼─────── (HIJAU-   │   │
+   └──────┘        KUNING)   │   │
+                             │   │
+                        [MCB 6A]  │
+                             │    │
+                             ▼    │
+                      ┌────────┐  │
+                      │ SAKELAR│  │
+                      │   IN ●─┘  │
+                      │  OUT ●────┼──── (MERAH) ────┐
+                      └────────┘                    │
+                                                    ▼
+                                             ┌──────────┐
+                                             │ FITTING  │
+                                             │   ●  ●   │
+                                             │   │  │   │
+                                             │   │  └───┼──── (BIRU) ──┐
+                                             │   │      │              │
+                                             │  [LAMPU] │              │
+                                             └──────────┘              │
+                                                                       │
+   ────────────────────────────────────────────────────────────────────┘
+              Jalur Netral (BIRU) dari sumber langsung ke fitting
+                    </div>
+
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-route mr-2"></i>Jalur Fasa (Merah)</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Dari sumber L → MCB</li>
+                                <li>MCB → Terminal IN sakelar</li>
+                                <li>Terminal OUT sakelar → Fitting (kontak tengah)</li>
+                            </ol>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-route mr-2"></i>Jalur Netral (Biru)</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Dari sumber N → langsung ke fitting</li>
+                                <li>TIDAK melalui sakelar</li>
+                                <li>Terhubung ke kontak samping fitting</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Identifikasi Kesalahan Rangkaian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-search-minus mr-2"></i>5. Identifikasi Kesalahan Rangkaian</h3>
+                    <p class="text-gray-700 mb-3">Dalam praktik, terdapat beberapa kesalahan umum yang sering terjadi pada pemasangan rangkaian satu sakelar satu lampu. Seorang teknisi yang kompeten harus mampu mengidentifikasi kesalahan-kesalahan ini:</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-red-100">
+                                <tr>
+                                    <th class="px-4 py-3">No</th>
+                                    <th class="px-4 py-3">Kesalahan</th>
+                                    <th class="px-4 py-3">Dampak</th>
+                                    <th class="px-4 py-3">Solusi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">1</td>
+                                    <td class="px-4 py-3 font-medium text-red-700">Sakelar dipasang di netral</td>
+                                    <td class="px-4 py-3">Fitting tetap bertegangan saat OFF → bahaya sengatan listrik</td>
+                                    <td class="px-4 py-3">Pindahkan sakelar ke penghantar fasa</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">2</td>
+                                    <td class="px-4 py-3 font-medium text-red-700">Fasa dan netral tertukar di fitting</td>
+                                    <td class="px-4 py-3">Kontak tengah fitting bertegangan → risiko tersengat saat mengganti lampu</td>
+                                    <td class="px-4 py-3">Pastikan fasa ke kontak tengah, netral ke kontak samping</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">3</td>
+                                    <td class="px-4 py-3 font-medium text-red-700">Sambungan kabel tidak rapat</td>
+                                    <td class="px-4 py-3">Kontak buruk → percikan api, panas, lampu berkedip</td>
+                                    <td class="px-4 py-3">Kencangkan sambungan, gunakan terminal box</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">4</td>
+                                    <td class="px-4 py-3 font-medium text-red-700">Isolasi kabel terkelupas berlebihan</td>
+                                    <td class="px-4 py-3">Konduktor telanjang → risiko hubung singkat</td>
+                                    <td class="px-4 py-3">Potong ulang kabel, isolasi secukupnya</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">5</td>
+                                    <td class="px-4 py-3 font-medium text-red-700">Tidak ada grounding pada fitting logam</td>
+                                    <td class="px-4 py-3">Bodi logam fitting bisa bertegangan jika isolasi bocor</td>
+                                    <td class="px-4 py-3">Pasang penghantar PE ke bodi fitting</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">6</td>
+                                    <td class="px-4 py-3 font-medium text-red-700">Penampang kabel terlalu kecil</td>
+                                    <td class="px-4 py-3">Kabel panas → isolasi meleleh → kebakaran</td>
+                                    <td class="px-4 py-3">Gunakan minimal 1.5 mm² untuk penerangan</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                        <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-tools mr-2"></i>Prosedur Troubleshooting Sistematis</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Visual inspection:</strong> Periksa fisik kabel, sambungan, dan komponen.</li>
+                            <li><strong>Uji kontinuitas:</strong> Gunakan multimeter pada mode ohm untuk memeriksa jalur penghantar.</li>
+                            <li><strong>Uji polaritas:</strong> Pastikan fasa dan netral terhubung dengan benar.</li>
+                            <li><strong>Uji tegangan:</strong> Gunakan test pen/multimeter untuk memverifikasi ada/tidaknya tegangan di titik-titik kritis.</li>
+                            <li><strong>Uji fungsi:</strong> Nyalakan sakelar dan pastikan lampu bekerja normal.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Selalu matikan MCB utama sebelum bekerja pada rangkaian.</li>
+                    <li>Verifikasi dengan test pen bahwa penghantar benar-benar tidak bertegangan.</li>
+                    <li>Ikuti diagram pengawatan secara persis — jangan menebak.</li>
+                    <li>Gunakan warna kabel standar PUIL (merah=fasa, biru=netral, hijau-kuning=ground).</li>
+                    <li>Kencangkan setiap sambungan dengan kuat agar tidak longgar.</li>
+                    <li>Lakukan uji fungsi sebelum menutup kotak sambung atau plafon.</li>
+                    <li>Dokumentasikan rangkaian yang telah dipasang untuk pemeliharaan.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Memasang sakelar di netral dengan alasan "yang penting lampu bisa mati".</li>
+                    <li>Tidak menggunakan MCB pengaman pada rangkaian baru.</li>
+                    <li>Menyambung kabel hanya dengan pilinan tanpa terminal box.</li>
+                    <li>Menggunakan kabel undersize (di bawah 1.5 mm²) untuk penerangan.</li>
+                    <li>Tidak melakukan uji kontinuitas sebelum mengaliri tegangan.</li>
+                    <li>Membiarkan konduktor telanjang terlalu panjang di terminal.</li>
+                    <li>Tidak mengencangkan baut terminal dengan torsi yang cukup.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Rangkaian satu sakelar satu lampu adalah fondasi paling dasar dalam instalasi penerangan listrik. Prinsip kerjanya sederhana: arus mengalir dari sumber (fasa) → MCB → sakelar → fitting → lampu → kembali ke sumber (netral). Prinsip keselamatan mutlak yang harus dipegang teguh adalah <strong>sakelar wajib dipasang pada penghantar fasa</strong>, bukan netral. Komponen utama meliputi sumber tegangan, MCB, penghantar fasa dan netral, sakelar tunggal, fitting, dan lampu. Diagram satu garis memberikan gambaran alur distribusi secara umum, sedangkan diagram pengawatan menjadi panduan detail pemasangan. Seorang teknisi yang kompeten harus mampu mengidentifikasi kesalahan umum seperti sakelar di netral, fasa-netral tertukar, sambungan longgar, atau penampang kabel tidak sesuai, serta melakukan troubleshooting secara sistematis. Penguasaan rangkaian dasar ini menjadi prasyarat mutlak sebelum melangkah ke rangkaian yang lebih kompleks (sakelar seri, tukar, silang) pada pertemuan-pertemuan berikutnya.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>IEC. (2015). <em>IEC 60617: Database for graphic symbols for electrical diagrams</em>. Geneva: IEC.</li>
+                <li>PLN. (2020). <em>Pedoman Instalasi Listrik Rumah Tangga</em>. Jakarta: PT PLN (Persero).</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="8.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 8</a>
+            <a href="10.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 10: Rangkaian 2 Lampu 1 Sakelar <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 9 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 9</h2>
+                <p class="text-gray-600 mt-2">Rangkaian Penerangan Satu Sakelar Satu Lampu</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Agar lampu pada rangkaian penerangan dapat menyala, syarat utama yang harus dipenuhi adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Terbentuk rangkaian tertutup (closed loop) dari sumber ke beban dan kembali ke sumber</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Lampu harus berdaya tinggi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Kabel harus berwarna merah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Sakelar harus dalam posisi OFF</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Menurut standar PUIL dan prinsip keselamatan, sakelar penerangan wajib dipasang pada penghantar...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Netral</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Fasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Pembumian (ground)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Bebas, yang penting lampu bisa nyala</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Komponen-komponen MINIMAL yang harus ada dalam rangkaian satu sakelar satu lampu adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Sumber, sakelar, dan fitting saja</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Sumber, MCB, stop kontak, dan lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Sumber tegangan, penghantar, sakelar, fitting, dan lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Generator, trafo, dan lampu LED</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Diagram yang menyederhanakan alur distribusi daya dengan satu garis untuk setiap penghantar disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Diagram satu garis (single line diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Diagram pengawatan (wiring diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. Gambar denah arsitektur</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Foto instalasi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Diagram yang menunjukkan detail koneksi fisik antar komponen dengan warna kabel standar dan digunakan sebagai panduan langsung saat pemasangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Diagram satu garis</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Diagram pengawatan (wiring diagram)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Diagram blok</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Gambar perspektif 3D</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Fungsi utama sakelar dalam rangkaian penerangan satu sakelar satu lampu adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Mengubah tegangan listrik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Memutus dan menyambung aliran arus pada penghantar fasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Melindungi dari arus bocor</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Menyimpan energi listrik</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Warna isolasi kabel yang digunakan untuk penghantar FASA menurut standar PUIL adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. Merah, hitam, atau coklat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. Biru</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. Hijau-kuning belang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. Putih</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Kesalahan pemasangan yang PALING BERBAHAYA pada rangkaian satu sakelar satu lampu adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Menggunakan lampu LED</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. Memasang sakelar pada penghantar netral</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Menggunakan fitting E27</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Memasang MCB pengaman</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Fungsi fitting lampu dalam rangkaian penerangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Memutus arus listrik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Mengubah tegangan listrik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Tempat memasang lampu sekaligus menghubungkan arus listrik ke lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Melindungi dari arus lebih</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Berdasarkan studi kasus 9, penyebab utama pemilik rumah tersengat listrik saat mengganti lampu adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Lampu yang digunakan terlalu terang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Tangga yang digunakan tidak stabil</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. MCB tidak terpasang di panel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Sakelar dipasang pada penghantar netral, sehingga fitting tetap bertegangan 220V meskipun sakelar OFF</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan prinsip kerja rangkaian satu sakelar satu lampu! Uraikan alur aliran arus listrik saat sakelar ON dan saat sakelar OFF!</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Mengapa sakelar penerangan WAJIB dipasang pada penghantar fasa, bukan pada penghantar netral? Jelaskan dari sudut pandang keselamatan!</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Jelaskan perbedaan antara diagram satu garis (single line diagram) dengan diagram pengawatan (wiring diagram)! Kapan masing-masing diagram digunakan dalam pekerjaan instalasi?</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 9 di atas! Identifikasi kesalahan fatal yang dilakukan, jelaskan mengapa fitting tetap bertegangan meskipun sakelar OFF, dan berikan solusi pemasangan yang benar sesuai standar PUIL!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan prosedur troubleshooting sistematis yang harus dilakukan jika sebuah lampu tidak menyala meskipun sakelar sudah ON! Sebutkan minimal 5 langkah pemeriksaan!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 9
+        const kunciJawaban = {
+            q1: 'A', q2: 'B', q3: 'C', q4: 'A', q5: 'B',
+            q6: 'B', q7: 'A', q8: 'B', q9: 'C', q10: 'D'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            // Hitung skor PG
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            // Tampilkan hasil
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            
+            // Scroll ke hasil
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 9 (1 Sakelar 1 Lampu) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 9 (Rangkaian Penerangan Satu Sakelar Satu Lampu) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

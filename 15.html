@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 15: Teknik Penyambungan Penghantar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .circuit-box { font-family: monospace; font-size: 0.85rem; line-height: 1.5; background: #f8fafc; border: 2px solid #1e40af; border-radius: 0.5rem; padding: 1rem; white-space: pre; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 15</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Teknik Penyambungan Penghantar</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mempelajari prinsip penyambungan kabel, jenis-jenis sambungan penghantar, penggunaan terminal/konektor, teknik isolasi sambungan, pemeriksaan kualitas sambungan, serta keselamatan pekerjaan penyambungan sesuai standar PUIL.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="14.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 14</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Penyambungan penghantar adalah salah satu keterampilan paling fundamental dalam instalasi listrik. Setiap sambungan kabel yang dibuat merupakan <strong>titik kritis</strong> dalam sebuah instalasi — jika dikerjakan dengan benar, sambungan akan bertahan puluhan tahun tanpa masalah; namun jika dikerjakan asal-asalan, sambungan dapat menjadi sumber panas, percikan api, hingga kebakaran listrik. Data menunjukkan bahwa lebih dari <strong>40% kebakaran listrik</strong> di Indonesia disebabkan oleh sambungan kabel yang buruk.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari prinsip-prinsip penyambungan kabel yang benar, berbagai jenis sambungan penghantar (pilinan lurus, pilinan cabang, Western Union, knuckle), penggunaan terminal dan konektor modern, teknik isolasi sambungan yang aman, prosedur pemeriksaan kualitas sambungan, serta aspek keselamatan kerja dalam penyambungan. Penguasaan materi ini menjadi fondasi penting sebelum melangkah ke pemasangan instalasi utuh pada pertemuan-pertemuan berikutnya.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-link mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Prinsip 3K Sambungan:</strong> Kuat mekanis, Konduktif baik, dan terIsolasi sempurna.</li>
+                    <li><strong>Jenis Sambungan:</strong> Pilinan lurus, pilinan cabang (tee), Western Union, knuckle, dan terminal.</li>
+                    <li><strong>Terminal/Konektor:</strong> Perangkat modern untuk menyambung kabel tanpa pilinan (sekrup, Wago, crimp).</li>
+                    <li><strong>Isolasi:</strong> Pelindung sambungan dari kontak langsung dan kelembaban (lakban, heat shrink).</li>
+                    <li><strong>Pemeriksaan:</strong> Visual, pull test, uji kontinuitas, dan uji tahanan isolasi.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Teknik Penyambungan Kabel yang Benar</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk melihat demonstrasi berbagai teknik penyambungan penghantar sesuai standar.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Penyambungan Kabel</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 15: Kebakaran Akibat Sambungan Kabel di Dalam Dinding</h3>
+            <p class="text-gray-700 mb-4">
+                Sebuah rumah tinggal di daerah perkotaan mengalami kebakaran pada dini hari. Hasil investigasi tim pemadam kebakaran menunjukkan bahwa api berasal dari dalam dinding ruang keluarga. Penyebabnya adalah sambungan kabel di dalam kotak sambung (doos) yang hanya dipilin seadanya tanpa dilas dop dan tanpa terminal box yang memadai. Setelah beberapa tahun, sambungan mengalami oksidasi, kontak menjadi longgar, resistansi meningkat, dan panas terakumulasi hingga membakar isolasi kabel dan struktur kayu di sekitarnya.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Sambungan kabel yang buruk adalah <strong>"silent killer"</strong> dalam instalasi listrik. Panas yang ditimbulkan oleh resistansi kontak yang tinggi tidak langsung terlihat, namun terakumulasi secara perlahan. <strong>Prinsip mutlak:</strong> Setiap sambungan harus memenuhi 3K (Kuat, Konduktif, terIsolasi), dilakukan di dalam kotak sambung yang aksesibel, dan diperiksa kualitasnya sebelum instalasi dialiri tegangan.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">15.1 Landasan Teoretis Penyambungan Penghantar</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">15.1.1 Resistansi Kontak</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Setiap sambungan kabel memiliki <strong>resistansi kontak</strong> — hambatan listrik tambahan yang muncul di titik pertemuan dua konduktor. Resistansi kontak yang tinggi akan menyebabkan:
+                        <br><br>
+                        • <strong>Panas berlebih</strong> (P = I² × R kontak)<br>
+                        • <strong>Penurunan tegangan</strong> (voltage drop)<br>
+                        • <strong>Pemborosan energi</strong><br>
+                        • <strong>Risiko kebakaran</strong>
+                        <br><br>
+                        Tujuan penyambungan yang baik adalah <strong>meminimalkan resistansi kontak</strong> sedekat mungkin dengan resistansi kabel itu sendiri.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">15.1.2 Standar PUIL untuk Penyambungan</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Pasal 5.5.16:</strong> Sambungan penghantar harus dibuat sedemikian rupa sehingga tidak mengurangi kekuatan mekanis dan konduktivitas listrik.</li>
+                        <li><strong>Pasal 5.5.17:</strong> Setiap sambungan harus diisolasi dengan baik dan ditempatkan di dalam kotak sambung yang aksesibel.</li>
+                        <li><strong>Pasal 5.5.18:</strong> Dilarang menyambung kabel dengan cara dipilin saja tanpa pengelasan atau terminal yang memadai untuk instalasi permanen.</li>
+                        <li><strong>Pasal 5.5.19:</strong> Sambungan harus mampu menahan arus beban penuh tanpa pemanasan berlebih.</li>
+                        <li><strong>Pasal 5.5.20:</strong> Tahanan isolasi sambungan minimal 1 MΩ pada tegangan uji 500V DC.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">15.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Prinsip Penyambungan Kabel -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-bullseye mr-2"></i>1. Prinsip Penyambungan Kabel (3K)</h3>
+                    <p class="text-gray-700 mb-3">Setiap sambungan penghantar yang baik harus memenuhi tiga prinsip utama yang dikenal dengan <strong>Prinsip 3K</strong>:</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200 text-center">
+                            <i class="fas fa-hand-fist text-4xl text-red-600 mb-2"></i>
+                            <h4 class="font-bold text-red-800 mb-2">KUAT Mekanis</h4>
+                            <p class="text-sm text-gray-700">Sambungan harus tahan terhadap tarikan, getaran, dan beban mekanis tanpa putus atau longgar.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 text-center">
+                            <i class="fas fa-bolt text-4xl text-yellow-600 mb-2"></i>
+                            <h4 class="font-bold text-yellow-800 mb-2">KONDUKTIF Baik</h4>
+                            <p class="text-sm text-gray-700">Resistansi kontak harus serendah mungkin agar arus dapat mengalir tanpa hambatan berarti dan tidak menimbulkan panas.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center">
+                            <i class="fas fa-shield-alt text-4xl text-blue-600 mb-2"></i>
+                            <h4 class="font-bold text-blue-800 mb-2">terISOLASI Sempurna</h4>
+                            <p class="text-sm text-gray-700">Sambungan harus diisolasi dengan baik untuk mencegah kontak langsung, hubung singkat, dan sengatan listrik.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Faktor yang Mempengaruhi Kualitas Sambungan</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Luas kontak:</strong> Semakin besar area pertemuan konduktor, semakin rendah resistansi.</li>
+                            <li><strong>Tekanan kontak:</strong> Sambungan yang dikencangkan dengan baik memiliki resistansi lebih rendah.</li>
+                            <li><strong>Kebersihan permukaan:</strong> Oksida dan kotoran meningkatkan resistansi kontak.</li>
+                            <li><strong>Jenis material:</strong> Tembaga-tembaga lebih baik daripada tembaga-aluminium.</li>
+                            <li><strong>Suhu kerja:</strong> Suhu tinggi mempercepat oksidasi dan penurunan kualitas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Jenis Sambungan Penghantar -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-project-diagram mr-2"></i>2. Jenis-Jenis Sambungan Penghantar</h3>
+                    <p class="text-gray-700 mb-3">Terdapat beberapa jenis sambungan penghantar yang umum digunakan dalam instalasi penerangan. Pemilihan jenis sambungan tergantung pada aplikasi dan kebutuhan:</p>
+                    
+                    <div class="space-y-4">
+                        <!-- Sambungan Lurus -->
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-arrows-alt-h mr-2"></i>A. Sambungan Pilinan Lurus (Straight Joint)</h4>
+                            <p class="text-sm text-gray-700 mb-2">Digunakan untuk menyambung dua kabel yang segaris (searah). Paling umum digunakan dalam instalasi rumah tinggal.</p>
+                            <div class="circuit-box text-blue-900">
+   SAMBUNGAN PILINAN LURUS:
+   
+   Kabel A                Kabel B
+   ───────────┐      ┌───────────
+              │      │
+              └──────┘
+              /      \
+             /        \
+            /  PILINAN \
+           /            \
+          └──────────────┘
+          
+   CARA MEMBUAT:
+   1. Kupas isolasi kedua kabel ±5-7 cm
+   2. Silangkan kedua konduktor membentuk X
+   3. Pilin masing-masing ujung ke konduktor lawan
+      (minimal 5-7 lilitan rapat)
+   4. Rapikan dan kencangkan dengan tang
+   5. Las dengan timah (opsional tapi disarankan)
+   6. Isolasi dengan lakban atau heat shrink
+                            </div>
+                        </div>
+
+                        <!-- Sambungan Cabang -->
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-code-branch mr-2"></i>B. Sambungan Pilinan Cabang (Tee Joint / Knuckle)</h4>
+                            <p class="text-sm text-gray-700 mb-2">Digunakan untuk percabangan kabel, misalnya saat mengambil jalur dari kabel utama ke kotak sakelar atau fitting.</p>
+                            <div class="circuit-box text-blue-900">
+   SAMBUNGAN PILINAN CABANG (TEE):
+   
+   Kabel Utama
+   ────────────────────────────────
+                   │
+                   │ Kabel Cabang
+                   │
+                   ▼
+                   
+   CARA MEMBUAT:
+   1. Kupas isolasi kabel cabang ±5 cm
+   2. Kupas isolasi kabel utama pada titik percabangan
+      (sekitar 2-3 cm, jangan sampai putus)
+   3. Lilitkan konduktor cabang ke konduktor utama
+      (minimal 5-7 lilitan rapat)
+   4. Kencangkan dengan tang kombinasi
+   5. Las dengan timah (sangat disarankan)
+   6. Isolasi dengan lakban atau heat shrink
+                            </div>
+                        </div>
+
+                        <!-- Western Union -->
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-link mr-2"></i>C. Sambungan Western Union</h4>
+                            <p class="text-sm text-gray-700 mb-2">Sambungan yang sangat kuat, sering digunakan untuk kabel yang akan mengalami tarikan tinggi. Umumnya digunakan pada kabel serabut (flexible).</p>
+                            <div class="circuit-box text-blue-900">
+   SAMBUNGAN WESTERN UNION:
+   
+   Kabel A                 Kabel B
+   ────────────┐     ┌────────────
+               │     │
+               └──┐ ┌┘
+                  │ │
+                  │ │
+               ┌──┘ └──┐
+               │       │
+               │ CROSS │
+               │       │
+               └───────┘
+               
+   KEUNGGULAN:
+   • Sangat kuat terhadap tarikan
+   • Kontak luas dan rapat
+   • Cocok untuk kabel serabut
+                            </div>
+                        </div>
+
+                        <!-- Knuckle -->
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-2"><i class="fas fa-circle-nodes mr-2"></i>D. Sambungan Knuckle</h4>
+                            <p class="text-sm text-gray-700 mb-2">Sambungan untuk dua kabel besar yang sulit dipilin langsung. Kedua kabel dililitkan pada kawat pengisi di tengahnya.</p>
+                            <div class="circuit-box text-blue-900">
+   SAMBUNGAN KNUCKLE:
+   
+   Kabel A       Kabel Pengisi      Kabel B
+   ─────────┐   ┌──────────────┐   ┌─────────
+            │   │              │   │
+            └───┤   FILLER     ├───┘
+                │   WIRE       │
+                └──────────────┘
+                
+   APLIKASI:
+   • Kabel berpenampang besar (>10 mm²)
+   • Instalasi industri
+   • Sambungan yang memerlukan kekuatan ekstra
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Penggunaan Terminal/Konektor -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-plug mr-2"></i>3. Penggunaan Terminal dan Konektor</h3>
+                    <p class="text-gray-700 mb-3">Selain sambungan pilinan, instalasi modern banyak menggunakan <strong>terminal dan konektor</strong> yang lebih praktis, aman, dan andal. Berikut jenis-jenis terminal yang umum digunakan:</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Jenis Terminal</th>
+                                    <th class="px-4 py-3">Karakteristik</th>
+                                    <th class="px-4 py-3">Kelebihan</th>
+                                    <th class="px-4 py-3">Aplikasi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-blue-700">Terminal Sekrup (Screw Terminal)</td>
+                                    <td class="px-4 py-3">Menggunakan sekrup untuk menjepit konduktor</td>
+                                    <td class="px-4 py-3">Mudah dibongkar pasang, murah, umum tersedia</td>
+                                    <td class="px-4 py-3">Sakelar, stop kontak, MCB, fitting, kotak sambung</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-blue-700">Terminal Dorong (Wago/Push-in)</td>
+                                    <td class="px-4 py-3">Sistem push-in tanpa alat, dengan tuas pengunci</td>
+                                    <td class="px-4 py-3">Cepat, aman, tidak perlu alat, dapat digunakan ulang</td>
+                                    <td class="px-4 py-3">Kotak sambung, percabangan, instalasi modern</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-blue-700">Terminal Crimp (Crimp Connector)</td>
+                                    <td class="px-4 py-3">Menggunakan alat crimping untuk menekan terminal ke kabel</td>
+                                    <td class="px-4 py-3">Sangat kuat, profesional, tahan getaran</td>
+                                    <td class="px-4 py-3">Panel industri, otomotif, instalasi besar</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium text-blue-700">Terminal Las (Solder Joint)</td>
+                                    <td class="px-4 py-3">Menyambung dengan timah panas (solder)</td>
+                                    <td class="px-4 py-3">Konduktif sangat baik, tahan korosi</td>
+                                    <td class="px-4 py-3">Sambungan pilinan yang diperkuat, elektronik</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-blue-700">Terminal Busbar</td>
+                                    <td class="px-4 py-3">Batang tembaga untuk distribusi arus besar</td>
+                                    <td class="px-4 py-3">Mampu menangani arus sangat besar</td>
+                                    <td class="px-4 py-3">Panel utama, PHB, distribusi daya</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-4 bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                        <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-check-circle mr-2"></i>Tren Modern: Terminal Wago</h4>
+                        <p class="text-sm text-gray-700">Terminal Wago (push-in connector) semakin populer karena:</p>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                            <li>Tidak memerlukan alat khusus — cukup kupas kabel dan masukkan</li>
+                            <li>Dapat menyambung kabel solid dan stranded</li>
+                            <li>Transparan sehingga sambungan dapat diperiksa visual</li>
+                            <li>Tahan getaran dan tidak mudah longgar</li>
+                            <li>Mempercepat waktu pemasangan hingga 70%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Isolasi Sambungan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-shield-alt mr-2"></i>4. Isolasi Sambungan</h3>
+                    <p class="text-gray-700 mb-3">Setelah sambungan dibuat, isolasi yang baik sangat penting untuk mencegah kontak langsung, hubung singkat, dan sengatan listrik. Berikut metode isolasi yang umum digunakan:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-tape mr-2"></i>A. Lakban Listrik (Electrical Tape)</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Terbuat dari PVC fleksibel</li>
+                                <li>Tersedia dalam berbagai warna</li>
+                                <li>Tegangan kerja hingga 600V</li>
+                                <li>Tahan suhu hingga 80-105°C</li>
+                                <li><strong>Cara pakai:</strong> Lilitkan dengan overlap 50%, minimal 2 lapis, mulai dari isolasi kabel ke isolasi kabel</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-fire mr-2"></i>B. Heat Shrink Tube</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Selang menyusut panas dari poliolefin</li>
+                                <li>Menyusut saat dipanaskan (solder/heat gun)</li>
+                                <li>Isolasi lebih rapi dan tahan lama</li>
+                                <li>Tahan suhu hingga 125°C</li>
+                                <li><strong>Cara pakai:</strong> Masukkan selang sebelum menyambung, lalu panaskan setelah sambungan selesai</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-box mr-2"></i>C. Kotak Sambung (Junction Box)</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Wadah pelindung untuk sambungan</li>
+                                <li>Tersedia tipe in-bow (tanam) dan out-bow (tempel)</li>
+                                <li>Memiliki derajat proteksi IP tertentu</li>
+                                <li>Harus aksesibel untuk pemeliharaan</li>
+                                <li><strong>Wajib digunakan</strong> untuk semua sambungan permanen</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-tint-slash mr-2"></i>D. Resin/Compound Pengisi</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Untuk sambungan di area basah/bawah tanah</li>
+                                <li>Mengisi rongga kotak sambung</li>
+                                <li>Kedap air dan tahan korosi</li>
+                                <li>Contoh: resin epoksi, compound silikon</li>
+                                <li><strong>Aplikasi:</strong> Sambungan kabel tanah, area outdoor</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <p class="text-sm text-gray-700"><strong>⚠️ Peringatan:</strong> Jangan pernah menggunakan lakban biasa (bukan lakban listrik) untuk mengisolasi sambungan! Lakban biasa tidak tahan panas, mudah terbakar, dan isolasinya tidak memadai untuk tegangan listrik.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Pemeriksaan Kualitas Sambungan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-clipboard-check mr-2"></i>5. Pemeriksaan Kualitas Sambungan</h3>
+                    <p class="text-gray-700 mb-3">Setiap sambungan yang dibuat harus diperiksa kualitasnya sebelum instalasi dialiri tegangan. Berikut prosedur pemeriksaan yang sistematis:</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pemeriksaan Visual</h5>
+                                <p class="text-sm text-gray-700">Periksa: (a) tidak ada konduktor telanjang yang terlihat, (b) isolasi utuh tanpa robekan, (c) lilitan rapat dan rapi, (d) tidak ada serabut konduktor yang mencuat keluar, (e) warna lakban/heat shrink sesuai standar.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pull Test (Uji Tarik)</h5>
+                                <p class="text-sm text-gray-700">Tarik sambungan dengan tangan secara perlahan namun tegas. Sambungan yang baik tidak akan longgar atau putus. Jika sambungan mudah terlepas, berarti tidak memenuhi prinsip kuat mekanis.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Uji Kontinuitas</h5>
+                                <p class="text-sm text-gray-700">Gunakan multimeter pada mode Ohm/continuity. Sambungan yang baik memiliki resistansi sangat rendah (mendekati 0 Ω). Jika resistansi tinggi, berarti kontak tidak sempurna.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Uji Tahanan Isolasi (Megger Test)</h5>
+                                <p class="text-sm text-gray-700">Gunakan Megger (insulation tester) pada tegangan 500V DC. Tahanan isolasi sambungan harus minimal 1 MΩ. Nilai di bawah itu menunjukkan isolasi buruk yang harus diperbaiki.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Uji Beban (Load Test)</h5>
+                                <p class="text-sm text-gray-700">Untuk instalasi besar, lakukan uji beban dengan mengalirkan arus nominal selama beberapa menit. Periksa suhu sambungan dengan thermal camera atau termometer — tidak boleh ada pemanasan berlebih.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                        <h4 class="font-bold text-yellow-800 mb-2"><i class="fas fa-file-alt mr-2"></i>Dokumentasi Pemeriksaan</h4>
+                        <p class="text-sm text-gray-700">Setiap pemeriksaan sambungan harus didokumentasikan dalam checklist: lokasi sambungan, tanggal, nama teknisi, hasil uji (lulus/tidak), nilai tahanan isolasi, dan tanda tangan. Dokumentasi ini penting untuk jaminan kualitas dan pemeliharaan di masa depan.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Keselamatan Pekerjaan Penyambungan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-hard-hat mr-2"></i>6. Keselamatan Pekerjaan Penyambungan</h3>
+                    <p class="text-gray-700 mb-3">Pekerjaan penyambungan kabel memiliki risiko tersendiri yang harus diantisipasi. Berikut prosedur K3 yang wajib diterapkan:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-ban mr-2"></i>Sebelum Menyambung</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li><strong>Matikan sumber listrik</strong> (LOTO)</li>
+                                <li>Verifikasi dengan test pen bahwa kabel tidak bertegangan</li>
+                                <li>Gunakan APD lengkap (sarung tangan isolasi, kacamata safety)</li>
+                                <li>Pastikan area kerja kering dan bebas dari bahan mudah terbakar</li>
+                                <li>Siapkan APAR di dekat area kerja</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                            <h4 class="font-bold text-orange-800 mb-2"><i class="fas fa-fire mr-2"></i>Saat Menyambung (Las/Solder)</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Gunakan kacamata las/safety saat menyolder</li>
+                                <li>Jangan menghirup uap timah (gunakan ventilasi/ekshauster)</li>
+                                <li>Hati-hati dengan solder panas — dapat menyebabkan luka bakar</li>
+                                <li>Letakkan solder pada stand, jangan di permukaan mudah terbakar</li>
+                                <li>Jangan meninggalkan solder panas tanpa pengawasan</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-check-circle mr-2"></i>Setelah Menyambung</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Pastikan semua sambungan terisolasi dengan baik</li>
+                                <li>Pastikan tidak ada konduktor telanjang yang terlihat</li>
+                                <li>Periksa kembali semua sambungan sebelum menyalakan listrik</li>
+                                <li>Bersihkan area kerja dari sisa kabel dan alat</li>
+                                <li>Dokumentasikan hasil pekerjaan</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                            <h4 class="font-bold text-purple-800 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>Larangan Keras</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Jangan menyambung kabel dalam keadaan bertegangan</li>
+                                <li>Jangan menggunakan kabel yang berbeda material (Cu-Al) tanpa terminal khusus</li>
+                                <li>Jangan meninggalkan sambungan telanjang tanpa isolasi</li>
+                                <li>Jangan menyambung kabel di area basah tanpa proteksi IP yang memadai</li>
+                                <li>Jangan menggunakan lakban biasa sebagai isolasi listrik</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Gunakan cutter tajam saat mengupas isolasi agar konduktor tidak tergores.</li>
+                    <li>Panjang pengupasan ideal: 5-7 cm untuk pilinan, 10-15 mm untuk terminal sekrup.</li>
+                    <li>Pilin minimal 5-7 lilitan rapat untuk sambungan yang kuat.</li>
+                    <li>Selalu las sambungan pilinan dengan timah untuk konduktivitas optimal.</li>
+                    <li>Gunakan terminal Wago untuk mempercepat pekerjaan dan meningkatkan keandalan.</li>
+                    <li>Lakukan pull test pada setiap sambungan sebelum menutup kotak doos.</li>
+                    <li>Dokumentasikan setiap sambungan dengan foto untuk pemeliharaan.</li>
+                    <li>Gunakan heat shrink tube untuk isolasi yang lebih rapi dan tahan lama.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Menyambung kabel hanya dengan pilinan seadanya tanpa las dop atau terminal.</li>
+                    <li>Mengupas isolasi terlalu pendek sehingga isolasi terjepit terminal.</li>
+                    <li>Mengupas isolasi terlalu panjang sehingga konduktor telanjang terlihat.</li>
+                    <li>Tidak melakukan pull test → sambungan longgar terdeteksi setelah instalasi jadi.</li>
+                    <li>Menggunakan lakban biasa (bukan lakban listrik) untuk isolasi.</li>
+                    <li>Menyambung kabel tembaga dengan aluminium tanpa terminal bimetal.</li>
+                    <li>Tidak menempatkan sambungan di dalam kotak doos (ditanam langsung di dinding).</li>
+                    <li>Menyambung kabel dalam keadaan bertegangan (sangat berbahaya!).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Teknik penyambungan penghantar adalah keterampilan kritis yang menentukan keandalan dan keselamatan instalasi listrik. Setiap sambungan harus memenuhi Prinsip 3K: Kuat mekanis, Konduktif baik, dan terIsolasi sempurna. Jenis sambungan meliputi pilinan lurus (untuk sambungan segaris), pilinan cabang (untuk percabangan), Western Union (untuk kabel serabut yang mengalami tarikan), dan knuckle (untuk kabel besar). Instalasi modern semakin banyak menggunakan terminal dan konektor seperti terminal sekrup, Wago, crimp, dan solder yang lebih praktis dan andal. Isolasi sambungan dapat menggunakan lakban listrik, heat shrink tube, kotak sambung, atau resin compound tergantung aplikasi. Pemeriksaan kualitas sambungan meliputi uji visual, pull test, uji kontinuitas, uji tahanan isolasi (Megger), dan uji beban. Keselamatan kerja dalam penyambungan menuntut penerapan LOTO, penggunaan APD, kehati-hatian saat menyolder, dan pelarangan bekerja dalam keadaan bertegangan. Penguasaan teknik penyambungan yang baik akan menghasilkan instalasi yang aman, andal, dan tahan lama.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>Wago Corporation. (2020). <em>Installation Connectors — Technical Guide</em>.</li>
+                <li>IEC. (2017). <em>IEC 60947-7-1: Low-voltage switchgear and controlgear — Connector blocks for copper conductors</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="14.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 14</a>
+            <a href="16.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 16: Pemasangan Instalasi <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 15 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 15</h2>
+                <p class="text-gray-600 mt-2">Teknik Penyambungan Penghantar</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Prinsip 3K dalam penyambungan penghantar yang benar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Kuat, Cepat, dan_kwargs</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Kuat mekanis, Konduktif baik, dan terIsolasi sempurna</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Kecil, Rapi, dan Murah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Keras, Konduktif, dan Kaku</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="E" class="form-radio text-blue-600"> <span>E. Kuat, Keras, dan Kedap air</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Jenis sambungan yang digunakan untuk menyambung dua kabel yang segaris (searah) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Sambungan cabang (tee joint)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Sambungan knuckle</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Sambungan pilinan lurus (straight joint)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Sambungan busbar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="E" class="form-radio text-blue-600"> <span>E. Sambungan crimp</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Terminal yang menggunakan sistem push-in tanpa memerlukan alat bantu dan semakin populer dalam instalasi modern adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Terminal sekrup</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Terminal crimp</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Terminal busbar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Terminal Wago (push-in connector)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="E" class="form-radio text-blue-600"> <span>E. Terminal las</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Alat yang digunakan untuk menguji tahanan isolasi sambungan kabel pada tegangan 500V DC adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Multimeter analog</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Test pen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. Megger (insulation tester)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Tang ampere</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="E" class="form-radio text-blue-600"> <span>E. Oscilloscope</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Menurut standar PUIL, tahanan isolasi minimal yang harus dimiliki oleh sebuah sambungan kabel adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. 0.1 Ω</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. 1 kΩ</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. 1 MΩ</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. 100 MΩ</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="E" class="form-radio text-blue-600"> <span>E. Tidak ada ketentuan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Jenis sambungan yang sangat kuat dan cocok untuk kabel serabut yang akan mengalami tarikan tinggi adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Sambungan pilinan lurus sederhana</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Sambungan Western Union</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Sambungan tee joint</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Sambungan tempel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="E" class="form-radio text-blue-600"> <span>E. Sambungan lakban</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Bahan isolasi sambungan yang menyusut saat dipanaskan dan memberikan isolasi yang rapi serta tahan lama adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. Lakban biasa</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. Kertas isolasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. Heat shrink tube</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. Kain ban</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="E" class="form-radio text-blue-600"> <span>E. Plastik kemasan</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Berdasarkan studi kasus 15, penyebab utama kebakaran di dalam dinding adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Lampu LED terlalu terang</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. MCB terlalu kecil</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Sambungan kabel dipilin seadanya tanpa las dop dan terminal yang memadai, menyebabkan oksidasi dan panas terakumulasi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Tegangan PLN terlalu tinggi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="E" class="form-radio text-blue-600"> <span>E. Kabel terlalu besar penampangnya</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Langkah PERTAMA yang wajib dilakukan sebelum melakukan penyambungan kabel adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Langsung mengupas kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Mematikan sumber listrik (LOTO) dan verifikasi dengan test pen</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Menyalakan MCB untuk menguji</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Menyiram kabel dengan air</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="E" class="form-radio text-blue-600"> <span>E. Mengecat dinding sekitar</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Uji yang dilakukan untuk memastikan sambungan kabel tidak mudah terlepas saat ditarik dengan tangan disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Uji kontinuitas</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Uji polaritas</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Pull test (uji tarik)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Uji beban</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="E" class="form-radio text-blue-600"> <span>E. Uji tahanan isolasi</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan Prinsip 3K dalam penyambungan penghantar! Mengapa setiap prinsip tersebut penting untuk dipenuhi? Berikan contoh akibat jika salah satu prinsip tidak dipenuhi!</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Bandingkan 4 jenis sambungan penghantar (pilinan lurus, pilinan cabang, Western Union, dan knuckle) ditinjau dari fungsi, cara pembuatan, dan aplikasinya! Kapan masing-masing jenis sambungan sebaiknya digunakan?</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Jelaskan perbedaan antara terminal sekrup, terminal Wago (push-in), terminal crimp, dan terminal las ditinjau dari cara pemasangan, kelebihan, kekurangan, dan aplikasinya! Mengapa terminal Wago semakin populer dalam instalasi modern?</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 15 di atas! Identifikasi penyebab kebakaran, jelaskan mekanisme terjadinya panas akibat resistansi kontak yang tinggi, dan berikan solusi penyambungan yang benar sesuai standar PUIL!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan prosedur pemeriksaan kualitas sambungan kabel yang sistematis! Jelaskan tujuan, alat yang digunakan, dan kriteria kelulusan pada setiap tahap pemeriksaan!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 15
+        const kunciJawaban = {
+            q1: 'B', q2: 'C', q3: 'D', q4: 'C', q5: 'C',
+            q6: 'B', q7: 'C', q8: 'C', q9: 'B', q10: 'C'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 15 (Teknik Penyambungan) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 15 (Teknik Penyambungan Penghantar) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

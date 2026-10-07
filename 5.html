@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 5: Komponen Instalasi Penerangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 5</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Komponen Instalasi Penerangan</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mengenal secara mendalam jenis kabel, sakelar, fitting, lampu, kotak sambung, serta pipa conduit beserta perlengkapannya sebagai komponen utama dalam instalasi penerangan listrik.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="4.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 4</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Sebuah instalasi penerangan listrik tersusun dari berbagai komponen yang masing-masing memiliki fungsi spesifik dan saling melengkapi. Seorang teknisi yang kompeten tidak hanya mampu merangkai komponen-komponen tersebut, tetapi juga harus memahami karakteristik, spesifikasi teknis, serta kriteria pemilihan setiap komponen sesuai dengan kebutuhan dan lingkungan pemasangannya.
+            </p>
+            <p class="mb-4 text-justify">
+                Pemilihan komponen yang salah dapat berakibat fatal: kabel yang tidak sesuai dapat menyebabkan kebakaran, sakelar yang keliru jenisnya membuat rangkaian tidak berfungsi, lampu yang tidak efisien memboroskan energi, dan pipa conduit yang tidak tepat mempercepat kerusakan instalasi. Oleh karena itu, penguasaan pengetahuan tentang komponen instalasi penerangan adalah kompetensi dasar yang wajib dimiliki sebelum melangkah ke tahap pemasangan.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-cubes mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Komponen Utama:</strong> Kabel, sakelar, fitting, lampu, kotak sambung, dan pipa conduit.</li>
+                    <li><strong>Spesifikasi Teknis:</strong> Setiap komponen memiliki rating tegangan, arus, dan derajat proteksi (IP) yang harus sesuai dengan aplikasi.</li>
+                    <li><strong>Kesesuaian Lingkungan:</strong> Pemilihan komponen harus mempertimbangkan kondisi lingkungan (indoor/outdoor, kering/basah, panas/dingin).</li>
+                    <li><strong>Standarisasi SNI:</strong> Semua komponen wajib berlabel SNI untuk menjamin keamanan dan keandalan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Mengenal Komponen-Komponen Instalasi Penerangan</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk melihat secara visual berbagai komponen instalasi dan cara mengidentifikasinya.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Komponen Instalasi</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 5: Kebakaran Akibat Salah Pilih Kabel</h3>
+            <p class="text-gray-700 mb-4">
+                Seorang pemilik rumah memasang instalasi penerangan teras menggunakan kabel jenis NYA (kabel tunggal tanpa selubung) yang dibiarkan terpapar langsung oleh hujan dan panas matahari tanpa pelindung pipa conduit. Dalam waktu kurang dari satu tahun, isolasi kabel getas dan terkelupas. Saat hujan deras, terjadi hubung singkat yang memicu percikan api dan membakar sebagian plafon rumah.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kabel NYA hanya boleh digunakan di dalam pipa conduit dan di lingkungan kering. Untuk area outdoor, seharusnya digunakan kabel <strong>NYM</strong> (yang memiliki selubung ganda) atau <strong>NYY</strong> (kabel tanah) yang tahan terhadap cuaca. <strong>Pemilihan komponen yang tepat adalah kunci keamanan instalasi.</strong></p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">5.1 Landasan Teoretis Komponen Listrik</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">5.1.1 Klasifikasi Komponen Instalasi</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Komponen instalasi penerangan dikelompokkan menjadi:
+                        <br><br>
+                        <strong>1. Komponen Penghantar:</strong> Kabel/penghantar yang menyalurkan energi listrik.
+                        <br>
+                        <strong>2. Komponen Pengendali:</strong> Sakelar yang memutus/menyambung rangkaian.
+                        <br>
+                        <strong>3. Komponen Beban:</strong> Lampu dan fitting sebagai penerima energi.
+                        <br>
+                        <strong>4. Komponen Pelindung:</strong> Pipa conduit, kotak sambung, dan aksesoris.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">5.1.2 Kriteria Pemilihan Komponen</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Kesesuaian spesifikasi:</strong> Rating arus, tegangan, dan daya.</li>
+                        <li><strong>Kesesuaian lingkungan:</strong> Indoor, outdoor, basah, kering, panas.</li>
+                        <li><strong>Kualitas material:</strong> Berlabel SNI dan berstandar internasional.</li>
+                        <li><strong>Kesesuaian fungsi:</strong> Jenis komponen sesuai dengan kebutuhan rangkaian.</li>
+                        <li><strong>Keandalan jangka panjang:</strong> Tahan aus dan tidak cepat rusak.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">5.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Kabel/Penghantar -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-wave-square mr-2"></i>1. Kabel/Penghantar Listrik</h3>
+                    <p class="text-gray-700 mb-3">Kabel adalah komponen vital yang berfungsi menyalurkan energi listrik dari sumber ke beban. Di Indonesia, terdapat beberapa jenis kabel yang umum digunakan dalam instalasi penerangan:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Jenis Kabel</th>
+                                    <th class="px-4 py-3">Keterangan</th>
+                                    <th class="px-4 py-3">Aplikasi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">NYA</td>
+                                    <td class="px-4 py-3">Kabel inti tunggal, isolasi PVC. Harus dipasang dalam pipa conduit.</td>
+                                    <td class="px-4 py-3">Instalasi indoor dalam pipa, panel.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">NYM</td>
+                                    <td class="px-4 py-3">Kabel multi-inti dengan selubung ganda, tahan lembab.</td>
+                                    <td class="px-4 py-3">Instalasi indoor/outdoor terlindung.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">NYY</td>
+                                    <td class="px-4 py-3">Kabel tanah, selubung kuat, tahan air dan mekanis.</td>
+                                    <td class="px-4 py-3">Instalasi bawah tanah, outdoor berat.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">NYFGBY</td>
+                                    <td class="px-4 py-3">Kabel dengan armor (pelindung baja), sangat kuat.</td>
+                                    <td class="px-4 py-3">Instalasi industri, area berisiko tinggi.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3"><strong>Catatan:</strong> Penampang kabel dinyatakan dalam mm² (contoh: 1.5 mm², 2.5 mm², 4 mm²). Pemilihan penampang harus disesuaikan dengan besar arus beban (KHA - Kemampuan Hantar Arus).</p>
+                </div>
+
+                <!-- 2. Sakelar -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-toggle-on mr-2"></i>2. Sakelar (Switch)</h3>
+                    <p class="text-gray-700 mb-3">Sakelar adalah komponen pengendali yang berfungsi memutus dan menyambung arus listrik pada penghantar fasa. Berikut jenis-jenis sakelar yang umum digunakan:</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2">Sakelar Tunggal</h4>
+                            <p class="text-sm text-gray-700">Mengendalikan satu kelompok lampu dari satu tempat. Memiliki 2 terminal (1 masuk, 1 keluar).</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2">Sakelar Seri (Double)</h4>
+                            <p class="text-sm text-gray-700">Mengendalikan dua kelompok lampu dari satu tempat. Memiliki 3 terminal (1 masuk, 2 keluar).</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2">Sakelar Tukar (SPDT)</h4>
+                            <p class="text-sm text-gray-700">Mengendalikan satu lampu dari dua tempat berbeda (contoh: ujung tangga). Memiliki 3 terminal (1 common, 2 traveler).</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2">Sakelar Silang (Intermediate)</h4>
+                            <p class="text-sm text-gray-700">Mengendalikan satu lampu dari tiga tempat atau lebih. Dipasang di antara dua sakelar tukar. Memiliki 4 terminal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Fitting Lampu -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-lightbulb mr-2"></i>3. Fitting Lampu (Lamp Holder)</h3>
+                    <p class="text-gray-700 mb-3">Fitting adalah komponen tempat memasang lampu sekaligus sebagai penghubung listrik ke lampu. Berdasarkan jenis soketnya, fitting dibedakan menjadi:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Jenis Fitting</th>
+                                    <th class="px-4 py-3">Karakteristik</th>
+                                    <th class="px-4 py-3">Penggunaan Umum</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">E27 (Edison 27mm)</td>
+                                    <td class="px-4 py-3">Fitting ulir besar, paling umum digunakan.</td>
+                                    <td class="px-4 py-3">Lampu rumah tinggal, lampu pijar/LED standar.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">E14 (Edison 14mm)</td>
+                                    <td class="px-4 py-3">Fitting ulir kecil.</td>
+                                    <td class="px-4 py-3">Lampu dekoratif, lampu kristal.</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">B22 (Bayonet 22mm)</td>
+                                    <td class="px-4 py-3">Fiting jenis tusuk/bayonet (bukan ulir).</td>
+                                    <td class="px-4 py-3">Lampu plafon, area yang rawan getaran.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Fitting TL (G13)</td>
+                                    <td class="px-4 py-3">Fitting khusus lampu tabung (fluorescent).</td>
+                                    <td class="px-4 py-3">Lampu kantor, sekolah, gudang.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3"><strong>Catatan:</strong> Berdasarkan cara pemasangannya, fitting juga dibedakan menjadi fitting plafon (menempel), fitting gantung (menggunakan tali/kabel), dan fitting dinding.</p>
+                </div>
+
+                <!-- 4. Lampu -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-sun mr-2"></i>4. Lampu Penerangan</h3>
+                    <p class="text-gray-700 mb-3">Lampu adalah beban utama dalam instalasi penerangan yang mengubah energi listrik menjadi energi cahaya. Terdapat tiga jenis lampu utama yang digunakan saat ini:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3">Aspek</th>
+                                    <th class="px-4 py-3">Lampu Pijar (Incandescent)</th>
+                                    <th class="px-4 py-3">Lampu TL (Fluorescent)</th>
+                                    <th class="px-4 py-3">Lampu LED</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Prinsip Kerja</td>
+                                    <td class="px-4 py-3">Pemanasan filamen wolfram hingga berpijar.</td>
+                                    <td class="px-4 py-3">Gas merkuri + fosfor menghasilkan cahaya.</td>
+                                    <td class="px-4 py-3">Dioda pemancar cahaya (Light Emitting Diode).</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Efisiensi Energi</td>
+                                    <td class="px-4 py-3">Sangat rendah (±5% jadi cahaya, sisanya panas).</td>
+                                    <td class="px-4 py-3">Sedang (lebih hemat dari pijar).</td>
+                                    <td class="px-4 py-3">Sangat tinggi (±80-90% jadi cahaya).</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">Umur Pakai</td>
+                                    <td class="px-4 py-3">±1.000 jam</td>
+                                    <td class="px-4 py-3">±8.000 jam</td>
+                                    <td class="px-4 py-3">±25.000-50.000 jam</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Harga</td>
+                                    <td class="px-4 py-3">Paling murah</td>
+                                    <td class="px-4 py-3">Menengah</td>
+                                    <td class="px-4 py-3">Paling mahal (namun paling ekonomis jangka panjang)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3"><strong>Tren Saat Ini:</strong> Lampu LED menjadi pilihan utama karena efisiensi energi yang sangat tinggi, umur pakai panjang, dan ramah lingkungan (tidak mengandung merkuri).</p>
+                </div>
+
+                <!-- 5. Kotak Sambung -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-box mr-2"></i>5. Kotak Sambung (Doos)</h3>
+                    <p class="text-gray-700 mb-3">Kotak sambung adalah wadah pelindung untuk tempat menyambung dan membagi penghantar kabel. Fungsinya adalah melindungi sambungan dari sentuhan langsung, kelembaban, dan debu, serta memberikan kerapian instalasi.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2">Kotak Sambung In-Bow</h4>
+                            <p class="text-sm text-gray-700">Ditanam di dalam dinding. Terlihat rapi karena hanya tutupnya yang tampak di permukaan. Digunakan pada instalasi pipa conduit tertanam.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-yellow-800 mb-2">Kotak Sambung Out-Bow</h4>
+                            <p class="text-sm text-gray-700">Dipasang di permukaan dinding. Digunakan pada instalasi pipa conduit tempel. Mudah diakses untuk pemeliharaan.</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3"><strong>Ukuran Standar:</strong> Kotak sambung tersedia dalam berbagai ukuran (misalnya 4x4 cm, 8x4 cm) dan jumlah gang (1, 2, 3, atau 4 gang) sesuai kebutuhan percabangan kabel.</p>
+                </div>
+
+                <!-- 6. Pipa/Conduit -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-grip-lines mr-2"></i>6. Pipa/Conduit dan Perlengkapannya</h3>
+                    <p class="text-gray-700 mb-3">Pipa conduit berfungsi sebagai pelindung mekanis kabel dari benturan, kelembaban, dan gangguan fisik lainnya. Selain itu, pipa juga memberikan estetika dan kerapian instalasi.</p>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2">Pipa PVC (Paralon)</h4>
+                            <p class="text-sm text-gray-700">Pipa plastik keras, ringan, tidak menghantarkan listrik. Tersedia dalam tipe:
+                            <br>• <strong>Tipe ringan</strong> (untuk pemasangan tempel)
+                            <br>• <strong>Tipe berat</strong> (untuk pemasangan tanam dalam beton)</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2">Pipa Fleksibel</h4>
+                            <p class="text-sm text-gray-700">Pipa lentur yang dapat ditekuk. Digunakan untuk menghubungkan pipa kaku ke komponen yang memerlukan penyesuaian posisi, atau pada area yang sulit dijangkau pipa kaku.</p>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Aksesoris Pipa Conduit:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                        <li><strong>Dop (End Cap):</strong> Menutup ujung pipa yang tidak digunakan.</li>
+                        <li><strong>Sok (Coupling):</strong> Menyambung dua pipa lurus.</li>
+                        <li><strong>Elbow (Siku):</strong> Membelokkan pipa 90° atau 45°.</li>
+                        <li><strong>Tee (Tiga Arah):</strong> Membagi pipa menjadi tiga arah.</li>
+                        <li><strong>Klem/Sadel:</strong> Mengikat pipa ke dinding atau plafon.</li>
+                        <li><strong>Sad (Bush):</strong> Melindungi ujung pipa dari goresan pada kabel saat penarikan.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Selalu periksa label SNI pada setiap komponen sebelum dibeli dan dipasang.</li>
+                    <li>Sesuaikan jenis kabel dengan lingkungan pemasangan (NYM untuk indoor, NYY untuk outdoor/tanah).</li>
+                    <li>Gunakan fitting yang sesuai dengan jenis dudukan lampu (E27, E14, B22).</li>
+                    <li>Pilih lampu LED untuk efisiensi energi jangka panjang meskipun harga beli lebih tinggi.</li>
+                    <li>Pastikan kotak sambung tertutup rapat untuk mencegah masuknya debu dan serangga.</li>
+                    <li>Gunakan pipa conduit dengan ketebalan yang sesuai (tipe berat untuk tanam dalam beton).</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Menggunakan kabel NYA di area outdoor tanpa pelindung pipa conduit.</li>
+                    <li>Memilih penampang kabel terlalu kecil sehingga cepat panas dan berpotensi kebakaran.</li>
+                    <li>Menggunakan sakelar berkualitas rendah yang cepat aus dan berisiko percikan api.</li>
+                    <li>Memasang fitting di area basah tanpa penutup pelindung (harusnya IP44 ke atas).</li>
+                    <li>Menyambung kabel tanpa menggunakan terminal box, langsung dibalut isolasi dan ditanam di dinding.</li>
+                    <li>Menarik kabel melalui pipa tanpa sad (bush), menyebabkan isolasi kabel tergores.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Komponen instalasi penerangan meliputi kabel (NYA, NYM, NYY, NYFGBY), sakelar (tunggal, seri, tukar, silang), fitting (E27, E14, B22, TL), lampu (pijar, TL, LED), kotak sambung (in-bow, out-bow), serta pipa conduit dengan berbagai aksesorisnya. Setiap komponen memiliki spesifikasi dan fungsi spesifik yang harus dipahami oleh teknisi. Pemilihan komponen yang tepat—sesuai dengan kebutuhan beban, kondisi lingkungan, dan standar SNI—akan menghasilkan instalasi yang aman, andal, efisien, dan tahan lama.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>PT Supreme Cable. (2020). <em>Katalog Kabel Listrik untuk Instalasi Rumah dan Gedung</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="4.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 4</a>
+            <a href="6.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 6: Pengaman Instalasi <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 5 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 5</h2>
+                <p class="text-gray-600 mt-2">Komponen Instalasi Penerangan</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jenis kabel yang memiliki selubung ganda dan cocok digunakan untuk instalasi indoor maupun outdoor terlindung adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. NYA</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. NYM</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. NYY</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. NYFGBY</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Sakelar yang digunakan untuk mengendalikan satu lampu dari dua tempat berbeda (misalnya di ujung tangga) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. Sakelar tunggal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. Sakelar seri</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. Sakelar tukar (SPDT)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. Sakelar silang</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Fitting lampu dengan kode E27 memiliki arti...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Fitting bayonet berdiameter 27 mm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Fitting ulir Edison berdiameter 27 mm</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Fitting khusus lampu TL 27 watt</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Fitting untuk tegangan 27 volt</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Jenis lampu yang paling efisien dalam penggunaan energi dan memiliki umur pakai paling panjang adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. Lampu pijar (incandescent)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. Lampu TL (fluorescent)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. Lampu LED</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. Lampu halogen</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Kotak sambung yang ditanam di dalam dinding sehingga hanya terlihat tutupnya di permukaan disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Kotak out-bow</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Kotak in-bow</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Kotak MCB</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Kotak kontaktor</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Aksesoris pipa conduit yang berfungsi untuk membelokkan arah pipa sebesar 90° disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Sok (coupling)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Dop (end cap)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Elbow (siku)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Tee (tiga arah)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Kabel jenis NYY paling cocok digunakan untuk instalasi...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. Di dalam rumah pada suhu tinggi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. Bawah tanah atau outdoor berat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. Sebagai kabel fleksibel peralatan elektronik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. Untuk instalasi tegangan tinggi di atas 1000V</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Sakelar yang memiliki 4 terminal dan digunakan untuk mengendalikan satu lampu dari tiga tempat atau lebih adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Sakelar tunggal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. Sakelar seri</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. Sakelar tukar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Sakelar silang (intermediate)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Fungsi utama dari pipa conduit dalam instalasi penerangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Menghantarkan arus listrik ke lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Melindungi kabel dari benturan, kelembaban, dan gangguan fisik</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Memutus arus saat terjadi hubung singkat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Mengubah tegangan listrik</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Berdasarkan studi kasus 5, penyebab utama kebakaran adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Penggunaan lampu LED yang salah</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Pemilihan jenis kabel yang tidak sesuai dengan lingkungan pemasangan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. Penggunaan sakelar yang terlalu kecil</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Tidak memasang MCB pada instalasi</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan perbedaan antara kabel NYA, NYM, dan NYY! Kapan masing-masing jenis kabel tersebut sebaiknya digunakan?</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Bandingkan lampu pijar, lampu TL, dan lampu LED dari segi prinsip kerja, efisiensi energi, umur pakai, dan harga! Mengapa lampu LED kini menjadi pilihan utama?</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Jelaskan perbedaan fungsi antara sakelar tunggal, sakelar seri, sakelar tukar, dan sakelar silang! Berikan contoh penerapan masing-masing dalam kehidupan sehari-hari!</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 5 di atas! Identifikasi kesalahan pemilihan komponen yang dilakukan, dan jelaskan solusi pemasangan yang seharusnya sesuai standar PUIL!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Sebutkan minimal 5 aksesoris pipa conduit beserta fungsinya! Mengapa aksesoris-aksesoris tersebut penting dalam instalasi yang rapi dan aman?</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 5
+        const kunciJawaban = {
+            q1: 'B', q2: 'C', q3: 'B', q4: 'C', q5: 'B',
+            q6: 'C', q7: 'B', q8: 'D', q9: 'B', q10: 'B'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            // Hitung skor PG
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            // Tampilkan hasil
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            
+            // Scroll ke hasil
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 5 (Komponen Instalasi) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 5 (Komponen Instalasi Penerangan) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

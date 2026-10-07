@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 13: Rangkaian Penerangan dengan Sakelar Tukar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white; color: black; }
+            .shadow-xl, .shadow-md { box-shadow: none !important; }
+        }
+        .print-only { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .circuit-box { font-family: monospace; font-size: 0.85rem; line-height: 1.6; background: #f8fafc; border: 2px solid #1e40af; border-radius: 0.5rem; padding: 1rem; white-space: pre; overflow-x: auto; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+                <span class="font-bold text-lg">INSTALASI PENERANGAN LISTRIK</span>
+            </div>
+            <div class="flex space-x-4 text-sm mt-2 sm:mt-0">
+                <a href="index.html" class="hover:text-yellow-400 transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+                <a href="index.html#tentang" class="hover:text-yellow-400 transition"><i class="fas fa-info-circle mr-1"></i> Tentang</a>
+                <a href="index.html#bab" class="hover:text-yellow-400 transition"><i class="fas fa-list mr-1"></i> Daftar Bab</a>
+                <a href="index.html#kontak" class="hover:text-yellow-400 transition"><i class="fas fa-user mr-1"></i> Penulis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pertemuan 13</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold mt-4 mb-2">Rangkaian Penerangan dengan Sakelar Tukar</h1>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto">
+                Mempelajari fungsi sakelar tukar, prinsip kerja rangkaian SPDT, pengendalian satu lampu dari dua tempat, diagram pengawatan, serta teknik pemasangan dan pengujian instalasi sakelar tukar.
+            </p>
+            <div class="mt-6 flex justify-center gap-4 no-print">
+                <a href="12.html" class="bg-white text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 12</a>
+                <a href="#pendahuluan" class="bg-yellow-500 text-blue-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-400 transition">Mulai Membaca <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-5xl">
+        
+        <!-- Pendahuluan -->
+        <section id="pendahuluan" class="mb-12 bg-white p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-3">Pendahuluan</h2>
+            <p class="mb-4 text-justify">
+                Dalam kehidupan sehari-hari, sering dijumpai situasi di mana satu lampu perlu dikendalikan dari <strong>dua tempat yang berbeda</strong>. Contoh paling klasik adalah lampu tangga: kita ingin menyalakan lampu dari lantai bawah saat akan naik, dan mematikannya dari lantai atas setelah sampai. Demikian pula di kamar tidur, kita ingin menyalakan lampu dari dekat pintu dan mematikannya dari samping tempat tidur tanpa harus bangkit. Untuk kebutuhan ini, digunakan <strong>sakelar tukar (changeover switch / SPDT)</strong>.
+            </p>
+            <p class="mb-4 text-justify">
+                Sakelar tukar merupakan pengembangan lebih lanjut dari sakelar tunggal dan sakelar seri yang telah dipelajari sebelumnya. Jika sakelar tunggal hanya memiliki satu jalur putus-sambung, sakelar tukar memiliki <strong>dua jalur yang saling bertukar</strong> — saat satu jalur tersambung, jalur lainnya terputus, dan sebaliknya. Prinsip inilah yang memungkinkan pengendalian satu lampu dari dua tempat secara bergantian.
+            </p>
+            <p class="mb-4 text-justify">
+                Pada pertemuan ini, siswa akan mempelajari fungsi sakelar tukar, prinsip kerja rangkaian SPDT, konsep kabel traveler, diagram pengawatan yang benar, serta teknik pemasangan dan pengujian yang sesuai standar PUIL. Penguasaan materi ini menjadi prasyarat penting sebelum melangkah ke sakelar silang yang memungkinkan pengendalian lampu dari tiga tempat atau lebih.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-lg">
+                <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-exchange-alt mr-2"></i>Konsep Kunci</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Sakelar Tukar (SPDT):</strong> Single Pole Double Throw — sakelar dengan 3 terminal (1 common, 2 traveler) yang memutus satu jalur dan menyambung jalur lain secara bergantian.</li>
+                    <li><strong>Kabel Traveler:</strong> Dua kabel penghubung antara dua sakelar tukar yang membawa arus bolak-balik tergantung posisi tuas.</li>
+                    <li><strong>Terminal Common (C):</strong> Terminal pusat yang selalu terhubung ke salah satu dari dua terminal traveler.</li>
+                    <li><strong>Prinsip Tukar:</strong> Saat tuas di posisi 1, C terhubung ke L1; saat tuas di posisi 2, C terhubung ke L2.</li>
+                    <li><strong>Pengendalian Dua Tempat:</strong> Dua sakelar tukar dipasang di dua lokasi berbeda, dihubungkan oleh 2 kabel traveler.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Placeholder -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-xl shadow-md text-center">
+            <i class="fas fa-play-circle text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Video: Rangkaian Sakelar Tukar — Prinsip dan Pemasangan</h3>
+            <p class="text-gray-300 mb-4">Simak video ini untuk memahami cara kerja sakelar tukar dan bagaimana satu lampu dapat dikendalikan dari dua tempat.</p>
+            <div class="bg-gray-800 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-600">
+                <span class="text-gray-400"><i class="fab fa-youtube text-red-500 mr-2"></i>Area Embed Video Sakelar Tukar</span>
+            </div>
+        </section>
+
+        <!-- Studi Kasus -->
+        <section class="mb-12 bg-red-50 border border-red-200 p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-bold text-red-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>Studi Kasus 13: Lampu Tangga Tidak Bisa Dimatikan dari Atas</h3>
+            <p class="text-gray-700 mb-4">
+                Seorang teknisi memasang rangkaian sakelar tukar untuk lampu tangga sebuah rumah dua lantai. Sakelar A dipasang di lantai bawah (dekat pintu masuk) dan sakelar B di lantai atas (dekat kamar tidur). Setelah pemasangan, lampu bisa dinyalakan dari sakelar A (bawah), tetapi saat sampai di atas dan menekan sakelar B, lampu <strong>tidak mau mati</strong>. Sebaliknya, jika lampu dimatikan dari sakelar A, sakelar B tidak bisa menyalakannya. Setelah diperiksa, ternyata teknisi tersebut <strong>salah menyambungkan kabel traveler</strong> — ia menyambungkan terminal L1 sakelar A ke terminal L2 sakelar B, dan L2 sakelar A ke L1 sakelar B secara terbalik, sehingga logika tukar tidak berfungsi dengan benar.
+            </p>
+            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <p class="font-semibold text-red-900">Pembelajaran:</p>
+                <p class="text-gray-700">Kesalahan penyambungan kabel traveler adalah masalah paling umum pada rangkaian sakelar tukar. Meskipun secara fisik kedua kabel traveler terlihat sama, <strong>urutan penyambungan harus konsisten</strong>: L1 sakelar A ke L1 sakelar B, dan L2 sakelar A ke L2 sakelar B. <strong>Prinsip:</strong> Selalu tandai kabel traveler dengan warna atau label yang berbeda sebelum pemasangan untuk menghindari kekeliruan.</p>
+            </div>
+        </section>
+
+        <!-- Landasan Teoretis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">13.1 Landasan Teoretis Sakelar Tukar</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">13.1.1 Konstruksi Sakelar Tukar (SPDT)</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Sakelar tukar (SPDT — <em>Single Pole Double Throw</em>) memiliki konstruksi khusus:
+                        <br><br>
+                        • <strong>Satu tuas (toggle)</strong> dengan dua posisi<br>
+                        • <strong>Tiga terminal sekrup:</strong> 1 common (C) dan 2 traveler (L1, L2)<br>
+                        • <strong>Mekanisme kontak internal:</strong> Kontak bergerak (tuas) selalu terhubung ke salah satu dari dua kontak tetap (L1 atau L2), tidak pernah keduanya sekaligus<br>
+                        • <strong>Bodi isolator</strong> dari bahan tahan panas<br>
+                        • <strong>Frame/plat</strong> standar 1 module DIN
+                        <br><br>
+                        Rating umum: 10A/250V AC. Simbol gambar: garis putus dengan tuas bercabang dua.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3">13.1.2 Standar PUIL untuk Sakelar Tukar</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li><strong>Pasal 5.5.2:</strong> Sakelar tukar harus memutus penghantar fasa (bukan netral).</li>
+                        <li><strong>Pasal 5.5.3:</strong> Ketinggian pemasangan 120-150 cm dari lantai.</li>
+                        <li><strong>Pasal 5.5.5:</strong> Sakelar di area basah harus IP44 minimal.</li>
+                        <li><strong>Pasal 5.5.8:</strong> Kabel traveler harus memiliki penampang yang sama dengan kabel fasa utama.</li>
+                        <li><strong>Pasal 5.5.11:</strong> Rangkaian sakelar tukar harus dapat diuji fungsinya dari kedua tempat secara independen.</li>
+                        <li><strong>Pasal 5.5.13:</strong> Terminal common harus ditandai dengan jelas (biasanya warna berbeda atau simbol panah).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uraian Materi Inti -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-gray-200 pb-2">13.2 Uraian Materi Inti</h2>
+            
+            <div class="space-y-6">
+                
+                <!-- 1. Fungsi Sakelar Tukar -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-bullseye mr-2"></i>1. Fungsi Sakelar Tukar</h3>
+                    <p class="text-gray-700 mb-3">Sakelar tukar memiliki fungsi spesifik yang tidak dapat digantikan oleh sakelar tunggal atau sakelar seri:</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-exchange-alt mr-2"></i>Fungsi Utama</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>Mengendalikan <strong>satu lampu dari dua tempat</strong> yang berbeda</li>
+                                <li>Memungkinkan operasi ON/OFF dari kedua lokasi secara bergantian</li>
+                                <li>Memberikan kenyamanan dan efisiensi bagi pengguna</li>
+                                <li>Menghemat energi (lampu tidak perlu menyala terus)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Aplikasi Khas</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li><strong>Tangga:</strong> Lantai bawah dan lantai atas</li>
+                                <li><strong>Kamar tidur:</strong> Pintu masuk dan samping tempat tidur</li>
+                                <li><strong>Lorong panjang:</strong> Kedua ujung lorong</li>
+                                <li><strong>Garasi:</strong> Dalam garasi dan pintu masuk rumah</li>
+                                <li><strong>Ruang rapat:</strong> Pintu depan dan pintu belakang</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Perbedaan dengan Sakelar Lain:</strong> Sakelar tunggal = 1 tempat, 1 lampu. Sakelar seri = 1 tempat, 2 lampu. Sakelar tukar = <strong>2 tempat, 1 lampu</strong>. Sakelar silang = 3+ tempat, 1 lampu.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Prinsip Kerja Rangkaian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-cogs mr-2"></i>2. Prinsip Kerja Rangkaian Sakelar Tukar</h3>
+                    <p class="text-gray-700 mb-3">
+                        Prinsip kerja sakelar tukar didasarkan pada <strong>mekanisme pertukaran jalur</strong>. Setiap sakelar tukar memiliki terminal common (C) yang selalu terhubung ke salah satu dari dua terminal traveler (L1 atau L2). Lampu akan menyala hanya jika kedua sakelar tukar berada pada posisi yang membentuk jalur tertutup dari sumber ke beban.
+                    </p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   PRINSIP KERJA SAKELAR TUKAR (SPDT)                       │
+└─────────────────────────────────────────────────────────────┘
+
+   Terminal Sakelar Tukar (tampak belakang):
+   
+           ┌─────────────────────┐
+           │   SAKELAR TUKAR     │
+           │                     │
+    L1 ●───┤  (traveler 1)       │
+           │       ╲             │
+    L2 ●───┤        ╲ (tuas)     │
+           │       ╱             │
+     C ●───┤  (common/masuk)     │
+           └─────────────────────┘
+   
+   C  = Terminal common (selalu terhubung ke L1 ATAU L2)
+   L1 = Terminal traveler 1
+   L2 = Terminal traveler 2
+
+   POSISI TUAS:
+   ┌──────────────┬──────────────────────────────┐
+   │ Posisi Tuas  │ Koneksi Internal             │
+   ├──────────────┼──────────────────────────────┤
+   │ Posisi 1     │ C terhubung ke L1            │
+   │ Posisi 2     │ C terhubung ke L2            │
+   │              │ (TIDAK PERNAH keduanya)      │
+   └──────────────┴──────────────────────────────┘
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-lightbulb mr-2"></i>Logika Rangkaian Dua Sakelar Tukar</h4>
+                        <p class="text-sm text-gray-700 mb-2">Lampu menyala jika jalur dari sumber → sakelar A → traveler → sakelar B → lampu → netral membentuk loop tertutup. Ini terjadi ketika <strong>kedua sakelar berada pada posisi yang sama</strong> (keduanya ke L1 atau keduanya ke L2).</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-xs text-left text-gray-600">
+                                <thead class="text-xs text-gray-700 uppercase bg-indigo-100">
+                                    <tr>
+                                        <th class="px-3 py-2">Sakelar A</th>
+                                        <th class="px-3 py-2">Sakelar B</th>
+                                        <th class="px-3 py-2">Jalur</th>
+                                        <th class="px-3 py-2">Lampu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b"><td class="px-3 py-2">C→L1</td><td class="px-3 py-2">C→L1</td><td class="px-3 py-2">Tertutup via L1</td><td class="px-3 py-2 font-bold text-green-700">NYALA ✅</td></tr>
+                                    <tr class="border-b"><td class="px-3 py-2">C→L1</td><td class="px-3 py-2">C→L2</td><td class="px-3 py-2">Terbuka (silang)</td><td class="px-3 py-2 font-bold text-red-700">MATI ❌</td></tr>
+                                    <tr class="border-b"><td class="px-3 py-2">C→L2</td><td class="px-3 py-2">C→L1</td><td class="px-3 py-2">Terbuka (silang)</td><td class="px-3 py-2 font-bold text-red-700">MATI ❌</td></tr>
+                                    <tr><td class="px-3 py-2">C→L2</td><td class="px-3 py-2">C→L2</td><td class="px-3 py-2">Tertutup via L2</td><td class="px-3 py-2 font-bold text-green-700">NYALA ✅</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2"><strong>Kesimpulan:</strong> Mengubah posisi salah satu sakelar akan mengubah kondisi lampu (ON↔OFF). Inilah yang memungkinkan pengendalian dari dua tempat.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Pengendalian Satu Lampu dari Dua Tempat -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-arrows-alt-h mr-2"></i>3. Pengendalian Satu Lampu dari Dua Tempat</h3>
+                    <p class="text-gray-700 mb-3">
+                        Rangkaian pengendalian satu lampu dari dua tempat menggunakan <strong>dua buah sakelar tukar</strong> yang dihubungkan oleh <strong>dua kabel traveler</strong>. Berikut adalah skema lengkapnya:
+                    </p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   RANGKAIAN: 1 Lampu — 2 Sakelar Tukar (2 Tempat)          │
+└─────────────────────────────────────────────────────────────┘
+
+   [PLN 220V]
+        │
+   [MCB 6A/10A]
+        │
+        ├──── FASA (Merah) ──────────────────┐
+        │                                     │
+        │                              [C] SAKELAR A
+        │                               ╱    (Lantai Bawah)
+        │                              ╱
+        │                    (Traveler 1 - Kuning)
+        │                              ╲
+        │                               ╲
+        │                              [C] SAKELAR B
+        │                               ╱    (Lantai Atas)
+        │                              ╱
+        │                    (Traveler 2 - Hitam)
+        │                              ╲
+        │                               ╲
+        │                         [C] SAKELAR B
+        │                              │
+        │                         (Merah - Balik)
+        │                              │
+        │                              ▼
+        │                         [FITTING]──[LAMPU]
+        │                              │
+        ├──── NETRAL (Biru) ───────────┘
+        │
+   ─────┴──────────────────────────────────────────────────────
+
+   KETERANGAN:
+   Sakelar A: C = masuk dari fasa MCB
+              L1, L2 = keluar ke traveler
+   Sakelar B: L1, L2 = masuk dari traveler
+              C = keluar ke fitting lampu
+   Traveler: 2 kabel penghubung antar sakelar
+                    </div>
+
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2"><i class="fas fa-route mr-2"></i>Jalur Fasa</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Sumber L → MCB</li>
+                                <li>MCB → Terminal C sakelar A</li>
+                                <li>Sakelar A (L1/L2) → kabel traveler</li>
+                                <li>Kabel traveler → sakelar B (L1/L2)</li>
+                                <li>Sakelar B (C) → fitting lampu</li>
+                            </ol>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-blue-800 mb-2"><i class="fas fa-route mr-2"></i>Jalur Netral</h4>
+                            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                                <li>Sumber N → langsung ke fitting lampu</li>
+                                <li>TIDAK melalui sakelar mana pun</li>
+                                <li>Hanya 1 kabel netral diperlukan</li>
+                                <li>Netral terhubung ke kontak samping fitting</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <p class="text-sm text-gray-700"><strong>💡 Catatan Penting:</strong> Kabel traveler harus menggunakan <strong>2 kabel terpisah</strong> dengan penampang yang sama dengan kabel fasa (minimal 1.5 mm²). Warna kabel traveler sebaiknya berbeda dari fasa dan netral (misalnya kuning dan hitam) agar mudah diidentifikasi.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Diagram Pengawatan -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-drafting-compass mr-2"></i>4. Diagram Pengawatan (Wiring Diagram)</h3>
+                    <p class="text-gray-700 mb-3">
+                        Diagram pengawatan menunjukkan detail koneksi fisik antar komponen dengan warna kabel standar. Diagram ini menjadi panduan langsung saat pemasangan di lapangan.
+                    </p>
+                    
+                    <div class="circuit-box text-blue-900">
+┌─────────────────────────────────────────────────────────────┐
+│   DIAGRAM PENGAWATAN: Sakelar Tukar — 1 Lampu, 2 Tempat    │
+└─────────────────────────────────────────────────────────────┘
+
+   Dari MCB Panel
+   ┌──────┐
+   │ L ●──┼──── (MERAH) ──────────────────────┐
+   │      │                                    │
+   │ N ●──┼──── (BIRU) ────────────────┐      │
+   │      │                            │      │
+   └──────┘                            │      │
+                                       │      │
+                    ┌──────────────────┼──────┼──────────────────┐
+                    │                  │      │                  │
+                    ▼                  │      ▼                  │
+            ┌──────────────┐           │  ┌──────────────┐       │
+            │  SAKELAR A   │           │  │  SAKELAR B   │       │
+            │  (Bawah)     │           │  │  (Atas)      │       │
+            │              │           │  │              │       │
+            │  [C] ●───────┘ (MERAH)   │  │  [C] ●───────┼───────┼──→ ke FITTING
+            │         ╲                │  │         ╲    │       │    (kontak tengah)
+            │          ╲               │  │          ╲   │       │
+            │  [L1]●────╲──────────────┼──┼──[L1]●────╲  │       │
+            │            ╲ (KUNING)    │  │            ╲ │       │
+            │  [L2]●─────╲─────────────┼──┼──[L2]●─────╲│       │
+            │             (HITAM)      │  │             (HITAM)  │
+            └──────────────┘           │  └──────────────┘       │
+                                       │                         │
+                                       │         ┌──────────┐    │
+                                       │         │ FITTING  │    │
+                                       │         │  ●    ●  │    │
+                                       │         │  │    │  │    │
+                                       └─────────┘    │  │       │
+                                            (BIRU)    │  │       │
+                                                      │  └───────┘
+                                                      │   (MERAH dari C sakelar B)
+                                                      │
+                                            [LAMPU] ──┘
+
+   KETERANGAN WARNA KABEL:
+   🔴 MERAH      = Fasa (MCB → C sakelar A) & Balik (C sakelar B → Fitting)
+   🟡 KUNING     = Traveler 1 (L1 sakelar A → L1 sakelar B)
+   ⚫ HITAM      = Traveler 2 (L2 sakelar A → L2 sakelar B)
+   🔵 BIRU       = Netral (MCB → Fitting langsung)
+                    </div>
+
+                    <div class="mt-4 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-list-ol mr-2"></i>Ringkasan Koneksi</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Fasa (Merah):</strong> MCB → Terminal C sakelar A</li>
+                            <li><strong>Traveler 1 (Kuning):</strong> Terminal L1 sakelar A → Terminal L1 sakelar B</li>
+                            <li><strong>Traveler 2 (Hitam):</strong> Terminal L2 sakelar A → Terminal L2 sakelar B</li>
+                            <li><strong>Balik (Merah):</strong> Terminal C sakelar B → Kontak tengah fitting</li>
+                            <li><strong>Netral (Biru):</strong> MCB → Kontak samping fitting (langsung)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 5. Teknik Pemasangan dan Pengujian -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-3"><i class="fas fa-tools mr-2"></i>5. Teknik Pemasangan dan Pengujian</h3>
+                    
+                    <h4 class="font-bold text-gray-800 mb-3 mt-2"><i class="fas fa-clipboard-list mr-2"></i>A. Prosedur Pemasangan</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Persiapan Alat dan Bahan</h5>
+                                <p class="text-sm text-gray-700">Siapkan: 2 sakelar tukar (SPDT), kabel NYA/NYM 1.5 mm² (merah, kuning, hitam, biru), fitting, lampu, kotak doos × 2, obeng, test pen, tang, cutter.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Matikan Sumber Listrik (LOTO)</h5>
+                                <p class="text-sm text-gray-700">Matikan MCB utama, kunci, beri label. Verifikasi dengan test pen bahwa semua penghantar tidak bertegangan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Pasang Kotak Doos di Kedua Lokasi</h5>
+                                <p class="text-sm text-gray-700">Pasang kotak doos untuk sakelar A (lokasi 1, misal lantai bawah) dan sakelar B (lokasi 2, misal lantai atas). Pastikan ketinggian 120-150 cm dari lantai.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Tarik Kabel Traveler Antar Lokasi</h5>
+                                <p class="text-sm text-gray-700">Tarik 2 kabel traveler (kuning dan hitam) dari kotak doos A ke kotak doos B melalui pipa conduit. Ini adalah langkah paling kritis — pastikan kabel cukup panjang dan tidak ada sambungan di tengah jalan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Identifikasi Terminal Sakelar Tukar</h5>
+                                <p class="text-sm text-gray-700">Periksa markings pada sakelar. Terminal common (C) biasanya ditandai dengan warna berbeda, simbol panah, atau tulisan "C"/"COM". Terminal L1 dan L2 adalah traveler. Jika tidak jelas, gunakan multimeter mode continuity untuk mengidentifikasi: putar tuas, terminal yang selalu terhubung ke salah satu dari dua lainnya adalah C.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Sambungkan Kabel ke Sakelar A</h5>
+                                <p class="text-sm text-gray-700">Terminal C ← kabel fasa (merah) dari MCB. Terminal L1 ← traveler 1 (kuning). Terminal L2 ← traveler 2 (hitam). Kencangkan semua sekrup terminal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">7</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Sambungkan Kabel ke Sakelar B</h5>
+                                <p class="text-sm text-gray-700">Terminal L1 ← traveler 1 (kuning) dari sakelar A. Terminal L2 ← traveler 2 (hitam) dari sakelar A. Terminal C → kabel balik (merah) ke fitting lampu. <strong>Pastikan urutan traveler konsisten: L1→L1, L2→L2.</strong></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-blue-50 p-3 rounded-lg">
+                            <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">8</span>
+                            <div>
+                                <h5 class="font-bold text-blue-800">Sambungkan Netral dan Pasang Lampu</h5>
+                                <p class="text-sm text-gray-700">Hubungkan kabel netral (biru) dari MCB langsung ke kontak samping fitting. Pasang lampu pada fitting. Pasang kedua sakelar ke kotak doos dan tutup cover.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-800 mb-3 mt-6"><i class="fas fa-clipboard-check mr-2"></i>B. Prosedur Pengujian</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Pemeriksaan Visual</h5>
+                                <p class="text-sm text-gray-700">Periksa kerapian pemasangan, tidak ada konduktor telanjang, isolasi utuh, warna kabel sesuai, kedua sakelar terpasang rata dan kuat.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Kontinuitas (Sebelum Bertegangan)</h5>
+                                <p class="text-sm text-gray-700">Gunakan multimeter mode Ohm. Uji: (a) fasa MCB → C sakelar A (≈0 Ω); (b) L1 sakelar A → L1 sakelar B (≈0 Ω); (c) L2 sakelar A → L2 sakelar B (≈0 Ω); (d) C sakelar B → fitting (≈0 Ω); (e) netral → fitting (≈0 Ω); (f) TIDAK ada short fasa-netral (∞ Ω).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi dari Lokasi A</h5>
+                                <p class="text-sm text-gray-700">Nyalakan MCB. Operasikan sakelar A → lampu harus berubah kondisi (ON↔OFF). Ulangi beberapa kali.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Fungsi dari Lokasi B</h5>
+                                <p class="text-sm text-gray-700">Operasikan sakelar B → lampu harus berubah kondisi (ON↔OFF) terlepas dari posisi sakelar A. Ini adalah uji paling kritis.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Kombinasi 4 Kondisi</h5>
+                                <p class="text-sm text-gray-700">Uji semua kombinasi: (A1-B1, A1-B2, A2-B1, A2-B2). Dua kombinasi harus NYALA, dua kombinasi harus MATI. Setiap kali satu sakelar diubah posisi, kondisi lampu harus berubah.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg">
+                            <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div>
+                                <h5 class="font-bold text-green-800">Uji Polaritas dan Keselamatan</h5>
+                                <p class="text-sm text-gray-700">Gunakan test pen. Verifikasi bahwa saat lampu OFF (dari posisi mana pun), fitting tidak bertegangan. Pastikan fasa terputus sempurna oleh rangkaian sakelar tukar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <p class="text-sm text-gray-700"><strong>⚠️ Peringatan:</strong> Jangan pernah menyambungkan netral ke terminal sakelar tukar! Kedua sakelar tukar hanya memutus/menyambung fasa. Jika netral yang diputus, fitting akan tetap bertegangan saat lampu OFF — sangat berbahaya.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tips & Kesalahan -->
+        <section class="mb-12 grid md:grid-cols-2 gap-6">
+            <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
+                <h3 class="font-bold text-green-800 mb-3"><i class="fas fa-check-circle mr-2"></i>Tips Praktis</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Identifikasi terminal common (C) dengan cermat sebelum menyambung — gunakan multimeter jika markings tidak jelas.</li>
+                    <li>Gunakan warna kabel berbeda untuk kedua traveler (misal kuning dan hitam) agar tidak tertukar.</li>
+                    <li>Tandai ujung kabel traveler dengan label atau isolasi berwarna sebelum ditarik melalui pipa.</li>
+                    <li>Pastikan urutan traveler konsisten: L1→L1 dan L2→L2 antar kedua sakelar.</li>
+                    <li>Gunakan kabel dengan penampang yang sama untuk fasa, traveler, dan balik (minimal 1.5 mm²).</li>
+                    <li>Lakukan uji fungsi dari KEDUA lokasi sebelum menutup kotak doos.</li>
+                    <li>Dokumentasikan diagram pengawatan yang telah dipasang untuk pemeliharaan.</li>
+                </ul>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 p-6 rounded-xl">
+                <h3 class="font-bold text-orange-800 mb-3"><i class="fas fa-times-circle mr-2"></i>Kesalahan yang Sering Terjadi</h3>
+                <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li>Salah mengidentifikasi terminal common (C) — menyambungkan fasa ke L1/L2 alih-alih ke C.</li>
+                    <li>Kabel traveler tertukar (L1→L2, L2→L1) — lampu tidak bisa dikendalikan dengan benar dari kedua tempat.</li>
+                    <li>Menyambungkan netral ke terminal sakelar — fitting tetap bertegangan saat OFF.</li>
+                    <li>Menggunakan kabel traveler dengan penampang lebih kecil dari kabel fasa.</li>
+                    <li>Ada sambungan di tengah kabel traveler — titik lemah yang berpotensi panas dan putus.</li>
+                    <li>Tidak melakukan uji kontinuitas sebelum menyalakan MCB.</li>
+                    <li>Hanya menguji dari satu lokasi — tidak memverifikasi fungsi dari lokasi kedua.</li>
+                    <li>Memasang sakelar tukar di area basah tanpa proteksi IP44.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kesimpulan & Daftar Pustaka -->
+        <section class="mb-12 bg-gray-100 p-8 rounded-xl">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Kesimpulan</h2>
+            <p class="text-gray-700 mb-6">
+                Sakelar tukar (SPDT — Single Pole Double Throw) adalah komponen pengendali yang memungkinkan satu lampu dikendalikan dari dua tempat yang berbeda. Dengan 3 terminal (1 common/C, 2 traveler/L1 dan L2), sakelar tukar bekerja berdasarkan prinsip pertukaran jalur: terminal common selalu terhubung ke salah satu dari dua terminal traveler, tidak pernah keduanya sekaligus. Rangkaian lengkap menggunakan dua sakelar tukar yang dihubungkan oleh dua kabel traveler. Lampu menyala ketika kedua sakelar berada pada posisi yang membentuk jalur tertutup (keduanya ke L1 atau keduanya ke L2), dan mati ketika posisi keduanya berbeda. Diagram pengawatan menunjukkan bahwa fasa dari MCB masuk ke terminal C sakelar A, keluar melalui L1/L2 ke kabel traveler, masuk ke L1/L2 sakelar B, keluar melalui C sakelar B ke fitting, sementara netral langsung ke fitting. Pemasangan yang benar mengikuti 8 langkah sistematis, dan pengujian meliputi 6 tahap: visual, kontinuitas, fungsi dari lokasi A, fungsi dari lokasi B, kombinasi 4 kondisi, dan polaritas. Penguasaan sakelar tukar menjadi fondasi penting sebelum mempelajari sakelar silang (3+ tempat) pada pertemuan berikutnya.
+            </p>
+            
+            <h3 class="font-bold text-blue-900 mb-3">📚 Daftar Pustaka</h3>
+            <ul class="text-sm text-gray-600 space-y-1 list-decimal list-inside">
+                <li>BSN. (2011). <em>SNI 0225:2011 — Persyaratan Umum Instalasi Listrik (PUIL 2011)</em>. Jakarta: Badan Standardisasi Nasional.</li>
+                <li>Suratman. (2009). <em>Instalasi Listrik Arus Kuat</em>. Bandung: CV. Armico.</li>
+                <li>Sumarna. (2010). <em>Teknik Instalasi Penerangan Listrik</em>. Jakarta: Direktorat Pembinaan SMK.</li>
+                <li>PT Brodo Surya Alam Tbk. (2020). <em>Katalog Komponen Instalasi Listrik — Sakelar Tukar dan Silang</em>.</li>
+                <li>IEC. (2015). <em>IEC 60669-1: Switches for household and similar fixed-electrical installations</em>.</li>
+            </ul>
+        </section>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex justify-between items-center mb-16 no-print">
+            <a href="12.html" class="text-blue-700 hover:text-blue-900 font-semibold"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Bab 12</a>
+            <a href="14.html" class="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition font-semibold">Bab 14: Sakelar Silang <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- UJI FORMATIF 13 -->
+        <!-- ========================================== -->
+        <section id="uji-formatif" class="bg-white border-t-8 border-yellow-500 rounded-xl shadow-2xl p-8 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-900">📋 Uji Formatif 13</h2>
+                <p class="text-gray-600 mt-2">Rangkaian Penerangan dengan Sakelar Tukar</p>
+                <div class="mt-4 inline-block bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Mohon lengkapi semua data dan jawaban terlebih dahulu!
+                </div>
+            </div>
+
+            <form id="quizForm" class="space-y-8">
+                <!-- Data Siswa -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 border-b pb-2">📋 Data Siswa</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" name="nama" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">NIS (Nomor Induk Siswa) <span class="text-red-500">*</span></label>
+                            <input type="text" name="nis" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Tanggal Ujian <span class="text-red-500">*</span></label>
+                            <input type="date" name="tanggal" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Semester <span class="text-red-500">*</span></label>
+                            <select name="semester" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                <option value="">Pilih Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Kelas <span class="text-red-500">*</span></label>
+                            <input type="text" name="kelas" placeholder="Contoh: XI TKTL 1" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>📋 Bagian A – Pilihan Ganda (10 Soal x 10 Poin)</span>
+                        <span class="text-sm font-normal text-red-600 bg-red-100 px-3 py-1 rounded-full">⚠️ Wajib diisi semua!</span>
+                    </h3>
+                    
+                    <div class="space-y-6" id="pg-questions">
+                        <!-- Soal 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Fungsi utama sakelar tukar dalam instalasi penerangan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="A" class="form-radio text-blue-600"> <span>A. Mengendalikan dua lampu dari satu tempat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="B" class="form-radio text-blue-600"> <span>B. Mengendalikan satu lampu dari satu tempat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="C" class="form-radio text-blue-600"> <span>C. Mengendalikan satu lampu dari dua tempat yang berbeda</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="D" class="form-radio text-blue-600"> <span>D. Mengendalikan tiga lampu dari tiga tempat</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q1" value="E" class="form-radio text-blue-600"> <span>E. Mengubah tegangan listrik</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Jumlah terminal yang dimiliki sakelar tukar (SPDT) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="A" class="form-radio text-blue-600"> <span>A. 1 terminal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="B" class="form-radio text-blue-600"> <span>B. 2 terminal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="C" class="form-radio text-blue-600"> <span>C. 3 terminal (1 common, 2 traveler)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="D" class="form-radio text-blue-600"> <span>D. 4 terminal</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q2" value="E" class="form-radio text-blue-600"> <span>E. 5 terminal</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Prinsip kerja sakelar tukar (SPDT) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="A" class="form-radio text-blue-600"> <span>A. Memutus dan menyambung semua terminal secara bersamaan</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="B" class="form-radio text-blue-600"> <span>B. Terminal common selalu terhubung ke salah satu dari dua terminal traveler secara bergantian, tidak pernah keduanya sekaligus</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="C" class="form-radio text-blue-600"> <span>C. Mengubah tegangan dari 220V menjadi 110V</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="D" class="form-radio text-blue-600"> <span>D. Menyimpan energi listrik untuk digunakan nanti</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q3" value="E" class="form-radio text-blue-600"> <span>E. Mengendalikan motor listrik 3 fasa</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Nama lain dari sakelar tukar dalam terminologi internasional adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="A" class="form-radio text-blue-600"> <span>A. SPDT (Single Pole Double Throw)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="B" class="form-radio text-blue-600"> <span>B. SPST (Single Pole Single Throw)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="C" class="form-radio text-blue-600"> <span>C. DPDT (Double Pole Double Throw)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="D" class="form-radio text-blue-600"> <span>D. MCB (Miniature Circuit Breaker)</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q4" value="E" class="form-radio text-blue-600"> <span>E. RCD (Residual Current Device)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Aplikasi yang PALING TEPAT untuk sakelar tukar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="A" class="form-radio text-blue-600"> <span>A. Mengendalikan lampu utama dan lampu aksen dari satu sakelar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="B" class="form-radio text-blue-600"> <span>B. Mengendalikan satu lampu dari satu tempat saja</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="C" class="form-radio text-blue-600"> <span>C. Mengendalikan motor listrik industri</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="D" class="form-radio text-blue-600"> <span>D. Mengendalikan lampu tangga dari lantai bawah dan lantai atas</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q5" value="E" class="form-radio text-blue-600"> <span>E. Mengendalikan lampu dari empat tempat sekaligus</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">6. Kabel yang menghubungkan terminal L1 dan L2 antara dua sakelar tukar disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="A" class="form-radio text-blue-600"> <span>A. Kabel netral</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="B" class="form-radio text-blue-600"> <span>B. Kabel traveler</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="C" class="form-radio text-blue-600"> <span>C. Kabel grounding</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="D" class="form-radio text-blue-600"> <span>D. Kabel feeder</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q6" value="E" class="form-radio text-blue-600"> <span>E. Kabel distribusi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">7. Jumlah kabel traveler yang diperlukan untuk menghubungkan dua sakelar tukar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="A" class="form-radio text-blue-600"> <span>A. 1 kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="B" class="form-radio text-blue-600"> <span>B. 2 kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="C" class="form-radio text-blue-600"> <span>C. 3 kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="D" class="form-radio text-blue-600"> <span>D. 4 kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q7" value="E" class="form-radio text-blue-600"> <span>E. 5 kabel</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">8. Kesalahan paling umum yang menyebabkan rangkaian sakelar tukar tidak berfungsi dengan benar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="A" class="form-radio text-blue-600"> <span>A. Kabel traveler tertukar (L1→L2, L2→L1) antara kedua sakelar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="B" class="form-radio text-blue-600"> <span>B. Menggunakan lampu LED</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="C" class="form-radio text-blue-600"> <span>C. MCB terlalu besar</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="D" class="form-radio text-blue-600"> <span>D. Fitting lampu terlalu kecil</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q8" value="E" class="form-radio text-blue-600"> <span>E. Tegangan PLN tidak stabil</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">9. Pengujian yang PALING KRITIS setelah pemasangan rangkaian sakelar tukar adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="A" class="form-radio text-blue-600"> <span>A. Mengukur tegangan PLN</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="B" class="form-radio text-blue-600"> <span>B. Memeriksa warna kabel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="C" class="form-radio text-blue-600"> <span>C. Menguji fungsi ON/OFF dari KEDUA lokasi secara bergantian dan memastikan setiap perubahan posisi sakelar mengubah kondisi lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="D" class="form-radio text-blue-600"> <span>D. Menghitung daya lampu</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q9" value="E" class="form-radio text-blue-600"> <span>E. Memeriksa merek sakelar</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">10. Berdasarkan studi kasus 13, penyebab lampu tangga tidak bisa dimatikan dari atas adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="A" class="form-radio text-blue-600"> <span>A. Sakelar B rusak</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="B" class="form-radio text-blue-600"> <span>B. Lampu LED tidak kompatibel</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="C" class="form-radio text-blue-600"> <span>C. MCB trip terus-menerus</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="D" class="form-radio text-blue-600"> <span>D. Kabel traveler salah sambung (L1→L2 dan L2→L1 terbalik) sehingga logika tukar tidak berfungsi</span></label>
+                                <label class="flex items-center space-x-3 cursor-pointer"><input type="radio" name="q10" value="E" class="form-radio text-blue-600"> <span>E. Netral tidak terhubung</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 class="font-bold text-lg text-blue-900 mb-4 flex justify-between items-center">
+                        <span>✍️ Bagian B – Essay (5 Soal x 20 Poin)</span>
+                        <span class="text-sm font-normal text-yellow-800 bg-yellow-200 px-3 py-1 rounded-full">Jawab dengan jelas dan ringkas</span>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">1. Jelaskan fungsi sakelar tukar dan prinsip kerja rangkaian SPDT! Mengapa sakelar tukar memungkinkan pengendalian satu lampu dari dua tempat?</p>
+                            <textarea name="essay1" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">2. Uraikan logika 4 kondisi kombinasi dua sakelar tukar (A1-B1, A1-B2, A2-B1, A2-B2)! Pada kondisi mana lampu menyala dan pada kondisi mana lampu mati? Jelaskan alasannya!</p>
+                            <textarea name="essay2" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">3. Gambarkan (dengan deskripsi teks) diagram pengawatan rangkaian sakelar tukar untuk mengendalikan satu lampu dari dua tempat! Jelaskan fungsi dan warna setiap kabel yang digunakan!</p>
+                            <textarea name="essay3" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">4. Analisislah Studi Kasus 13 di atas! Identifikasi kesalahan penyambungan yang dilakukan, jelaskan mengapa logika tukar tidak berfungsi, dan berikan solusi pemasangan yang benar!</p>
+                            <textarea name="essay4" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="font-semibold mb-3">5. Uraikan prosedur pemasangan dan pengujian lengkap rangkaian sakelar tukar! Jelaskan mengapa setiap langkah pengujian penting untuk dilakukan sebelum instalasi dinyatakan selesai!</p>
+                            <textarea name="essay5" rows="3" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Tombol Aksi -->
+                <div class="bg-gray-900 text-white p-6 rounded-xl shadow-lg text-center space-y-6">
+                    <div id="hasilSkor" class="hidden fade-in">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">📊 Hasil Uji Formatif</h3>
+                        <div class="text-4xl font-extrabold mb-2"><span id="skorPG">0</span> / 100</div>
+                        <p class="text-gray-300 text-sm">Bagian A (Pilihan Ganda)</p>
+                        <p class="text-yellow-300 text-sm mt-2 italic">* Bagian B (Essay) akan dinilai secara manual oleh guru pengampu.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 no-print">
+                        <button type="button" onclick="hitungSkor()" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-calculator mr-2"></i> Kirim Jawaban & Lihat Hasil
+                        </button>
+                        <button type="button" onclick="window.print()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Unduh PDF Lengkap
+                        </button>
+                        <button type="button" onclick="kirimEmail()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Kirim Email ke Guru
+                        </button>
+                        <button type="reset" onclick="resetForm()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                            <i class="fas fa-redo mr-2"></i> Mulai Ulang
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm no-print">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold text-white">INSTALASI PENERANGAN LISTRIK SEMESTER 1 KELAS XI TKTL</p>
+            <p class="mt-2">© 2026 FEBRI HENNI, S.Pd - SMKN 1 KOTO BALINGKA</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Fungsi Uji Formatif -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda Bab 13
+        const kunciJawaban = {
+            q1: 'C', q2: 'C', q3: 'B', q4: 'A', q5: 'D',
+            q6: 'B', q7: 'B', q8: 'A', q9: 'C', q10: 'D'
+        };
+
+        function hitungSkor() {
+            const form = document.getElementById('quizForm');
+            if (!form.checkValidity()) {
+                alert('⚠️ Mohon lengkapi semua data siswa dan jawab semua soal Pilihan Ganda terlebih dahulu!');
+                form.reportValidity();
+                return;
+            }
+
+            let skorPG = 0;
+            let terjawab = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const jawaban = form.querySelector(`input[name="q${i}"]:checked`);
+                if (jawaban) {
+                    terjawab++;
+                    if (jawaban.value === kunciJawaban[`q${i}`]) {
+                        skorPG += 10;
+                    }
+                }
+            }
+
+            if (terjawab < 10) {
+                alert('⚠️ Mohon jawab semua 10 soal Pilihan Ganda!');
+                return;
+            }
+
+            document.getElementById('skorPG').innerText = skorPG;
+            document.getElementById('hasilSkor').classList.remove('hidden');
+            document.getElementById('hasilSkor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`✅ Perhitungan Selesai!\nSkor Pilihan Ganda Anda: ${skorPG}/100\n\nCatatan: Jawaban Essay akan dinilai oleh guru.`);
+        }
+
+        function kirimEmail() {
+            const form = document.getElementById('quizForm');
+            const nama = form.nama.value || 'Siswa';
+            const nis = form.nis.value || '-';
+            const kelas = form.kelas.value || '-';
+            const skor = document.getElementById('skorPG').innerText || 'Belum dihitung';
+
+            if (skor === 'Belum dihitung') {
+                alert('⚠️ Silakan klik "Kirim Jawaban & Lihat Hasil" terlebih dahulu untuk menghitung skor!');
+                return;
+            }
+
+            const subject = `Hasil Uji Formatif 13 (Sakelar Tukar) - ${nama} (${nis}) - Kelas ${kelas}`;
+            const body = `Yth. Bapak FEBRI HENNI, S.Pd,\n\nBerikut adalah hasil Uji Formatif 13 (Rangkaian Penerangan dengan Sakelar Tukar) saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skor}/100\n\nCatatan: Jawaban Essay telah saya isi pada lembar uji formatif dan siap untuk dinilai.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:febrihenni@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('hasilSkor').classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
